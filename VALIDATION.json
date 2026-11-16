@@ -410,7 +410,7 @@
     "Matched serial/parallel real-model quality and efficiency benchmark"
   ],
   "formal_release_review": "pending_configured_independent_authority",
-  "remote_push": "not_performed_at_validation_snapshot_authenticated_connector_available",
+  "remote_push": "completed_via_existing_authenticated_connector_tree_verified",
   "current_evidence_scope": "The recorded frozen source-input digest passed 582 tests on this Linux x86_64 host. Actual Codex synthetic tool turns, namespaces, IPC/HTTP, Git, pinned ZCode option and argument parsers, and three real-process pipeline demos were exercised. Queue previews grant no reservation; historical metrics grant no quality proof. Real external-model quality, managed-policy equivalence, complete ZCode execution, zero-defect guarantees and serial/parallel speedup remain unverified.",
   "environment": {
     "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
@@ -500,8 +500,13 @@
     "target_branch": "feat/parallel-development-v0.5.0",
     "connection": "existing_authenticated_GitHub_connector",
     "write_access_observed": true,
-    "status": "pending_after_validation_snapshot",
+    "status": "published_and_tree_verified",
     "default_branch_preserved": true,
-    "note": "Remote publication is a separate subsequent action. No broad credential or device login was acquired."
+    "note": "The complete source snapshot was published through the existing GitHub connection and its tree identity matches the validated local snapshot. Later delivery-metadata updates may advance the same branch; local development ancestry remains in the packaged Git bundle. No broad credential or device login was acquired.",
+    "initial_published_commit": "5a20cc1f0852929ccceeb92fe7a03ab1b1e7bfbc",
+    "published_tree": "952c54e4ca338dcb80f3a8cfa45281e427aeecaa",
+    "validated_local_source_commit": "8f7bf49fb438635ff87c4b7bf3562fa1c8b456f4",
+    "files": 161,
+    "branch_url": "https://github.com/wmqfl861/xiaolvji/tree/feat/parallel-development-v0.5.0"
   }
 }

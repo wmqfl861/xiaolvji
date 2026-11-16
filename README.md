@@ -104,4 +104,4 @@ python3 scripts/build_release.py --output /tmp/xiaolvji-runtime-0.5.0.zip
 
 插件是 Python 源码包，不是虚构的原生二进制。Windows 包提供配置与源码，当前不能作为已验收的 Windows 执行器使用。完整交付脚本只从指定的已提交版本构建，包含源码、文档、测试、四种插件布局和可还原历史的 Git bundle。
 
-本地开发完成不等于远端已发布。远端推送和正式独立发布审核状态会在交付记录中单独说明。
+本版源码与全部文档已同步到 [GitHub 开发分支](https://github.com/wmqfl861/xiaolvji/tree/feat/parallel-development-v0.5.0)。发布时核对了完整 Git 树与本地验证快照一致；记录见 `VALIDATION.json`。源码同步不替代目标宿主验收或指定 reviewer 的正式发布批准。
