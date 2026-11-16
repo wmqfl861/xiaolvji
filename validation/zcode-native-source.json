@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "evidence_level": "native_mapping_only",
+  "source_commit": "a60ba6a7e5a06742270ca605f5d2cc2766afa7e1",
+  "node_version": "v24.22.1",
+  "documented_build_node_version": "v24.14.0",
+  "source_files": [
+    {
+      "path": "packages/model-option-map/src/compiler.ts",
+      "sha256": "36f97b996d1bd5757eafcabd9660ff451e64a92d9fa632e8f7078719fe6fcb43"
+    },
+    {
+      "path": "packages/model-option-map/src/evaluator.ts",
+      "sha256": "522a3eaf968110c2caf79d9f2c4b19b9f71289e867789129af237ae841fe5ec7"
+    },
+    {
+      "path": "packages/model-option-map/src/index.ts",
+      "sha256": "e573a4696a4d6dae0ff4b281fe1f8975a2e395f6eaea76a2880158c81143ea33"
+    },
+    {
+      "path": "packages/model-option-map/src/merge-patch.ts",
+      "sha256": "31333e43e9f33d242addd7e3185ad5736312b2b79e17d3fbc7856df50df057ef"
+    },
+    {
+      "path": "packages/model-option-map/src/option-maps.ts",
+      "sha256": "2bff6e281391b735cfc81b5e8ea016f56086a4088d0566da732b1acaf94b5547"
+    },
+    {
+      "path": "packages/model-option-map/src/parser.ts",
+      "sha256": "4eeb09c63416b4b44069b24480026fb468553496206bf84ad44f6cb8d5686003"
+    },
+    {
+      "path": "packages/model-option-map/src/tokenizer.ts",
+      "sha256": "8066cc35cb4062a7046beebc1b4e3c9e5f28f0ed64928a8f218b5429dcdcc042"
+    },
+    {
+      "path": "packages/model-option-map/src/types.ts",
+      "sha256": "6ff4a5db3e323eb887de390f8b0c6cc2af0a0cb052054be866a4e5876a1ca397"
+    },
+    {
+      "path": "apps/zcode-cli/packages/core/src/tool/compat.ts",
+      "sha256": "ead3bb869ca0203c37375db1813ba2ffbf3285e4f9bbf16f7de3434f8a5f3364"
+    },
+    {
+      "path": "packages/shared/src/runtimeEnv.ts",
+      "sha256": "2fce0f407600a8a07d73be3701efadfe28680025a9e239435afc6459f5278d9f"
+    },
+    {
+      "path": "apps/zcode-cli/packages/cli/src/arguments.ts",
+      "sha256": "28fd9de33f8fd8e36360b2da0c4c6b84729aa14e110271f84859e8bd5651a8ce"
+    }
+  ],
+  "cases": [
+    {
+      "name": "responses-high",
+      "api": "openai-responses",
+      "passed": true
+    },
+    {
+      "name": "responses-ultra",
+      "api": "openai-responses",
+      "passed": true
+    },
+    {
+      "name": "chat-high",
+      "api": "openai-chat-completions",
+      "passed": true
+    },
+    {
+      "name": "chat-ultra",
+      "api": "openai-chat-completions",
+      "passed": true
+    },
+    {
+      "name": "anthropic-enabled",
+      "api": "anthropic-messages",
+      "passed": true
+    },
+    {
+      "name": "anthropic-disabled",
+      "api": "anthropic-messages",
+      "passed": true
+    },
+    {
+      "name": "anthropic-adaptive",
+      "api": "anthropic-messages",
+      "passed": true
+    }
+  ],
+  "negative_controls": 3,
+  "alias_controls": 3,
+  "environment_controls": 14,
+  "argument_cases": [
+    {
+      "name": "ordinary",
+      "prompt_bytes": 33,
+      "passed": true
+    },
+    {
+      "name": "unicode-multiline",
+      "prompt_bytes": 62,
+      "passed": true
+    },
+    {
+      "name": "leading-option",
+      "prompt_bytes": 6,
+      "passed": true
+    },
+    {
+      "name": "tool-rule-text",
+      "prompt_bytes": 23,
+      "passed": true
+    },
+    {
+      "name": "mode-option-text",
+      "prompt_bytes": 19,
+      "passed": true
+    },
+    {
+      "name": "near-ascii-limit",
+      "prompt_bytes": 120000,
+      "passed": true
+    },
+    {
+      "name": "near-utf8-limit",
+      "prompt_bytes": 120000,
+      "passed": true
+    }
+  ],
+  "argument_negative_controls": 3,
+  "argument_parser_tested": true,
+  "configuration_schema_loaded": false,
+  "cli_launched": false,
+  "real_model_request_tested": false,
+  "native_execution_ready": false,
+  "not_verified": [
+    "Complete Zod provider schema loading",
+    "CLI/provider streaming and model turn",
+    "Managed policy, hooks, trust and live tool inventory",
+    "Native cancellation and strict sandbox compatibility"
+  ]
+}

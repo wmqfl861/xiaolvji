@@ -1,0 +1,1735 @@
+[
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:21.541Z",
+    "payload": {
+      "profile": "cooperative_native"
+    },
+    "project_id": "demo",
+    "seq": 1,
+    "task_id": null,
+    "type": "project_enabled"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:21.544Z",
+    "payload": {
+      "approval_ref": "Built-in reversible local fixture explicitly invoked through the demo command",
+      "plan": {
+        "id": "demo-plan",
+        "revision": 1,
+        "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+      }
+    },
+    "project_id": "demo",
+    "seq": 2,
+    "task_id": null,
+    "type": "plan_registered"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:21.548Z",
+    "payload": {
+      "plan": {
+        "id": "demo-plan",
+        "revision": 1,
+        "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+      }
+    },
+    "project_id": "demo",
+    "seq": 3,
+    "task_id": "alpha",
+    "type": "task_registered"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:21.552Z",
+    "payload": {
+      "plan": {
+        "id": "demo-plan",
+        "revision": 1,
+        "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+      }
+    },
+    "project_id": "demo",
+    "seq": 4,
+    "task_id": "beta",
+    "type": "task_registered"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:21.556Z",
+    "payload": {
+      "plan": {
+        "id": "demo-plan",
+        "revision": 1,
+        "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+      }
+    },
+    "project_id": "demo",
+    "seq": 5,
+    "task_id": "gamma",
+    "type": "task_registered"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:21.560Z",
+    "payload": {
+      "plan": {
+        "id": "demo-plan",
+        "revision": 1,
+        "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+      }
+    },
+    "project_id": "demo",
+    "seq": 6,
+    "task_id": "combined",
+    "type": "task_registered"
+  },
+  {
+    "attempt_id": "16652ca7d3bd474bb04b3829da97ff4c",
+    "occurred_at": "2026-11-16T16:33:21.568Z",
+    "payload": {
+      "generation": 1,
+      "resources": [],
+      "scopes": [
+        {
+          "canonical": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/project/src/alpha.py",
+          "key": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/project/src/alpha.py",
+          "kind": "file",
+          "path": "src/alpha.py"
+        }
+      ]
+    },
+    "project_id": "demo",
+    "seq": 7,
+    "task_id": "alpha",
+    "type": "run_reserved"
+  },
+  {
+    "attempt_id": "719f4b499234443aa54d4cf5c0bc2a17",
+    "occurred_at": "2026-11-16T16:33:21.572Z",
+    "payload": {
+      "generation": 1,
+      "resources": [],
+      "scopes": [
+        {
+          "canonical": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/project/src/beta.py",
+          "key": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/project/src/beta.py",
+          "kind": "file",
+          "path": "src/beta.py"
+        }
+      ]
+    },
+    "project_id": "demo",
+    "seq": 8,
+    "task_id": "beta",
+    "type": "run_reserved"
+  },
+  {
+    "attempt_id": "16652ca7d3bd474bb04b3829da97ff4c",
+    "occurred_at": "2026-11-16T16:33:21.578Z",
+    "payload": {
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 9,
+    "task_id": "alpha",
+    "type": "launch_claimed"
+  },
+  {
+    "attempt_id": "719f4b499234443aa54d4cf5c0bc2a17",
+    "occurred_at": "2026-11-16T16:33:21.585Z",
+    "payload": {
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 10,
+    "task_id": "beta",
+    "type": "launch_claimed"
+  },
+  {
+    "attempt_id": "16652ca7d3bd474bb04b3829da97ff4c",
+    "occurred_at": "2026-11-16T16:33:21.731Z",
+    "payload": {
+      "generation": 1,
+      "identity": {
+        "attempt_id": "16652ca7d3bd474bb04b3829da97ff4c",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 67,
+        "pid_namespace": "pid:[4026532593]",
+        "proc_pid": 67,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 67,
+        "start_time": "3922110",
+        "tracking": "linux_child_subreaper_v1"
+      }
+    },
+    "project_id": "demo",
+    "seq": 11,
+    "task_id": "alpha",
+    "type": "run_start_ack"
+  },
+  {
+    "attempt_id": "719f4b499234443aa54d4cf5c0bc2a17",
+    "occurred_at": "2026-11-16T16:33:21.754Z",
+    "payload": {
+      "generation": 1,
+      "identity": {
+        "attempt_id": "719f4b499234443aa54d4cf5c0bc2a17",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 66,
+        "pid_namespace": "pid:[4026532593]",
+        "proc_pid": 66,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 66,
+        "start_time": "3922110",
+        "tracking": "linux_child_subreaper_v1"
+      }
+    },
+    "project_id": "demo",
+    "seq": 12,
+    "task_id": "beta",
+    "type": "run_start_ack"
+  },
+  {
+    "attempt_id": "719f4b499234443aa54d4cf5c0bc2a17",
+    "occurred_at": "2026-11-16T16:33:21.870Z",
+    "payload": {
+      "generation": 1,
+      "observation": {
+        "cancelled": false,
+        "exit_code": 0,
+        "identity": {
+          "attempt_id": "719f4b499234443aa54d4cf5c0bc2a17",
+          "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+          "generation": 1,
+          "nonce": "<redacted>",
+          "pid": 66,
+          "pid_namespace": "pid:[4026532593]",
+          "proc_pid": 66,
+          "profile": "cooperative_native",
+          "sandbox_policy_digest": null,
+          "session_id": 66,
+          "start_time": "3922110",
+          "tracking": "linux_child_subreaper_v1"
+        },
+        "process_tree_terminated": true,
+        "timed_out": false
+      }
+    },
+    "project_id": "demo",
+    "seq": 13,
+    "task_id": "beta",
+    "type": "run_exit_confirmed"
+  },
+  {
+    "attempt_id": "719f4b499234443aa54d4cf5c0bc2a17",
+    "occurred_at": "2026-11-16T16:33:21.870Z",
+    "payload": {
+      "basis": "process_tree_exit",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 14,
+    "task_id": "beta",
+    "type": "resource_released"
+  },
+  {
+    "attempt_id": "6d277f33b89d4a318930ad9fd3749c94",
+    "occurred_at": "2026-11-16T16:33:21.879Z",
+    "payload": {
+      "generation": 1,
+      "resources": [],
+      "scopes": [
+        {
+          "canonical": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/project/src/gamma.py",
+          "key": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/project/src/gamma.py",
+          "kind": "file",
+          "path": "src/gamma.py"
+        }
+      ]
+    },
+    "project_id": "demo",
+    "seq": 15,
+    "task_id": "gamma",
+    "type": "run_reserved"
+  },
+  {
+    "attempt_id": "6d277f33b89d4a318930ad9fd3749c94",
+    "occurred_at": "2026-11-16T16:33:21.886Z",
+    "payload": {
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 16,
+    "task_id": "gamma",
+    "type": "launch_claimed"
+  },
+  {
+    "attempt_id": "719f4b499234443aa54d4cf5c0bc2a17",
+    "occurred_at": "2026-11-16T16:33:21.909Z",
+    "payload": {
+      "artifact_digest": "sha256:f74f52271eb34cd41288a83cf2121512ce97f49cd6ee8d3664ffecd7595ad25f",
+      "commit": "2b91348bbe3467cfbb1ecbf928b3cc652d8a6f1e",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 17,
+    "task_id": "beta",
+    "type": "candidate_submitted"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:21.922Z",
+    "payload": {
+      "plan": {
+        "id": "demo-plan",
+        "revision": 1,
+        "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+      }
+    },
+    "project_id": "demo",
+    "seq": 18,
+    "task_id": "verify-8560805161a8e0d4c6c64ca6b7e0cce8",
+    "type": "task_registered"
+  },
+  {
+    "attempt_id": "6d277f33b89d4a318930ad9fd3749c94",
+    "occurred_at": "2026-11-16T16:33:22.081Z",
+    "payload": {
+      "generation": 1,
+      "identity": {
+        "attempt_id": "6d277f33b89d4a318930ad9fd3749c94",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 102,
+        "pid_namespace": "pid:[4026532593]",
+        "proc_pid": 102,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 102,
+        "start_time": "3922142",
+        "tracking": "linux_child_subreaper_v1"
+      }
+    },
+    "project_id": "demo",
+    "seq": 19,
+    "task_id": "gamma",
+    "type": "run_start_ack"
+  },
+  {
+    "attempt_id": "6d277f33b89d4a318930ad9fd3749c94",
+    "occurred_at": "2026-11-16T16:33:22.196Z",
+    "payload": {
+      "generation": 1,
+      "observation": {
+        "cancelled": false,
+        "exit_code": 0,
+        "identity": {
+          "attempt_id": "6d277f33b89d4a318930ad9fd3749c94",
+          "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+          "generation": 1,
+          "nonce": "<redacted>",
+          "pid": 102,
+          "pid_namespace": "pid:[4026532593]",
+          "proc_pid": 102,
+          "profile": "cooperative_native",
+          "sandbox_policy_digest": null,
+          "session_id": 102,
+          "start_time": "3922142",
+          "tracking": "linux_child_subreaper_v1"
+        },
+        "process_tree_terminated": true,
+        "timed_out": false
+      }
+    },
+    "project_id": "demo",
+    "seq": 20,
+    "task_id": "gamma",
+    "type": "run_exit_confirmed"
+  },
+  {
+    "attempt_id": "6d277f33b89d4a318930ad9fd3749c94",
+    "occurred_at": "2026-11-16T16:33:22.196Z",
+    "payload": {
+      "basis": "process_tree_exit",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 21,
+    "task_id": "gamma",
+    "type": "resource_released"
+  },
+  {
+    "attempt_id": "9a20c57c28664ebf9518553f8678bf9e",
+    "occurred_at": "2026-11-16T16:33:22.206Z",
+    "payload": {
+      "generation": 1,
+      "resources": [],
+      "scopes": []
+    },
+    "project_id": "demo",
+    "seq": 22,
+    "task_id": "verify-8560805161a8e0d4c6c64ca6b7e0cce8",
+    "type": "run_reserved"
+  },
+  {
+    "attempt_id": "9a20c57c28664ebf9518553f8678bf9e",
+    "occurred_at": "2026-11-16T16:33:22.216Z",
+    "payload": {
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 23,
+    "task_id": "verify-8560805161a8e0d4c6c64ca6b7e0cce8",
+    "type": "launch_claimed"
+  },
+  {
+    "attempt_id": "6d277f33b89d4a318930ad9fd3749c94",
+    "occurred_at": "2026-11-16T16:33:22.230Z",
+    "payload": {
+      "artifact_digest": "sha256:0dc569ff5ca2ae29cf7174047c51f133861c4b71690b9087ca47f2d156e3986f",
+      "commit": "610d75674cc6040ff04cb787997ccfb5111c9ca9",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 24,
+    "task_id": "gamma",
+    "type": "candidate_submitted"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:22.236Z",
+    "payload": {
+      "plan": {
+        "id": "demo-plan",
+        "revision": 1,
+        "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+      }
+    },
+    "project_id": "demo",
+    "seq": 25,
+    "task_id": "verify-c3e3ea27dba8b16aa96f6d08ac2c8610",
+    "type": "task_registered"
+  },
+  {
+    "attempt_id": "9a20c57c28664ebf9518553f8678bf9e",
+    "occurred_at": "2026-11-16T16:33:22.357Z",
+    "payload": {
+      "generation": 1,
+      "identity": {
+        "attempt_id": "9a20c57c28664ebf9518553f8678bf9e",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 146,
+        "pid_namespace": "pid:[4026532593]",
+        "proc_pid": 146,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 146,
+        "start_time": "3922174",
+        "tracking": "linux_child_subreaper_v1"
+      }
+    },
+    "project_id": "demo",
+    "seq": 26,
+    "task_id": "verify-8560805161a8e0d4c6c64ca6b7e0cce8",
+    "type": "run_start_ack"
+  },
+  {
+    "attempt_id": "9a20c57c28664ebf9518553f8678bf9e",
+    "occurred_at": "2026-11-16T16:33:22.708Z",
+    "payload": {
+      "generation": 1,
+      "observation": {
+        "cancelled": false,
+        "exit_code": 0,
+        "identity": {
+          "attempt_id": "9a20c57c28664ebf9518553f8678bf9e",
+          "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+          "generation": 1,
+          "nonce": "<redacted>",
+          "pid": 146,
+          "pid_namespace": "pid:[4026532593]",
+          "proc_pid": 146,
+          "profile": "cooperative_native",
+          "sandbox_policy_digest": null,
+          "session_id": 146,
+          "start_time": "3922174",
+          "tracking": "linux_child_subreaper_v1"
+        },
+        "process_tree_terminated": true,
+        "timed_out": false
+      }
+    },
+    "project_id": "demo",
+    "seq": 27,
+    "task_id": "verify-8560805161a8e0d4c6c64ca6b7e0cce8",
+    "type": "run_exit_confirmed"
+  },
+  {
+    "attempt_id": "9a20c57c28664ebf9518553f8678bf9e",
+    "occurred_at": "2026-11-16T16:33:22.708Z",
+    "payload": {
+      "basis": "process_tree_exit",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 28,
+    "task_id": "verify-8560805161a8e0d4c6c64ca6b7e0cce8",
+    "type": "resource_released"
+  },
+  {
+    "attempt_id": "ec6e25d73aa9441599a43f6ac065e6e2",
+    "occurred_at": "2026-11-16T16:33:22.716Z",
+    "payload": {
+      "generation": 1,
+      "resources": [],
+      "scopes": []
+    },
+    "project_id": "demo",
+    "seq": 29,
+    "task_id": "verify-c3e3ea27dba8b16aa96f6d08ac2c8610",
+    "type": "run_reserved"
+  },
+  {
+    "attempt_id": "ec6e25d73aa9441599a43f6ac065e6e2",
+    "occurred_at": "2026-11-16T16:33:22.722Z",
+    "payload": {
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 30,
+    "task_id": "verify-c3e3ea27dba8b16aa96f6d08ac2c8610",
+    "type": "launch_claimed"
+  },
+  {
+    "attempt_id": "9a20c57c28664ebf9518553f8678bf9e",
+    "occurred_at": "2026-11-16T16:33:22.742Z",
+    "payload": {
+      "artifact_digest": "sha256:f74f52271eb34cd41288a83cf2121512ce97f49cd6ee8d3664ffecd7595ad25f",
+      "commit": "2b91348bbe3467cfbb1ecbf928b3cc652d8a6f1e",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 31,
+    "task_id": "verify-8560805161a8e0d4c6c64ca6b7e0cce8",
+    "type": "candidate_submitted"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:22.746Z",
+    "payload": {
+      "artifact_digest": "sha256:f74f52271eb34cd41288a83cf2121512ce97f49cd6ee8d3664ffecd7595ad25f",
+      "binding": {
+        "contract_versions": [],
+        "environment_digest": "sha256:73a4ae0c2955ae45b3447408f99c53b19bd1c0588679fa9b8fab39721e235679",
+        "evidence_refs": [
+          {
+            "digest": "sha256:e79c36418b2351afb374bb550e3cb5f21fe433aea1637a505f095eb3b383fbd6",
+            "id": "9a20c57c28664ebf9518553f8678bf9e",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/9a20c57c28664ebf9518553f8678bf9e/report.json"
+          }
+        ],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "implementation_verified",
+      "principal_id": "controller-verifier"
+    },
+    "project_id": "demo",
+    "seq": 32,
+    "task_id": "verify-8560805161a8e0d4c6c64ca6b7e0cce8",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:22.750Z",
+    "payload": {
+      "artifact_digest": "sha256:f74f52271eb34cd41288a83cf2121512ce97f49cd6ee8d3664ffecd7595ad25f",
+      "binding": {
+        "contract_versions": [],
+        "environment_digest": "sha256:73a4ae0c2955ae45b3447408f99c53b19bd1c0588679fa9b8fab39721e235679",
+        "evidence_refs": [
+          {
+            "digest": "sha256:e79c36418b2351afb374bb550e3cb5f21fe433aea1637a505f095eb3b383fbd6",
+            "id": "9a20c57c28664ebf9518553f8678bf9e",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/9a20c57c28664ebf9518553f8678bf9e/report.json"
+          }
+        ],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "implementation_verified",
+      "principal_id": "controller-verifier"
+    },
+    "project_id": "demo",
+    "seq": 33,
+    "task_id": "beta",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": "ec6e25d73aa9441599a43f6ac065e6e2",
+    "occurred_at": "2026-11-16T16:33:22.864Z",
+    "payload": {
+      "generation": 1,
+      "identity": {
+        "attempt_id": "ec6e25d73aa9441599a43f6ac065e6e2",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 200,
+        "pid_namespace": "pid:[4026532593]",
+        "proc_pid": 200,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 200,
+        "start_time": "3922224",
+        "tracking": "linux_child_subreaper_v1"
+      }
+    },
+    "project_id": "demo",
+    "seq": 34,
+    "task_id": "verify-c3e3ea27dba8b16aa96f6d08ac2c8610",
+    "type": "run_start_ack"
+  },
+  {
+    "attempt_id": "16652ca7d3bd474bb04b3829da97ff4c",
+    "occurred_at": "2026-11-16T16:33:23.093Z",
+    "payload": {
+      "generation": 1,
+      "observation": {
+        "cancelled": false,
+        "exit_code": 0,
+        "identity": {
+          "attempt_id": "16652ca7d3bd474bb04b3829da97ff4c",
+          "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+          "generation": 1,
+          "nonce": "<redacted>",
+          "pid": 67,
+          "pid_namespace": "pid:[4026532593]",
+          "proc_pid": 67,
+          "profile": "cooperative_native",
+          "sandbox_policy_digest": null,
+          "session_id": 67,
+          "start_time": "3922110",
+          "tracking": "linux_child_subreaper_v1"
+        },
+        "process_tree_terminated": true,
+        "timed_out": false
+      }
+    },
+    "project_id": "demo",
+    "seq": 35,
+    "task_id": "alpha",
+    "type": "run_exit_confirmed"
+  },
+  {
+    "attempt_id": "16652ca7d3bd474bb04b3829da97ff4c",
+    "occurred_at": "2026-11-16T16:33:23.093Z",
+    "payload": {
+      "basis": "process_tree_exit",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 36,
+    "task_id": "alpha",
+    "type": "resource_released"
+  },
+  {
+    "attempt_id": "16652ca7d3bd474bb04b3829da97ff4c",
+    "occurred_at": "2026-11-16T16:33:23.120Z",
+    "payload": {
+      "artifact_digest": "sha256:5b547f4a9a4efa423030eb1e39cd04859f5d6e6786c68117efa373e4f9d4d08a",
+      "commit": "90ec25a11e6303323f079b46ef238b6463f84cf6",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 37,
+    "task_id": "alpha",
+    "type": "candidate_submitted"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:23.132Z",
+    "payload": {
+      "plan": {
+        "id": "demo-plan",
+        "revision": 1,
+        "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+      }
+    },
+    "project_id": "demo",
+    "seq": 38,
+    "task_id": "verify-cdf6a8ab1bafac231449c29a554c54e0",
+    "type": "task_registered"
+  },
+  {
+    "attempt_id": "bc4c3f3eb8024208b29104e9015cb7d3",
+    "occurred_at": "2026-11-16T16:33:23.140Z",
+    "payload": {
+      "generation": 1,
+      "resources": [],
+      "scopes": []
+    },
+    "project_id": "demo",
+    "seq": 39,
+    "task_id": "verify-cdf6a8ab1bafac231449c29a554c54e0",
+    "type": "run_reserved"
+  },
+  {
+    "attempt_id": "bc4c3f3eb8024208b29104e9015cb7d3",
+    "occurred_at": "2026-11-16T16:33:23.150Z",
+    "payload": {
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 40,
+    "task_id": "verify-cdf6a8ab1bafac231449c29a554c54e0",
+    "type": "launch_claimed"
+  },
+  {
+    "attempt_id": "ec6e25d73aa9441599a43f6ac065e6e2",
+    "occurred_at": "2026-11-16T16:33:23.157Z",
+    "payload": {
+      "generation": 1,
+      "observation": {
+        "cancelled": false,
+        "exit_code": 0,
+        "identity": {
+          "attempt_id": "ec6e25d73aa9441599a43f6ac065e6e2",
+          "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+          "generation": 1,
+          "nonce": "<redacted>",
+          "pid": 200,
+          "pid_namespace": "pid:[4026532593]",
+          "proc_pid": 200,
+          "profile": "cooperative_native",
+          "sandbox_policy_digest": null,
+          "session_id": 200,
+          "start_time": "3922224",
+          "tracking": "linux_child_subreaper_v1"
+        },
+        "process_tree_terminated": true,
+        "timed_out": false
+      }
+    },
+    "project_id": "demo",
+    "seq": 41,
+    "task_id": "verify-c3e3ea27dba8b16aa96f6d08ac2c8610",
+    "type": "run_exit_confirmed"
+  },
+  {
+    "attempt_id": "ec6e25d73aa9441599a43f6ac065e6e2",
+    "occurred_at": "2026-11-16T16:33:23.157Z",
+    "payload": {
+      "basis": "process_tree_exit",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 42,
+    "task_id": "verify-c3e3ea27dba8b16aa96f6d08ac2c8610",
+    "type": "resource_released"
+  },
+  {
+    "attempt_id": "ec6e25d73aa9441599a43f6ac065e6e2",
+    "occurred_at": "2026-11-16T16:33:23.189Z",
+    "payload": {
+      "artifact_digest": "sha256:0dc569ff5ca2ae29cf7174047c51f133861c4b71690b9087ca47f2d156e3986f",
+      "commit": "610d75674cc6040ff04cb787997ccfb5111c9ca9",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 43,
+    "task_id": "verify-c3e3ea27dba8b16aa96f6d08ac2c8610",
+    "type": "candidate_submitted"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:23.192Z",
+    "payload": {
+      "artifact_digest": "sha256:0dc569ff5ca2ae29cf7174047c51f133861c4b71690b9087ca47f2d156e3986f",
+      "binding": {
+        "contract_versions": [],
+        "environment_digest": "sha256:5cf7f414e984795dd985d25da5a8ae9913f6a826c62206a8daa884832db7530f",
+        "evidence_refs": [
+          {
+            "digest": "sha256:c42c5d519b769f5a88bddc077e81921aa9a9cc73f690cb78771224cbec1d2212",
+            "id": "ec6e25d73aa9441599a43f6ac065e6e2",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/ec6e25d73aa9441599a43f6ac065e6e2/report.json"
+          }
+        ],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "implementation_verified",
+      "principal_id": "controller-verifier"
+    },
+    "project_id": "demo",
+    "seq": 44,
+    "task_id": "verify-c3e3ea27dba8b16aa96f6d08ac2c8610",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:23.195Z",
+    "payload": {
+      "artifact_digest": "sha256:0dc569ff5ca2ae29cf7174047c51f133861c4b71690b9087ca47f2d156e3986f",
+      "binding": {
+        "contract_versions": [],
+        "environment_digest": "sha256:5cf7f414e984795dd985d25da5a8ae9913f6a826c62206a8daa884832db7530f",
+        "evidence_refs": [
+          {
+            "digest": "sha256:c42c5d519b769f5a88bddc077e81921aa9a9cc73f690cb78771224cbec1d2212",
+            "id": "ec6e25d73aa9441599a43f6ac065e6e2",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/ec6e25d73aa9441599a43f6ac065e6e2/report.json"
+          }
+        ],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "implementation_verified",
+      "principal_id": "controller-verifier"
+    },
+    "project_id": "demo",
+    "seq": 45,
+    "task_id": "gamma",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": "bc4c3f3eb8024208b29104e9015cb7d3",
+    "occurred_at": "2026-11-16T16:33:23.281Z",
+    "payload": {
+      "generation": 1,
+      "identity": {
+        "attempt_id": "bc4c3f3eb8024208b29104e9015cb7d3",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 261,
+        "pid_namespace": "pid:[4026532593]",
+        "proc_pid": 261,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 261,
+        "start_time": "3922267",
+        "tracking": "linux_child_subreaper_v1"
+      }
+    },
+    "project_id": "demo",
+    "seq": 46,
+    "task_id": "verify-cdf6a8ab1bafac231449c29a554c54e0",
+    "type": "run_start_ack"
+  },
+  {
+    "attempt_id": "bc4c3f3eb8024208b29104e9015cb7d3",
+    "occurred_at": "2026-11-16T16:33:23.527Z",
+    "payload": {
+      "generation": 1,
+      "observation": {
+        "cancelled": false,
+        "exit_code": 0,
+        "identity": {
+          "attempt_id": "bc4c3f3eb8024208b29104e9015cb7d3",
+          "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+          "generation": 1,
+          "nonce": "<redacted>",
+          "pid": 261,
+          "pid_namespace": "pid:[4026532593]",
+          "proc_pid": 261,
+          "profile": "cooperative_native",
+          "sandbox_policy_digest": null,
+          "session_id": 261,
+          "start_time": "3922267",
+          "tracking": "linux_child_subreaper_v1"
+        },
+        "process_tree_terminated": true,
+        "timed_out": false
+      }
+    },
+    "project_id": "demo",
+    "seq": 47,
+    "task_id": "verify-cdf6a8ab1bafac231449c29a554c54e0",
+    "type": "run_exit_confirmed"
+  },
+  {
+    "attempt_id": "bc4c3f3eb8024208b29104e9015cb7d3",
+    "occurred_at": "2026-11-16T16:33:23.527Z",
+    "payload": {
+      "basis": "process_tree_exit",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 48,
+    "task_id": "verify-cdf6a8ab1bafac231449c29a554c54e0",
+    "type": "resource_released"
+  },
+  {
+    "attempt_id": "bc4c3f3eb8024208b29104e9015cb7d3",
+    "occurred_at": "2026-11-16T16:33:23.557Z",
+    "payload": {
+      "artifact_digest": "sha256:5b547f4a9a4efa423030eb1e39cd04859f5d6e6786c68117efa373e4f9d4d08a",
+      "commit": "90ec25a11e6303323f079b46ef238b6463f84cf6",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 49,
+    "task_id": "verify-cdf6a8ab1bafac231449c29a554c54e0",
+    "type": "candidate_submitted"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:23.562Z",
+    "payload": {
+      "artifact_digest": "sha256:5b547f4a9a4efa423030eb1e39cd04859f5d6e6786c68117efa373e4f9d4d08a",
+      "binding": {
+        "contract_versions": [],
+        "environment_digest": "sha256:cf0a28de3259e5d0e88887a1a086f760ae7eb6294273ccbc62c430020729766b",
+        "evidence_refs": [
+          {
+            "digest": "sha256:da32de47516ecf53e5d43aefec4fbc534b5a102e4acdb3414d269f892fd94997",
+            "id": "bc4c3f3eb8024208b29104e9015cb7d3",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/bc4c3f3eb8024208b29104e9015cb7d3/report.json"
+          }
+        ],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "implementation_verified",
+      "principal_id": "controller-verifier"
+    },
+    "project_id": "demo",
+    "seq": 50,
+    "task_id": "verify-cdf6a8ab1bafac231449c29a554c54e0",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:23.566Z",
+    "payload": {
+      "artifact_digest": "sha256:5b547f4a9a4efa423030eb1e39cd04859f5d6e6786c68117efa373e4f9d4d08a",
+      "binding": {
+        "contract_versions": [],
+        "environment_digest": "sha256:cf0a28de3259e5d0e88887a1a086f760ae7eb6294273ccbc62c430020729766b",
+        "evidence_refs": [
+          {
+            "digest": "sha256:da32de47516ecf53e5d43aefec4fbc534b5a102e4acdb3414d269f892fd94997",
+            "id": "bc4c3f3eb8024208b29104e9015cb7d3",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/bc4c3f3eb8024208b29104e9015cb7d3/report.json"
+          }
+        ],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "implementation_verified",
+      "principal_id": "controller-verifier"
+    },
+    "project_id": "demo",
+    "seq": 51,
+    "task_id": "alpha",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": "78154ab11cb947b0a4de43566c1b45e8",
+    "occurred_at": "2026-11-16T16:33:23.578Z",
+    "payload": {
+      "generation": 1,
+      "resources": [],
+      "scopes": [
+        {
+          "canonical": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/project/src/combined.py",
+          "key": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/project/src/combined.py",
+          "kind": "file",
+          "path": "src/combined.py"
+        }
+      ]
+    },
+    "project_id": "demo",
+    "seq": 52,
+    "task_id": "combined",
+    "type": "run_reserved"
+  },
+  {
+    "attempt_id": "78154ab11cb947b0a4de43566c1b45e8",
+    "occurred_at": "2026-11-16T16:33:23.585Z",
+    "payload": {
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 53,
+    "task_id": "combined",
+    "type": "launch_claimed"
+  },
+  {
+    "attempt_id": "78154ab11cb947b0a4de43566c1b45e8",
+    "occurred_at": "2026-11-16T16:33:23.803Z",
+    "payload": {
+      "generation": 1,
+      "identity": {
+        "attempt_id": "78154ab11cb947b0a4de43566c1b45e8",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 352,
+        "pid_namespace": "pid:[4026532593]",
+        "proc_pid": 352,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 352,
+        "start_time": "3922319",
+        "tracking": "linux_child_subreaper_v1"
+      }
+    },
+    "project_id": "demo",
+    "seq": 54,
+    "task_id": "combined",
+    "type": "run_start_ack"
+  },
+  {
+    "attempt_id": "78154ab11cb947b0a4de43566c1b45e8",
+    "occurred_at": "2026-11-16T16:33:23.919Z",
+    "payload": {
+      "generation": 1,
+      "observation": {
+        "cancelled": false,
+        "exit_code": 0,
+        "identity": {
+          "attempt_id": "78154ab11cb947b0a4de43566c1b45e8",
+          "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+          "generation": 1,
+          "nonce": "<redacted>",
+          "pid": 352,
+          "pid_namespace": "pid:[4026532593]",
+          "proc_pid": 352,
+          "profile": "cooperative_native",
+          "sandbox_policy_digest": null,
+          "session_id": 352,
+          "start_time": "3922319",
+          "tracking": "linux_child_subreaper_v1"
+        },
+        "process_tree_terminated": true,
+        "timed_out": false
+      }
+    },
+    "project_id": "demo",
+    "seq": 55,
+    "task_id": "combined",
+    "type": "run_exit_confirmed"
+  },
+  {
+    "attempt_id": "78154ab11cb947b0a4de43566c1b45e8",
+    "occurred_at": "2026-11-16T16:33:23.919Z",
+    "payload": {
+      "basis": "process_tree_exit",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 56,
+    "task_id": "combined",
+    "type": "resource_released"
+  },
+  {
+    "attempt_id": "78154ab11cb947b0a4de43566c1b45e8",
+    "occurred_at": "2026-11-16T16:33:23.949Z",
+    "payload": {
+      "artifact_digest": "sha256:f6f953b9905d77e38854be6ed4d9fe7ff625d1811402c3c85daddea844f7904d",
+      "commit": "91fbae3b78a0dcc0f93af64a95752d365bb50be8",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 57,
+    "task_id": "combined",
+    "type": "candidate_submitted"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:23.957Z",
+    "payload": {
+      "plan": {
+        "id": "demo-plan",
+        "revision": 1,
+        "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+      }
+    },
+    "project_id": "demo",
+    "seq": 58,
+    "task_id": "verify-db1ec6f1898c5db5b53c3ff46533b155",
+    "type": "task_registered"
+  },
+  {
+    "attempt_id": "51af71afefd44321b4e141ff19d2c5a3",
+    "occurred_at": "2026-11-16T16:33:23.965Z",
+    "payload": {
+      "generation": 1,
+      "resources": [],
+      "scopes": []
+    },
+    "project_id": "demo",
+    "seq": 59,
+    "task_id": "verify-db1ec6f1898c5db5b53c3ff46533b155",
+    "type": "run_reserved"
+  },
+  {
+    "attempt_id": "51af71afefd44321b4e141ff19d2c5a3",
+    "occurred_at": "2026-11-16T16:33:23.970Z",
+    "payload": {
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 60,
+    "task_id": "verify-db1ec6f1898c5db5b53c3ff46533b155",
+    "type": "launch_claimed"
+  },
+  {
+    "attempt_id": "51af71afefd44321b4e141ff19d2c5a3",
+    "occurred_at": "2026-11-16T16:33:24.112Z",
+    "payload": {
+      "generation": 1,
+      "identity": {
+        "attempt_id": "51af71afefd44321b4e141ff19d2c5a3",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 400,
+        "pid_namespace": "pid:[4026532593]",
+        "proc_pid": 400,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 400,
+        "start_time": "3922350",
+        "tracking": "linux_child_subreaper_v1"
+      }
+    },
+    "project_id": "demo",
+    "seq": 61,
+    "task_id": "verify-db1ec6f1898c5db5b53c3ff46533b155",
+    "type": "run_start_ack"
+  },
+  {
+    "attempt_id": "51af71afefd44321b4e141ff19d2c5a3",
+    "occurred_at": "2026-11-16T16:33:24.367Z",
+    "payload": {
+      "generation": 1,
+      "observation": {
+        "cancelled": false,
+        "exit_code": 0,
+        "identity": {
+          "attempt_id": "51af71afefd44321b4e141ff19d2c5a3",
+          "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+          "generation": 1,
+          "nonce": "<redacted>",
+          "pid": 400,
+          "pid_namespace": "pid:[4026532593]",
+          "proc_pid": 400,
+          "profile": "cooperative_native",
+          "sandbox_policy_digest": null,
+          "session_id": 400,
+          "start_time": "3922350",
+          "tracking": "linux_child_subreaper_v1"
+        },
+        "process_tree_terminated": true,
+        "timed_out": false
+      }
+    },
+    "project_id": "demo",
+    "seq": 62,
+    "task_id": "verify-db1ec6f1898c5db5b53c3ff46533b155",
+    "type": "run_exit_confirmed"
+  },
+  {
+    "attempt_id": "51af71afefd44321b4e141ff19d2c5a3",
+    "occurred_at": "2026-11-16T16:33:24.367Z",
+    "payload": {
+      "basis": "process_tree_exit",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 63,
+    "task_id": "verify-db1ec6f1898c5db5b53c3ff46533b155",
+    "type": "resource_released"
+  },
+  {
+    "attempt_id": "51af71afefd44321b4e141ff19d2c5a3",
+    "occurred_at": "2026-11-16T16:33:24.402Z",
+    "payload": {
+      "artifact_digest": "sha256:f6f953b9905d77e38854be6ed4d9fe7ff625d1811402c3c85daddea844f7904d",
+      "commit": "91fbae3b78a0dcc0f93af64a95752d365bb50be8",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 64,
+    "task_id": "verify-db1ec6f1898c5db5b53c3ff46533b155",
+    "type": "candidate_submitted"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:24.406Z",
+    "payload": {
+      "artifact_digest": "sha256:f6f953b9905d77e38854be6ed4d9fe7ff625d1811402c3c85daddea844f7904d",
+      "binding": {
+        "contract_versions": [],
+        "environment_digest": "sha256:6581107233eabbdc73a4b88e9b49ada2953a79cef4ca9748adf34a34f6f5be35",
+        "evidence_refs": [
+          {
+            "digest": "sha256:0026c07874178cf487d47614ce44b2592449ab8fbbbe2e97bce06222385849b3",
+            "id": "51af71afefd44321b4e141ff19d2c5a3",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/51af71afefd44321b4e141ff19d2c5a3/report.json"
+          }
+        ],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "implementation_verified",
+      "principal_id": "controller-verifier"
+    },
+    "project_id": "demo",
+    "seq": 65,
+    "task_id": "verify-db1ec6f1898c5db5b53c3ff46533b155",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:24.410Z",
+    "payload": {
+      "artifact_digest": "sha256:f6f953b9905d77e38854be6ed4d9fe7ff625d1811402c3c85daddea844f7904d",
+      "binding": {
+        "contract_versions": [],
+        "environment_digest": "sha256:6581107233eabbdc73a4b88e9b49ada2953a79cef4ca9748adf34a34f6f5be35",
+        "evidence_refs": [
+          {
+            "digest": "sha256:0026c07874178cf487d47614ce44b2592449ab8fbbbe2e97bce06222385849b3",
+            "id": "51af71afefd44321b4e141ff19d2c5a3",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/51af71afefd44321b4e141ff19d2c5a3/report.json"
+          }
+        ],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "implementation_verified",
+      "principal_id": "controller-verifier"
+    },
+    "project_id": "demo",
+    "seq": 66,
+    "task_id": "combined",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:24.565Z",
+    "payload": {
+      "plan": {
+        "id": "demo-plan",
+        "revision": 1,
+        "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+      }
+    },
+    "project_id": "demo",
+    "seq": 67,
+    "task_id": "integrate-b2b17e8927813c9cc9bd4af4121053a5",
+    "type": "task_registered"
+  },
+  {
+    "attempt_id": "a1cde0c067bf450eae5510b20bca8621",
+    "occurred_at": "2026-11-16T16:33:24.576Z",
+    "payload": {
+      "generation": 1,
+      "resources": [
+        "integration:e1633b00cb8efef9ed157d3c5d093fbc279e1396b8412832f2bb4340e55d9b44"
+      ],
+      "scopes": []
+    },
+    "project_id": "demo",
+    "seq": 68,
+    "task_id": "integrate-b2b17e8927813c9cc9bd4af4121053a5",
+    "type": "run_reserved"
+  },
+  {
+    "attempt_id": "a1cde0c067bf450eae5510b20bca8621",
+    "occurred_at": "2026-11-16T16:33:24.586Z",
+    "payload": {
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 69,
+    "task_id": "integrate-b2b17e8927813c9cc9bd4af4121053a5",
+    "type": "launch_claimed"
+  },
+  {
+    "attempt_id": "a1cde0c067bf450eae5510b20bca8621",
+    "occurred_at": "2026-11-16T16:33:24.708Z",
+    "payload": {
+      "generation": 1,
+      "identity": {
+        "attempt_id": "a1cde0c067bf450eae5510b20bca8621",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 522,
+        "pid_namespace": "pid:[4026532593]",
+        "proc_pid": 522,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 522,
+        "start_time": "3922410",
+        "tracking": "linux_child_subreaper_v1"
+      }
+    },
+    "project_id": "demo",
+    "seq": 70,
+    "task_id": "integrate-b2b17e8927813c9cc9bd4af4121053a5",
+    "type": "run_start_ack"
+  },
+  {
+    "attempt_id": "a1cde0c067bf450eae5510b20bca8621",
+    "occurred_at": "2026-11-16T16:33:25.357Z",
+    "payload": {
+      "generation": 1,
+      "observation": {
+        "cancelled": false,
+        "exit_code": 0,
+        "identity": {
+          "attempt_id": "a1cde0c067bf450eae5510b20bca8621",
+          "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+          "generation": 1,
+          "nonce": "<redacted>",
+          "pid": 522,
+          "pid_namespace": "pid:[4026532593]",
+          "proc_pid": 522,
+          "profile": "cooperative_native",
+          "sandbox_policy_digest": null,
+          "session_id": 522,
+          "start_time": "3922410",
+          "tracking": "linux_child_subreaper_v1"
+        },
+        "process_tree_terminated": true,
+        "timed_out": false
+      }
+    },
+    "project_id": "demo",
+    "seq": 71,
+    "task_id": "integrate-b2b17e8927813c9cc9bd4af4121053a5",
+    "type": "run_exit_confirmed"
+  },
+  {
+    "attempt_id": "a1cde0c067bf450eae5510b20bca8621",
+    "occurred_at": "2026-11-16T16:33:25.357Z",
+    "payload": {
+      "basis": "process_tree_exit",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 72,
+    "task_id": "integrate-b2b17e8927813c9cc9bd4af4121053a5",
+    "type": "resource_released"
+  },
+  {
+    "attempt_id": "a1cde0c067bf450eae5510b20bca8621",
+    "occurred_at": "2026-11-16T16:33:25.386Z",
+    "payload": {
+      "artifact_digest": "sha256:91a90bb5dc9e4dbc2f3b0cc8e2f637661afba966e699704f42d10f36eaf1125f",
+      "commit": "6062e6cf0f0be6f41199370f961ecf8b949882aa",
+      "generation": 1
+    },
+    "project_id": "demo",
+    "seq": 73,
+    "task_id": "integrate-b2b17e8927813c9cc9bd4af4121053a5",
+    "type": "candidate_submitted"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:25.390Z",
+    "payload": {
+      "artifact_digest": "sha256:91a90bb5dc9e4dbc2f3b0cc8e2f637661afba966e699704f42d10f36eaf1125f",
+      "binding": {
+        "contract_versions": [],
+        "environment_digest": "sha256:f360acb1d62a48ff7f650a07aedd0c87d29c42a4a61a8c615dda87cf1f3385d6",
+        "evidence_refs": [
+          {
+            "digest": "sha256:e493a3dd5428fc7515f97038e971d34db5e06c8de05a99de998e6b9902d85cdf",
+            "id": "a1cde0c067bf450eae5510b20bca8621",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/report.json"
+          }
+        ],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "implementation_verified",
+      "principal_id": "controller-verifier"
+    },
+    "project_id": "demo",
+    "seq": 74,
+    "task_id": "integrate-b2b17e8927813c9cc9bd4af4121053a5",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:25.394Z",
+    "payload": {
+      "plan": {
+        "id": "demo-plan",
+        "revision": 1,
+        "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+      },
+      "principal_id": "controller-integrator",
+      "publication_id": "a1cde0c067bf450eae5510b20bca8621"
+    },
+    "project_id": "demo",
+    "seq": 75,
+    "task_id": null,
+    "type": "publication_started"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:25.456Z",
+    "payload": {
+      "artifact_digest": "sha256:91a90bb5dc9e4dbc2f3b0cc8e2f637661afba966e699704f42d10f36eaf1125f",
+      "binding": {
+        "baseline_commit": "0ce59a136fc3d32f66e5048bc8e8b165c63b37b0",
+        "candidate_digest": "sha256:5b547f4a9a4efa423030eb1e39cd04859f5d6e6786c68117efa373e4f9d4d08a",
+        "contract_versions": [],
+        "environment_digest": "sha256:f360acb1d62a48ff7f650a07aedd0c87d29c42a4a61a8c615dda87cf1f3385d6",
+        "evidence_refs": [
+          {
+            "digest": "sha256:e493a3dd5428fc7515f97038e971d34db5e06c8de05a99de998e6b9902d85cdf",
+            "id": "a1cde0c067bf450eae5510b20bca8621",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/report.json"
+          }
+        ],
+        "integration_commit": "6062e6cf0f0be6f41199370f961ecf8b949882aa",
+        "integration_ref": "refs/heads/parallel-dev/integration",
+        "integration_repository": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/composition/ba168f6664a74858b3eeb1c8631a1305/combined.git",
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "integrated_verified",
+      "principal_id": "controller-integrator"
+    },
+    "project_id": "demo",
+    "seq": 76,
+    "task_id": "alpha",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:25.460Z",
+    "payload": {
+      "artifact_digest": "sha256:91a90bb5dc9e4dbc2f3b0cc8e2f637661afba966e699704f42d10f36eaf1125f",
+      "binding": {
+        "baseline_commit": "0ce59a136fc3d32f66e5048bc8e8b165c63b37b0",
+        "candidate_digest": "sha256:f74f52271eb34cd41288a83cf2121512ce97f49cd6ee8d3664ffecd7595ad25f",
+        "contract_versions": [],
+        "environment_digest": "sha256:f360acb1d62a48ff7f650a07aedd0c87d29c42a4a61a8c615dda87cf1f3385d6",
+        "evidence_refs": [
+          {
+            "digest": "sha256:e493a3dd5428fc7515f97038e971d34db5e06c8de05a99de998e6b9902d85cdf",
+            "id": "a1cde0c067bf450eae5510b20bca8621",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/report.json"
+          }
+        ],
+        "integration_commit": "6062e6cf0f0be6f41199370f961ecf8b949882aa",
+        "integration_ref": "refs/heads/parallel-dev/integration",
+        "integration_repository": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/composition/ba168f6664a74858b3eeb1c8631a1305/combined.git",
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "integrated_verified",
+      "principal_id": "controller-integrator"
+    },
+    "project_id": "demo",
+    "seq": 77,
+    "task_id": "beta",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:25.463Z",
+    "payload": {
+      "artifact_digest": "sha256:91a90bb5dc9e4dbc2f3b0cc8e2f637661afba966e699704f42d10f36eaf1125f",
+      "binding": {
+        "baseline_commit": "0ce59a136fc3d32f66e5048bc8e8b165c63b37b0",
+        "candidate_digest": "sha256:0dc569ff5ca2ae29cf7174047c51f133861c4b71690b9087ca47f2d156e3986f",
+        "contract_versions": [],
+        "environment_digest": "sha256:f360acb1d62a48ff7f650a07aedd0c87d29c42a4a61a8c615dda87cf1f3385d6",
+        "evidence_refs": [
+          {
+            "digest": "sha256:e493a3dd5428fc7515f97038e971d34db5e06c8de05a99de998e6b9902d85cdf",
+            "id": "a1cde0c067bf450eae5510b20bca8621",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/report.json"
+          }
+        ],
+        "integration_commit": "6062e6cf0f0be6f41199370f961ecf8b949882aa",
+        "integration_ref": "refs/heads/parallel-dev/integration",
+        "integration_repository": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/composition/ba168f6664a74858b3eeb1c8631a1305/combined.git",
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "integrated_verified",
+      "principal_id": "controller-integrator"
+    },
+    "project_id": "demo",
+    "seq": 78,
+    "task_id": "gamma",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:25.468Z",
+    "payload": {
+      "artifact_digest": "sha256:91a90bb5dc9e4dbc2f3b0cc8e2f637661afba966e699704f42d10f36eaf1125f",
+      "binding": {
+        "baseline_commit": "0ce59a136fc3d32f66e5048bc8e8b165c63b37b0",
+        "candidate_digest": "sha256:f6f953b9905d77e38854be6ed4d9fe7ff625d1811402c3c85daddea844f7904d",
+        "contract_versions": [],
+        "environment_digest": "sha256:f360acb1d62a48ff7f650a07aedd0c87d29c42a4a61a8c615dda87cf1f3385d6",
+        "evidence_refs": [
+          {
+            "digest": "sha256:e493a3dd5428fc7515f97038e971d34db5e06c8de05a99de998e6b9902d85cdf",
+            "id": "a1cde0c067bf450eae5510b20bca8621",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/report.json"
+          }
+        ],
+        "integration_commit": "6062e6cf0f0be6f41199370f961ecf8b949882aa",
+        "integration_ref": "refs/heads/parallel-dev/integration",
+        "integration_repository": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/composition/ba168f6664a74858b3eeb1c8631a1305/combined.git",
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "integrated_verified",
+      "principal_id": "controller-integrator"
+    },
+    "project_id": "demo",
+    "seq": 79,
+    "task_id": "combined",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:25.474Z",
+    "payload": {
+      "artifact_digest": "sha256:91a90bb5dc9e4dbc2f3b0cc8e2f637661afba966e699704f42d10f36eaf1125f",
+      "binding": {
+        "candidate_digest": "sha256:f74f52271eb34cd41288a83cf2121512ce97f49cd6ee8d3664ffecd7595ad25f",
+        "contract_versions": [],
+        "environment_digest": "sha256:f360acb1d62a48ff7f650a07aedd0c87d29c42a4a61a8c615dda87cf1f3385d6",
+        "evidence_refs": [
+          {
+            "digest": "sha256:e493a3dd5428fc7515f97038e971d34db5e06c8de05a99de998e6b9902d85cdf",
+            "id": "a1cde0c067bf450eae5510b20bca8621",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/report.json"
+          }
+        ],
+        "integration_commit": "6062e6cf0f0be6f41199370f961ecf8b949882aa",
+        "integration_ref": "refs/heads/parallel-dev/integration",
+        "integration_repository": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/composition/ba168f6664a74858b3eeb1c8631a1305/combined.git",
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "integrated_verified",
+      "principal_id": "controller-integrator"
+    },
+    "project_id": "demo",
+    "seq": 80,
+    "task_id": "verify-8560805161a8e0d4c6c64ca6b7e0cce8",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:25.478Z",
+    "payload": {
+      "artifact_digest": "sha256:91a90bb5dc9e4dbc2f3b0cc8e2f637661afba966e699704f42d10f36eaf1125f",
+      "binding": {
+        "candidate_digest": "sha256:0dc569ff5ca2ae29cf7174047c51f133861c4b71690b9087ca47f2d156e3986f",
+        "contract_versions": [],
+        "environment_digest": "sha256:f360acb1d62a48ff7f650a07aedd0c87d29c42a4a61a8c615dda87cf1f3385d6",
+        "evidence_refs": [
+          {
+            "digest": "sha256:e493a3dd5428fc7515f97038e971d34db5e06c8de05a99de998e6b9902d85cdf",
+            "id": "a1cde0c067bf450eae5510b20bca8621",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/report.json"
+          }
+        ],
+        "integration_commit": "6062e6cf0f0be6f41199370f961ecf8b949882aa",
+        "integration_ref": "refs/heads/parallel-dev/integration",
+        "integration_repository": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/composition/ba168f6664a74858b3eeb1c8631a1305/combined.git",
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "integrated_verified",
+      "principal_id": "controller-integrator"
+    },
+    "project_id": "demo",
+    "seq": 81,
+    "task_id": "verify-c3e3ea27dba8b16aa96f6d08ac2c8610",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:25.481Z",
+    "payload": {
+      "artifact_digest": "sha256:91a90bb5dc9e4dbc2f3b0cc8e2f637661afba966e699704f42d10f36eaf1125f",
+      "binding": {
+        "candidate_digest": "sha256:5b547f4a9a4efa423030eb1e39cd04859f5d6e6786c68117efa373e4f9d4d08a",
+        "contract_versions": [],
+        "environment_digest": "sha256:f360acb1d62a48ff7f650a07aedd0c87d29c42a4a61a8c615dda87cf1f3385d6",
+        "evidence_refs": [
+          {
+            "digest": "sha256:e493a3dd5428fc7515f97038e971d34db5e06c8de05a99de998e6b9902d85cdf",
+            "id": "a1cde0c067bf450eae5510b20bca8621",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/report.json"
+          }
+        ],
+        "integration_commit": "6062e6cf0f0be6f41199370f961ecf8b949882aa",
+        "integration_ref": "refs/heads/parallel-dev/integration",
+        "integration_repository": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/composition/ba168f6664a74858b3eeb1c8631a1305/combined.git",
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "integrated_verified",
+      "principal_id": "controller-integrator"
+    },
+    "project_id": "demo",
+    "seq": 82,
+    "task_id": "verify-cdf6a8ab1bafac231449c29a554c54e0",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:25.485Z",
+    "payload": {
+      "artifact_digest": "sha256:91a90bb5dc9e4dbc2f3b0cc8e2f637661afba966e699704f42d10f36eaf1125f",
+      "binding": {
+        "candidate_digest": "sha256:f6f953b9905d77e38854be6ed4d9fe7ff625d1811402c3c85daddea844f7904d",
+        "contract_versions": [],
+        "environment_digest": "sha256:f360acb1d62a48ff7f650a07aedd0c87d29c42a4a61a8c615dda87cf1f3385d6",
+        "evidence_refs": [
+          {
+            "digest": "sha256:e493a3dd5428fc7515f97038e971d34db5e06c8de05a99de998e6b9902d85cdf",
+            "id": "a1cde0c067bf450eae5510b20bca8621",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/report.json"
+          }
+        ],
+        "integration_commit": "6062e6cf0f0be6f41199370f961ecf8b949882aa",
+        "integration_ref": "refs/heads/parallel-dev/integration",
+        "integration_repository": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/composition/ba168f6664a74858b3eeb1c8631a1305/combined.git",
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "integrated_verified",
+      "principal_id": "controller-integrator"
+    },
+    "project_id": "demo",
+    "seq": 83,
+    "task_id": "verify-db1ec6f1898c5db5b53c3ff46533b155",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:25.488Z",
+    "payload": {
+      "artifact_digest": "sha256:91a90bb5dc9e4dbc2f3b0cc8e2f637661afba966e699704f42d10f36eaf1125f",
+      "binding": {
+        "candidate_digest": "sha256:91a90bb5dc9e4dbc2f3b0cc8e2f637661afba966e699704f42d10f36eaf1125f",
+        "contract_versions": [],
+        "environment_digest": "sha256:f360acb1d62a48ff7f650a07aedd0c87d29c42a4a61a8c615dda87cf1f3385d6",
+        "evidence_refs": [
+          {
+            "digest": "sha256:e493a3dd5428fc7515f97038e971d34db5e06c8de05a99de998e6b9902d85cdf",
+            "id": "a1cde0c067bf450eae5510b20bca8621",
+            "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/report.json"
+          }
+        ],
+        "integration_commit": "6062e6cf0f0be6f41199370f961ecf8b949882aa",
+        "integration_ref": "refs/heads/parallel-dev/integration",
+        "integration_repository": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/composition/ba168f6664a74858b3eeb1c8631a1305/combined.git",
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "gate": "integrated_verified",
+      "principal_id": "controller-integrator"
+    },
+    "project_id": "demo",
+    "seq": 84,
+    "task_id": "integrate-b2b17e8927813c9cc9bd4af4121053a5",
+    "type": "gate_recorded"
+  },
+  {
+    "attempt_id": null,
+    "occurred_at": "2026-11-16T16:33:25.492Z",
+    "payload": {
+      "plan": {
+        "id": "demo-plan",
+        "revision": 1,
+        "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+      },
+      "principal_id": "controller-integrator",
+      "publication_id": "a1cde0c067bf450eae5510b20bca8621"
+    },
+    "project_id": "demo",
+    "seq": 85,
+    "task_id": null,
+    "type": "publication_completed"
+  }
+]

@@ -1,0 +1,2000 @@
+[
+  {
+    "manifest": {
+      "artifact": {
+        "artifact_digest": "sha256:0dc569ff5ca2ae29cf7174047c51f133861c4b71690b9087ca47f2d156e3986f",
+        "commit": "edee985d9e2d82e702172dd40a3e5f663b17bcdb",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.gamma import value; assert value() == 3"
+          ],
+          "criterion": "The approved function returns its specified value.",
+          "cwd": ".",
+          "id": "gamma-value",
+          "required": true,
+          "timeout_ms": 5000
+        }
+      ],
+      "log_dir": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/0766ad39ab0c47568afff762e3cb5ea3/logs",
+      "result_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/0766ad39ab0c47568afff762e3cb5ea3/report.json",
+      "workspace": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/0766ad39ab0c47568afff762e3cb5ea3/worktree"
+    },
+    "manifest_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/0766ad39ab0c47568afff762e3cb5ea3/manifest.json",
+    "report": {
+      "artifact": {
+        "artifact_digest": "sha256:0dc569ff5ca2ae29cf7174047c51f133861c4b71690b9087ca47f2d156e3986f",
+        "commit": "edee985d9e2d82e702172dd40a3e5f663b17bcdb",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "blockers": [],
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.gamma import value; assert value() == 3"
+          ],
+          "cancelled": false,
+          "criterion": "The approved function returns its specified value.",
+          "cwd": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/0766ad39ab0c47568afff762e3cb5ea3/worktree",
+          "ended_at": "2026-11-16T16:33:24.002Z",
+          "executable": {
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          "executed_argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-c",
+            "from src.gamma import value; assert value() == 3"
+          ],
+          "exit_code": 0,
+          "id": "gamma-value",
+          "logs": [
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/0766ad39ab0c47568afff762e3cb5ea3/logs/gamma-value.stdout.log",
+              "stream": "stdout",
+              "truncated": false
+            },
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/0766ad39ab0c47568afff762e3cb5ea3/logs/gamma-value.stderr.log",
+              "stream": "stderr",
+              "truncated": false
+            }
+          ],
+          "process_identity": {
+            "attempt_id": "check-8b7a6c61f9f0459d84cb4206fb348f86",
+            "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+            "generation": 1,
+            "nonce": "<redacted>",
+            "pid": 322,
+            "pid_namespace": "pid:[4026532523]",
+            "proc_pid": 322,
+            "profile": "controlled_executor",
+            "sandbox_policy_digest": "sha256:33b3dda70e30d9f36b20e10b91caf3c2bc084d838a9d3caf51552e7cdfb21f3e",
+            "session_id": 322,
+            "start_time": "3922330",
+            "tracking": "linux_child_subreaper_v1"
+          },
+          "process_tree_terminated": true,
+          "required": true,
+          "sandbox": {
+            "actual": {
+              "controller_paths_hidden": true,
+              "cwd": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/0766ad39ab0c47568afff762e3cb5ea3/worktree",
+              "mount_flags": {
+                "/": true,
+                "/dev": false,
+                "/etc/group": true,
+                "/etc/ld.so.cache": true,
+                "/etc/localtime": true,
+                "/etc/passwd": true,
+                "/home/xiaolvji": false,
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/python": true,
+                "/proc": true,
+                "/tmp": false,
+                "/usr/bin": true,
+                "/usr/lib": true,
+                "/usr/lib64": true,
+                "/usr/libexec": true,
+                "/usr/local/bin": true,
+                "/usr/local/lib": true,
+                "/usr/local/libexec": true,
+                "/usr/sbin": true,
+                "/usr/share/git-core": true,
+                "/usr/share/locale": true,
+                "/usr/share/zoneinfo": true,
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/0766ad39ab0c47568afff762e3cb5ea3/worktree": true,
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/0766ad39ab0c47568afff762e3cb5ea3/worktree/.git": true
+              },
+              "mountinfo_sha256": "ef4c10c25c3c127e3a5003d582e2ce3fa5e59cae88240504e89afac20d263db4",
+              "namespaces": {
+                "ipc": "ipc:[4026532451]",
+                "mnt": "mnt:[4026532448]",
+                "net": "net:[4026532237]",
+                "pid": "pid:[4026532452]",
+                "user": "user:[4026532453]",
+                "uts": "uts:[4026532449]"
+              },
+              "pid": 2,
+              "ppid": 1,
+              "status": {
+                "CapAmb": "0000000000000000",
+                "CapBnd": "0000000000000000",
+                "CapEff": "0000000000000000",
+                "CapInh": "0000000000000000",
+                "CapPrm": "0000000000000000",
+                "NoNewPrivs": "1",
+                "Seccomp": "2"
+              }
+            },
+            "attested": true,
+            "backend": "linux-bubblewrap-offline-v1",
+            "bootstrap_identity": {
+              "pid": 333,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 333,
+              "proc_ppid": 332,
+              "session_id": 332,
+              "start_time": "3922337",
+              "state": "S"
+            },
+            "init_identity": {
+              "pid": 332,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 332,
+              "proc_ppid": 331,
+              "session_id": 332,
+              "start_time": "3922337",
+              "state": "S"
+            },
+            "launcher_identity": {
+              "pid": 331,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 331,
+              "proc_ppid": 322,
+              "session_id": 331,
+              "start_time": "3922337",
+              "state": "R"
+            },
+            "policy": {
+              "architecture": "x86_64",
+              "home": "/home/xiaolvji",
+              "namespaces": [
+                "user",
+                "pid",
+                "mnt",
+                "net",
+                "ipc",
+                "uts"
+              ],
+              "network": "none",
+              "readonly_mounts": [
+                "/usr/bin",
+                "/usr/sbin",
+                "/usr/lib",
+                "/usr/lib64",
+                "/usr/libexec",
+                "/usr/local/bin",
+                "/usr/local/lib",
+                "/usr/local/libexec",
+                "/usr/share/git-core",
+                "/usr/share/locale",
+                "/usr/share/zoneinfo",
+                "/etc/ld.so.cache",
+                "/etc/localtime",
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/python",
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/0766ad39ab0c47568afff762e3cb5ea3/worktree",
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/0766ad39ab0c47568afff762e3cb5ea3/worktree/.git",
+                "/",
+                "/proc",
+                "/etc/passwd",
+                "/etc/group"
+              ],
+              "readonly_paths": [],
+              "seccomp": "xlj-offline-v1",
+              "version": 1,
+              "workspace": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/0766ad39ab0c47568afff762e3cb5ea3/worktree",
+              "writable_mounts": [
+                "/home/xiaolvji",
+                "/tmp",
+                "/dev"
+              ],
+              "writable_paths": [],
+              "write_scope": []
+            },
+            "policy_digest": "sha256:33b3dda70e30d9f36b20e10b91caf3c2bc084d838a9d3caf51552e7cdfb21f3e",
+            "tool_versions": {
+              "bwrap": "bubblewrap 0.12.0",
+              "unshare": "unshare from util-linux 2.41.5"
+            }
+          },
+          "started_at": "2026-11-16T16:33:23.796Z",
+          "status": "passed",
+          "timed_out": false,
+          "timeout_ms": 5000
+        }
+      ],
+      "ended_at": "2026-11-16T16:33:24.017Z",
+      "environment": {
+        "environment_values_recorded": false,
+        "executables": [
+          {
+            "check_id": "gamma-value",
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          }
+        ],
+        "execution_profile": "controlled_executor",
+        "hermetic_environment": false,
+        "machine": "x86_64",
+        "platform": "Linux",
+        "python_bytecode_disabled": true,
+        "python_version": "3.12.14",
+        "release": "6.18.57",
+        "runner_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "runner_executable_digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "source_scratch_directory": null,
+        "temp_and_cache": "private_per_check_sandbox"
+      },
+      "environment_digest": "sha256:fd919d713101cf977f0b736f2a823cac704aeee8a92ed98277ca114a27160182",
+      "execution_profile": "controlled_executor",
+      "manifest_digest": "sha256:5808fcb154fbc7053a14859c994f95b7606405706be6a3d7146d704f87803184",
+      "schema_version": 1,
+      "source_after_digest": "sha256:1afda78d55efa3e748aad9d64642ab0458c22c0accfaabf88876e16ca91a6c06",
+      "source_before_digest": "sha256:1afda78d55efa3e748aad9d64642ab0458c22c0accfaabf88876e16ca91a6c06",
+      "source_unchanged": true,
+      "started_at": "2026-11-16T16:33:23.766Z",
+      "status": "passed"
+    },
+    "report_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/0766ad39ab0c47568afff762e3cb5ea3/report.json"
+  },
+  {
+    "manifest": {
+      "artifact": {
+        "artifact_digest": "sha256:5b547f4a9a4efa423030eb1e39cd04859f5d6e6786c68117efa373e4f9d4d08a",
+        "commit": "7a06a5f8d15d9df7d4eb29284b5ff4f3f892b8bc",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.alpha import value; assert value() == 1"
+          ],
+          "criterion": "The approved function returns its specified value.",
+          "cwd": ".",
+          "id": "alpha-value",
+          "required": true,
+          "timeout_ms": 5000
+        }
+      ],
+      "log_dir": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/7171692c65e04e36839e7527567eee14/logs",
+      "result_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/7171692c65e04e36839e7527567eee14/report.json",
+      "workspace": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/7171692c65e04e36839e7527567eee14/worktree"
+    },
+    "manifest_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/7171692c65e04e36839e7527567eee14/manifest.json",
+    "report": {
+      "artifact": {
+        "artifact_digest": "sha256:5b547f4a9a4efa423030eb1e39cd04859f5d6e6786c68117efa373e4f9d4d08a",
+        "commit": "7a06a5f8d15d9df7d4eb29284b5ff4f3f892b8bc",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "blockers": [],
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.alpha import value; assert value() == 1"
+          ],
+          "cancelled": false,
+          "criterion": "The approved function returns its specified value.",
+          "cwd": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/7171692c65e04e36839e7527567eee14/worktree",
+          "ended_at": "2026-11-16T16:33:24.047Z",
+          "executable": {
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          "executed_argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-c",
+            "from src.alpha import value; assert value() == 1"
+          ],
+          "exit_code": 0,
+          "id": "alpha-value",
+          "logs": [
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/7171692c65e04e36839e7527567eee14/logs/alpha-value.stdout.log",
+              "stream": "stdout",
+              "truncated": false
+            },
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/7171692c65e04e36839e7527567eee14/logs/alpha-value.stderr.log",
+              "stream": "stderr",
+              "truncated": false
+            }
+          ],
+          "process_identity": {
+            "attempt_id": "check-a0249cac905e47e39cb58780ac3e3b09",
+            "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+            "generation": 1,
+            "nonce": "<redacted>",
+            "pid": 328,
+            "pid_namespace": "pid:[4026532523]",
+            "proc_pid": 328,
+            "profile": "controlled_executor",
+            "sandbox_policy_digest": "sha256:33710ed08b5542796aec0734d9596ebf1221689e4fabf2faea23e7e6907c8942",
+            "session_id": 328,
+            "start_time": "3922334",
+            "tracking": "linux_child_subreaper_v1"
+          },
+          "process_tree_terminated": true,
+          "required": true,
+          "sandbox": {
+            "actual": {
+              "controller_paths_hidden": true,
+              "cwd": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/7171692c65e04e36839e7527567eee14/worktree",
+              "mount_flags": {
+                "/": true,
+                "/dev": false,
+                "/etc/group": true,
+                "/etc/ld.so.cache": true,
+                "/etc/localtime": true,
+                "/etc/passwd": true,
+                "/home/xiaolvji": false,
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/python": true,
+                "/proc": true,
+                "/tmp": false,
+                "/usr/bin": true,
+                "/usr/lib": true,
+                "/usr/lib64": true,
+                "/usr/libexec": true,
+                "/usr/local/bin": true,
+                "/usr/local/lib": true,
+                "/usr/local/libexec": true,
+                "/usr/sbin": true,
+                "/usr/share/git-core": true,
+                "/usr/share/locale": true,
+                "/usr/share/zoneinfo": true,
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/7171692c65e04e36839e7527567eee14/worktree": true,
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/7171692c65e04e36839e7527567eee14/worktree/.git": true
+              },
+              "mountinfo_sha256": "8f73da3a6dba0df32ae0876fc2b5e3a1b0ca84e343e0ed3f87c75a7e9921df25",
+              "namespaces": {
+                "ipc": "ipc:[4026532458]",
+                "mnt": "mnt:[4026532455]",
+                "net": "net:[4026532246]",
+                "pid": "pid:[4026532459]",
+                "user": "user:[4026532460]",
+                "uts": "uts:[4026532457]"
+              },
+              "pid": 2,
+              "ppid": 1,
+              "status": {
+                "CapAmb": "0000000000000000",
+                "CapBnd": "0000000000000000",
+                "CapEff": "0000000000000000",
+                "CapInh": "0000000000000000",
+                "CapPrm": "0000000000000000",
+                "NoNewPrivs": "1",
+                "Seccomp": "2"
+              }
+            },
+            "attested": true,
+            "backend": "linux-bubblewrap-offline-v1",
+            "bootstrap_identity": {
+              "pid": 338,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 338,
+              "proc_ppid": 337,
+              "session_id": 337,
+              "start_time": "3922342",
+              "state": "S"
+            },
+            "init_identity": {
+              "pid": 337,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 337,
+              "proc_ppid": 336,
+              "session_id": 337,
+              "start_time": "3922341",
+              "state": "S"
+            },
+            "launcher_identity": {
+              "pid": 336,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 336,
+              "proc_ppid": 328,
+              "session_id": 336,
+              "start_time": "3922341",
+              "state": "R"
+            },
+            "policy": {
+              "architecture": "x86_64",
+              "home": "/home/xiaolvji",
+              "namespaces": [
+                "user",
+                "pid",
+                "mnt",
+                "net",
+                "ipc",
+                "uts"
+              ],
+              "network": "none",
+              "readonly_mounts": [
+                "/usr/bin",
+                "/usr/sbin",
+                "/usr/lib",
+                "/usr/lib64",
+                "/usr/libexec",
+                "/usr/local/bin",
+                "/usr/local/lib",
+                "/usr/local/libexec",
+                "/usr/share/git-core",
+                "/usr/share/locale",
+                "/usr/share/zoneinfo",
+                "/etc/ld.so.cache",
+                "/etc/localtime",
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/python",
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/7171692c65e04e36839e7527567eee14/worktree",
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/7171692c65e04e36839e7527567eee14/worktree/.git",
+                "/",
+                "/proc",
+                "/etc/passwd",
+                "/etc/group"
+              ],
+              "readonly_paths": [],
+              "seccomp": "xlj-offline-v1",
+              "version": 1,
+              "workspace": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/7171692c65e04e36839e7527567eee14/worktree",
+              "writable_mounts": [
+                "/home/xiaolvji",
+                "/tmp",
+                "/dev"
+              ],
+              "writable_paths": [],
+              "write_scope": []
+            },
+            "policy_digest": "sha256:33710ed08b5542796aec0734d9596ebf1221689e4fabf2faea23e7e6907c8942",
+            "tool_versions": {
+              "bwrap": "bubblewrap 0.12.0",
+              "unshare": "unshare from util-linux 2.41.5"
+            }
+          },
+          "started_at": "2026-11-16T16:33:23.852Z",
+          "status": "passed",
+          "timed_out": false,
+          "timeout_ms": 5000
+        }
+      ],
+      "ended_at": "2026-11-16T16:33:24.061Z",
+      "environment": {
+        "environment_values_recorded": false,
+        "executables": [
+          {
+            "check_id": "alpha-value",
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          }
+        ],
+        "execution_profile": "controlled_executor",
+        "hermetic_environment": false,
+        "machine": "x86_64",
+        "platform": "Linux",
+        "python_bytecode_disabled": true,
+        "python_version": "3.12.14",
+        "release": "6.18.57",
+        "runner_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "runner_executable_digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "source_scratch_directory": null,
+        "temp_and_cache": "private_per_check_sandbox"
+      },
+      "environment_digest": "sha256:b9e4be33ea84548ab9641921f1fd365c3510062e3a5f78b1b411811f2c215546",
+      "execution_profile": "controlled_executor",
+      "manifest_digest": "sha256:35c25956c840f57add3ff23675800f75281a3814b59faa9f727ba705effeba9d",
+      "schema_version": 1,
+      "source_after_digest": "sha256:d4f7fb18eadfdc18e616e29b651a2fa3b6ba8a1c6a7c086c3d6771c88a9f3e67",
+      "source_before_digest": "sha256:d4f7fb18eadfdc18e616e29b651a2fa3b6ba8a1c6a7c086c3d6771c88a9f3e67",
+      "source_unchanged": true,
+      "started_at": "2026-11-16T16:33:23.823Z",
+      "status": "passed"
+    },
+    "report_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/7171692c65e04e36839e7527567eee14/report.json"
+  },
+  {
+    "manifest": {
+      "artifact": {
+        "artifact_digest": "sha256:f74f52271eb34cd41288a83cf2121512ce97f49cd6ee8d3664ffecd7595ad25f",
+        "commit": "679c8aa5bc3adc968ada7832daee8ed9a06ae699",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.beta import value; assert value() == 2"
+          ],
+          "criterion": "The approved function returns its specified value.",
+          "cwd": ".",
+          "id": "beta-value",
+          "required": true,
+          "timeout_ms": 5000
+        }
+      ],
+      "log_dir": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/bb53eec1dc0045eda05124d63d80f72c/logs",
+      "result_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/bb53eec1dc0045eda05124d63d80f72c/report.json",
+      "workspace": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/bb53eec1dc0045eda05124d63d80f72c/worktree"
+    },
+    "manifest_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/bb53eec1dc0045eda05124d63d80f72c/manifest.json",
+    "report": {
+      "artifact": {
+        "artifact_digest": "sha256:f74f52271eb34cd41288a83cf2121512ce97f49cd6ee8d3664ffecd7595ad25f",
+        "commit": "679c8aa5bc3adc968ada7832daee8ed9a06ae699",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "blockers": [],
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.beta import value; assert value() == 2"
+          ],
+          "cancelled": false,
+          "criterion": "The approved function returns its specified value.",
+          "cwd": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/bb53eec1dc0045eda05124d63d80f72c/worktree",
+          "ended_at": "2026-11-16T16:33:23.432Z",
+          "executable": {
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          "executed_argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-c",
+            "from src.beta import value; assert value() == 2"
+          ],
+          "exit_code": 0,
+          "id": "beta-value",
+          "logs": [
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/bb53eec1dc0045eda05124d63d80f72c/logs/beta-value.stdout.log",
+              "stream": "stdout",
+              "truncated": false
+            },
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/bb53eec1dc0045eda05124d63d80f72c/logs/beta-value.stderr.log",
+              "stream": "stderr",
+              "truncated": false
+            }
+          ],
+          "process_identity": {
+            "attempt_id": "check-03f6358c95064ab6b3d79fc536d8fe55",
+            "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+            "generation": 1,
+            "nonce": "<redacted>",
+            "pid": 208,
+            "pid_namespace": "pid:[4026532523]",
+            "proc_pid": 208,
+            "profile": "controlled_executor",
+            "sandbox_policy_digest": "sha256:217aa7d2423c6b1104254be9533e099c0e1af6255d9f0f713811c799671b354e",
+            "session_id": 208,
+            "start_time": "3922270",
+            "tracking": "linux_child_subreaper_v1"
+          },
+          "process_tree_terminated": true,
+          "required": true,
+          "sandbox": {
+            "actual": {
+              "controller_paths_hidden": true,
+              "cwd": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/bb53eec1dc0045eda05124d63d80f72c/worktree",
+              "mount_flags": {
+                "/": true,
+                "/dev": false,
+                "/etc/group": true,
+                "/etc/ld.so.cache": true,
+                "/etc/localtime": true,
+                "/etc/passwd": true,
+                "/home/xiaolvji": false,
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/python": true,
+                "/proc": true,
+                "/tmp": false,
+                "/usr/bin": true,
+                "/usr/lib": true,
+                "/usr/lib64": true,
+                "/usr/libexec": true,
+                "/usr/local/bin": true,
+                "/usr/local/lib": true,
+                "/usr/local/libexec": true,
+                "/usr/sbin": true,
+                "/usr/share/git-core": true,
+                "/usr/share/locale": true,
+                "/usr/share/zoneinfo": true,
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/bb53eec1dc0045eda05124d63d80f72c/worktree": true,
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/bb53eec1dc0045eda05124d63d80f72c/worktree/.git": true
+              },
+              "mountinfo_sha256": "51428c020755a17f1d41347c698fd120c4c331adb1a6ee0fcf0f063dd47225a0",
+              "namespaces": {
+                "ipc": "ipc:[4026532513]",
+                "mnt": "mnt:[4026532505]",
+                "net": "net:[4026532255]",
+                "pid": "pid:[4026532514]",
+                "user": "user:[4026532515]",
+                "uts": "uts:[4026532511]"
+              },
+              "pid": 2,
+              "ppid": 1,
+              "status": {
+                "CapAmb": "0000000000000000",
+                "CapBnd": "0000000000000000",
+                "CapEff": "0000000000000000",
+                "CapInh": "0000000000000000",
+                "CapPrm": "0000000000000000",
+                "NoNewPrivs": "1",
+                "Seccomp": "2"
+              }
+            },
+            "attested": true,
+            "backend": "linux-bubblewrap-offline-v1",
+            "bootstrap_identity": {
+              "pid": 213,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 213,
+              "proc_ppid": 212,
+              "session_id": 212,
+              "start_time": "3922277",
+              "state": "S"
+            },
+            "init_identity": {
+              "pid": 212,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 212,
+              "proc_ppid": 211,
+              "session_id": 212,
+              "start_time": "3922277",
+              "state": "S"
+            },
+            "launcher_identity": {
+              "pid": 211,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 211,
+              "proc_ppid": 208,
+              "session_id": 211,
+              "start_time": "3922277",
+              "state": "R"
+            },
+            "policy": {
+              "architecture": "x86_64",
+              "home": "/home/xiaolvji",
+              "namespaces": [
+                "user",
+                "pid",
+                "mnt",
+                "net",
+                "ipc",
+                "uts"
+              ],
+              "network": "none",
+              "readonly_mounts": [
+                "/usr/bin",
+                "/usr/sbin",
+                "/usr/lib",
+                "/usr/lib64",
+                "/usr/libexec",
+                "/usr/local/bin",
+                "/usr/local/lib",
+                "/usr/local/libexec",
+                "/usr/share/git-core",
+                "/usr/share/locale",
+                "/usr/share/zoneinfo",
+                "/etc/ld.so.cache",
+                "/etc/localtime",
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/python",
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/bb53eec1dc0045eda05124d63d80f72c/worktree",
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/bb53eec1dc0045eda05124d63d80f72c/worktree/.git",
+                "/",
+                "/proc",
+                "/etc/passwd",
+                "/etc/group"
+              ],
+              "readonly_paths": [],
+              "seccomp": "xlj-offline-v1",
+              "version": 1,
+              "workspace": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/bb53eec1dc0045eda05124d63d80f72c/worktree",
+              "writable_mounts": [
+                "/home/xiaolvji",
+                "/tmp",
+                "/dev"
+              ],
+              "writable_paths": [],
+              "write_scope": []
+            },
+            "policy_digest": "sha256:217aa7d2423c6b1104254be9533e099c0e1af6255d9f0f713811c799671b354e",
+            "tool_versions": {
+              "bwrap": "bubblewrap 0.12.0",
+              "unshare": "unshare from util-linux 2.41.5"
+            }
+          },
+          "started_at": "2026-11-16T16:33:23.211Z",
+          "status": "passed",
+          "timed_out": false,
+          "timeout_ms": 5000
+        }
+      ],
+      "ended_at": "2026-11-16T16:33:23.447Z",
+      "environment": {
+        "environment_values_recorded": false,
+        "executables": [
+          {
+            "check_id": "beta-value",
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          }
+        ],
+        "execution_profile": "controlled_executor",
+        "hermetic_environment": false,
+        "machine": "x86_64",
+        "platform": "Linux",
+        "python_bytecode_disabled": true,
+        "python_version": "3.12.14",
+        "release": "6.18.57",
+        "runner_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "runner_executable_digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "source_scratch_directory": null,
+        "temp_and_cache": "private_per_check_sandbox"
+      },
+      "environment_digest": "sha256:9cb50c405c601080cdc0de6e438be72eac8e3fe91ddb1908b6d6cb5a6b758f7f",
+      "execution_profile": "controlled_executor",
+      "manifest_digest": "sha256:90296d254283681be7bddbc0990d06bf8720f58be6b977eacd7ccedb94f3d6f7",
+      "schema_version": 1,
+      "source_after_digest": "sha256:0699d769d964bb016d316ab86816f4ccb1d459e2525aae8f6e8111f78460c0c3",
+      "source_before_digest": "sha256:0699d769d964bb016d316ab86816f4ccb1d459e2525aae8f6e8111f78460c0c3",
+      "source_unchanged": true,
+      "started_at": "2026-11-16T16:33:23.181Z",
+      "status": "passed"
+    },
+    "report_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/bb53eec1dc0045eda05124d63d80f72c/report.json"
+  },
+  {
+    "manifest": {
+      "artifact": {
+        "artifact_digest": "sha256:91a90bb5dc9e4dbc2f3b0cc8e2f637661afba966e699704f42d10f36eaf1125f",
+        "commit": "e6d736d00b731b9423db18ec182e11a691428f08",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.alpha import value; assert value() == 1"
+          ],
+          "criterion": "The approved function returns its specified value.",
+          "cwd": ".",
+          "id": "check-8dd7d89da5ee969a13079189141e6e96",
+          "required": true,
+          "timeout_ms": 5000
+        },
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.beta import value; assert value() == 2"
+          ],
+          "criterion": "The approved function returns its specified value.",
+          "cwd": ".",
+          "id": "check-9f9348c44a7cec2a55fe357a9d9a48fb",
+          "required": true,
+          "timeout_ms": 5000
+        },
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.gamma import value; assert value() == 3"
+          ],
+          "criterion": "The approved function returns its specified value.",
+          "cwd": ".",
+          "id": "check-a4db2f8f8d24dbb1389d930a60f13613",
+          "required": true,
+          "timeout_ms": 5000
+        },
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.combined import value; assert value() == 3"
+          ],
+          "criterion": "The approved function returns its specified value.",
+          "cwd": ".",
+          "id": "check-b0b8b5a0d657c67b362c25288c7ea005",
+          "required": true,
+          "timeout_ms": 5000
+        }
+      ],
+      "log_dir": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/ec214c08645e4e6589f9fbde96d3fd97/logs",
+      "result_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/ec214c08645e4e6589f9fbde96d3fd97/report.json",
+      "workspace": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree"
+    },
+    "manifest_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/ec214c08645e4e6589f9fbde96d3fd97/manifest.json",
+    "report": {
+      "artifact": {
+        "artifact_digest": "sha256:91a90bb5dc9e4dbc2f3b0cc8e2f637661afba966e699704f42d10f36eaf1125f",
+        "commit": "e6d736d00b731b9423db18ec182e11a691428f08",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "blockers": [],
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.alpha import value; assert value() == 1"
+          ],
+          "cancelled": false,
+          "criterion": "The approved function returns its specified value.",
+          "cwd": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree",
+          "ended_at": "2026-11-16T16:33:26.120Z",
+          "executable": {
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          "executed_argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-c",
+            "from src.alpha import value; assert value() == 1"
+          ],
+          "exit_code": 0,
+          "id": "check-8dd7d89da5ee969a13079189141e6e96",
+          "logs": [
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/ec214c08645e4e6589f9fbde96d3fd97/logs/check-8dd7d89da5ee969a13079189141e6e96.stdout.log",
+              "stream": "stdout",
+              "truncated": false
+            },
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/ec214c08645e4e6589f9fbde96d3fd97/logs/check-8dd7d89da5ee969a13079189141e6e96.stderr.log",
+              "stream": "stderr",
+              "truncated": false
+            }
+          ],
+          "process_identity": {
+            "attempt_id": "check-a5e804c7935647d3a956ea0b17e3889e",
+            "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+            "generation": 1,
+            "nonce": "<redacted>",
+            "pid": 643,
+            "pid_namespace": "pid:[4026532523]",
+            "proc_pid": 643,
+            "profile": "controlled_executor",
+            "sandbox_policy_digest": "sha256:7b61fbbafaa4da170c35d939d8826632f2db64f097a3dfa72d8e00597c733cc6",
+            "session_id": 643,
+            "start_time": "3922540",
+            "tracking": "linux_child_subreaper_v1"
+          },
+          "process_tree_terminated": true,
+          "required": true,
+          "sandbox": {
+            "actual": {
+              "controller_paths_hidden": true,
+              "cwd": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree",
+              "mount_flags": {
+                "/": true,
+                "/dev": false,
+                "/etc/group": true,
+                "/etc/ld.so.cache": true,
+                "/etc/localtime": true,
+                "/etc/passwd": true,
+                "/home/xiaolvji": false,
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/python": true,
+                "/proc": true,
+                "/tmp": false,
+                "/usr/bin": true,
+                "/usr/lib": true,
+                "/usr/lib64": true,
+                "/usr/libexec": true,
+                "/usr/local/bin": true,
+                "/usr/local/lib": true,
+                "/usr/local/libexec": true,
+                "/usr/sbin": true,
+                "/usr/share/git-core": true,
+                "/usr/share/locale": true,
+                "/usr/share/zoneinfo": true,
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree": true,
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree/.git": true
+              },
+              "mountinfo_sha256": "b0a5b303e6234891f6e1aec50cbde50471281a72477c601ce1631f9fe863b037",
+              "namespaces": {
+                "ipc": "ipc:[4026532455]",
+                "mnt": "mnt:[4026532453]",
+                "net": "net:[4026532240]",
+                "pid": "pid:[4026532457]",
+                "user": "user:[4026532458]",
+                "uts": "uts:[4026532454]"
+              },
+              "pid": 2,
+              "ppid": 1,
+              "status": {
+                "CapAmb": "0000000000000000",
+                "CapBnd": "0000000000000000",
+                "CapEff": "0000000000000000",
+                "CapInh": "0000000000000000",
+                "CapPrm": "0000000000000000",
+                "NoNewPrivs": "1",
+                "Seccomp": "2"
+              }
+            },
+            "attested": true,
+            "backend": "linux-bubblewrap-offline-v1",
+            "bootstrap_identity": {
+              "pid": 648,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 648,
+              "proc_ppid": 647,
+              "session_id": 647,
+              "start_time": "3922549",
+              "state": "S"
+            },
+            "init_identity": {
+              "pid": 647,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 647,
+              "proc_ppid": 646,
+              "session_id": 647,
+              "start_time": "3922549",
+              "state": "S"
+            },
+            "launcher_identity": {
+              "pid": 646,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 646,
+              "proc_ppid": 643,
+              "session_id": 646,
+              "start_time": "3922548",
+              "state": "R"
+            },
+            "policy": {
+              "architecture": "x86_64",
+              "home": "/home/xiaolvji",
+              "namespaces": [
+                "user",
+                "pid",
+                "mnt",
+                "net",
+                "ipc",
+                "uts"
+              ],
+              "network": "none",
+              "readonly_mounts": [
+                "/usr/bin",
+                "/usr/sbin",
+                "/usr/lib",
+                "/usr/lib64",
+                "/usr/libexec",
+                "/usr/local/bin",
+                "/usr/local/lib",
+                "/usr/local/libexec",
+                "/usr/share/git-core",
+                "/usr/share/locale",
+                "/usr/share/zoneinfo",
+                "/etc/ld.so.cache",
+                "/etc/localtime",
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/python",
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree",
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree/.git",
+                "/",
+                "/proc",
+                "/etc/passwd",
+                "/etc/group"
+              ],
+              "readonly_paths": [],
+              "seccomp": "xlj-offline-v1",
+              "version": 1,
+              "workspace": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree",
+              "writable_mounts": [
+                "/home/xiaolvji",
+                "/tmp",
+                "/dev"
+              ],
+              "writable_paths": [],
+              "write_scope": []
+            },
+            "policy_digest": "sha256:7b61fbbafaa4da170c35d939d8826632f2db64f097a3dfa72d8e00597c733cc6",
+            "tool_versions": {
+              "bwrap": "bubblewrap 0.12.0",
+              "unshare": "unshare from util-linux 2.41.5"
+            }
+          },
+          "started_at": "2026-11-16T16:33:25.909Z",
+          "status": "passed",
+          "timed_out": false,
+          "timeout_ms": 5000
+        },
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.beta import value; assert value() == 2"
+          ],
+          "cancelled": false,
+          "criterion": "The approved function returns its specified value.",
+          "cwd": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree",
+          "ended_at": "2026-11-16T16:33:26.338Z",
+          "executable": {
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          "executed_argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-c",
+            "from src.beta import value; assert value() == 2"
+          ],
+          "exit_code": 0,
+          "id": "check-9f9348c44a7cec2a55fe357a9d9a48fb",
+          "logs": [
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/ec214c08645e4e6589f9fbde96d3fd97/logs/check-9f9348c44a7cec2a55fe357a9d9a48fb.stdout.log",
+              "stream": "stdout",
+              "truncated": false
+            },
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/ec214c08645e4e6589f9fbde96d3fd97/logs/check-9f9348c44a7cec2a55fe357a9d9a48fb.stderr.log",
+              "stream": "stderr",
+              "truncated": false
+            }
+          ],
+          "process_identity": {
+            "attempt_id": "check-3d5fd117769046a2b43239e94b425f6b",
+            "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+            "generation": 1,
+            "nonce": "<redacted>",
+            "pid": 658,
+            "pid_namespace": "pid:[4026532523]",
+            "proc_pid": 658,
+            "profile": "controlled_executor",
+            "sandbox_policy_digest": "sha256:7b61fbbafaa4da170c35d939d8826632f2db64f097a3dfa72d8e00597c733cc6",
+            "session_id": 658,
+            "start_time": "3922565",
+            "tracking": "linux_child_subreaper_v1"
+          },
+          "process_tree_terminated": true,
+          "required": true,
+          "sandbox": {
+            "actual": {
+              "controller_paths_hidden": true,
+              "cwd": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree",
+              "mount_flags": {
+                "/": true,
+                "/dev": false,
+                "/etc/group": true,
+                "/etc/ld.so.cache": true,
+                "/etc/localtime": true,
+                "/etc/passwd": true,
+                "/home/xiaolvji": false,
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/python": true,
+                "/proc": true,
+                "/tmp": false,
+                "/usr/bin": true,
+                "/usr/lib": true,
+                "/usr/lib64": true,
+                "/usr/libexec": true,
+                "/usr/local/bin": true,
+                "/usr/local/lib": true,
+                "/usr/local/libexec": true,
+                "/usr/sbin": true,
+                "/usr/share/git-core": true,
+                "/usr/share/locale": true,
+                "/usr/share/zoneinfo": true,
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree": true,
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree/.git": true
+              },
+              "mountinfo_sha256": "a8c99783a60aa3a487e3a9e9dfe1fba19523017b38c7be1b5243f42eabf7cd4f",
+              "namespaces": {
+                "ipc": "ipc:[4026532453]",
+                "mnt": "mnt:[4026532411]",
+                "net": "net:[4026532243]",
+                "pid": "pid:[4026532456]",
+                "user": "user:[4026532457]",
+                "uts": "uts:[4026532452]"
+              },
+              "pid": 2,
+              "ppid": 1,
+              "status": {
+                "CapAmb": "0000000000000000",
+                "CapBnd": "0000000000000000",
+                "CapEff": "0000000000000000",
+                "CapInh": "0000000000000000",
+                "CapPrm": "0000000000000000",
+                "NoNewPrivs": "1",
+                "Seccomp": "2"
+              }
+            },
+            "attested": true,
+            "backend": "linux-bubblewrap-offline-v1",
+            "bootstrap_identity": {
+              "pid": 663,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 663,
+              "proc_ppid": 662,
+              "session_id": 662,
+              "start_time": "3922572",
+              "state": "S"
+            },
+            "init_identity": {
+              "pid": 662,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 662,
+              "proc_ppid": 661,
+              "session_id": 662,
+              "start_time": "3922572",
+              "state": "S"
+            },
+            "launcher_identity": {
+              "pid": 661,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 661,
+              "proc_ppid": 658,
+              "session_id": 661,
+              "start_time": "3922572",
+              "state": "R"
+            },
+            "policy": {
+              "architecture": "x86_64",
+              "home": "/home/xiaolvji",
+              "namespaces": [
+                "user",
+                "pid",
+                "mnt",
+                "net",
+                "ipc",
+                "uts"
+              ],
+              "network": "none",
+              "readonly_mounts": [
+                "/usr/bin",
+                "/usr/sbin",
+                "/usr/lib",
+                "/usr/lib64",
+                "/usr/libexec",
+                "/usr/local/bin",
+                "/usr/local/lib",
+                "/usr/local/libexec",
+                "/usr/share/git-core",
+                "/usr/share/locale",
+                "/usr/share/zoneinfo",
+                "/etc/ld.so.cache",
+                "/etc/localtime",
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/python",
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree",
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree/.git",
+                "/",
+                "/proc",
+                "/etc/passwd",
+                "/etc/group"
+              ],
+              "readonly_paths": [],
+              "seccomp": "xlj-offline-v1",
+              "version": 1,
+              "workspace": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree",
+              "writable_mounts": [
+                "/home/xiaolvji",
+                "/tmp",
+                "/dev"
+              ],
+              "writable_paths": [],
+              "write_scope": []
+            },
+            "policy_digest": "sha256:7b61fbbafaa4da170c35d939d8826632f2db64f097a3dfa72d8e00597c733cc6",
+            "tool_versions": {
+              "bwrap": "bubblewrap 0.12.0",
+              "unshare": "unshare from util-linux 2.41.5"
+            }
+          },
+          "started_at": "2026-11-16T16:33:26.152Z",
+          "status": "passed",
+          "timed_out": false,
+          "timeout_ms": 5000
+        },
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.gamma import value; assert value() == 3"
+          ],
+          "cancelled": false,
+          "criterion": "The approved function returns its specified value.",
+          "cwd": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree",
+          "ended_at": "2026-11-16T16:33:26.543Z",
+          "executable": {
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          "executed_argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-c",
+            "from src.gamma import value; assert value() == 3"
+          ],
+          "exit_code": 0,
+          "id": "check-a4db2f8f8d24dbb1389d930a60f13613",
+          "logs": [
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/ec214c08645e4e6589f9fbde96d3fd97/logs/check-a4db2f8f8d24dbb1389d930a60f13613.stdout.log",
+              "stream": "stdout",
+              "truncated": false
+            },
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/ec214c08645e4e6589f9fbde96d3fd97/logs/check-a4db2f8f8d24dbb1389d930a60f13613.stderr.log",
+              "stream": "stderr",
+              "truncated": false
+            }
+          ],
+          "process_identity": {
+            "attempt_id": "check-84f99040fa954650af5deebcc10d2d8d",
+            "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+            "generation": 1,
+            "nonce": "<redacted>",
+            "pid": 673,
+            "pid_namespace": "pid:[4026532523]",
+            "proc_pid": 673,
+            "profile": "controlled_executor",
+            "sandbox_policy_digest": "sha256:7b61fbbafaa4da170c35d939d8826632f2db64f097a3dfa72d8e00597c733cc6",
+            "session_id": 673,
+            "start_time": "3922586",
+            "tracking": "linux_child_subreaper_v1"
+          },
+          "process_tree_terminated": true,
+          "required": true,
+          "sandbox": {
+            "actual": {
+              "controller_paths_hidden": true,
+              "cwd": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree",
+              "mount_flags": {
+                "/": true,
+                "/dev": false,
+                "/etc/group": true,
+                "/etc/ld.so.cache": true,
+                "/etc/localtime": true,
+                "/etc/passwd": true,
+                "/home/xiaolvji": false,
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/python": true,
+                "/proc": true,
+                "/tmp": false,
+                "/usr/bin": true,
+                "/usr/lib": true,
+                "/usr/lib64": true,
+                "/usr/libexec": true,
+                "/usr/local/bin": true,
+                "/usr/local/lib": true,
+                "/usr/local/libexec": true,
+                "/usr/sbin": true,
+                "/usr/share/git-core": true,
+                "/usr/share/locale": true,
+                "/usr/share/zoneinfo": true,
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree": true,
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree/.git": true
+              },
+              "mountinfo_sha256": "33b650a912d4c0ecfc905c664594483bfec15c2ee5958abf845d4cde28c6f597",
+              "namespaces": {
+                "ipc": "ipc:[4026532381]",
+                "mnt": "mnt:[4026532309]",
+                "net": "net:[4026532237]",
+                "pid": "pid:[4026532383]",
+                "user": "user:[4026532384]",
+                "uts": "uts:[4026532379]"
+              },
+              "pid": 2,
+              "ppid": 1,
+              "status": {
+                "CapAmb": "0000000000000000",
+                "CapBnd": "0000000000000000",
+                "CapEff": "0000000000000000",
+                "CapInh": "0000000000000000",
+                "CapPrm": "0000000000000000",
+                "NoNewPrivs": "1",
+                "Seccomp": "2"
+              }
+            },
+            "attested": true,
+            "backend": "linux-bubblewrap-offline-v1",
+            "bootstrap_identity": {
+              "pid": 678,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 678,
+              "proc_ppid": 677,
+              "session_id": 677,
+              "start_time": "3922593",
+              "state": "S"
+            },
+            "init_identity": {
+              "pid": 677,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 677,
+              "proc_ppid": 676,
+              "session_id": 677,
+              "start_time": "3922592",
+              "state": "S"
+            },
+            "launcher_identity": {
+              "pid": 676,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 676,
+              "proc_ppid": 673,
+              "session_id": 676,
+              "start_time": "3922592",
+              "state": "R"
+            },
+            "policy": {
+              "architecture": "x86_64",
+              "home": "/home/xiaolvji",
+              "namespaces": [
+                "user",
+                "pid",
+                "mnt",
+                "net",
+                "ipc",
+                "uts"
+              ],
+              "network": "none",
+              "readonly_mounts": [
+                "/usr/bin",
+                "/usr/sbin",
+                "/usr/lib",
+                "/usr/lib64",
+                "/usr/libexec",
+                "/usr/local/bin",
+                "/usr/local/lib",
+                "/usr/local/libexec",
+                "/usr/share/git-core",
+                "/usr/share/locale",
+                "/usr/share/zoneinfo",
+                "/etc/ld.so.cache",
+                "/etc/localtime",
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/python",
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree",
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree/.git",
+                "/",
+                "/proc",
+                "/etc/passwd",
+                "/etc/group"
+              ],
+              "readonly_paths": [],
+              "seccomp": "xlj-offline-v1",
+              "version": 1,
+              "workspace": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree",
+              "writable_mounts": [
+                "/home/xiaolvji",
+                "/tmp",
+                "/dev"
+              ],
+              "writable_paths": [],
+              "write_scope": []
+            },
+            "policy_digest": "sha256:7b61fbbafaa4da170c35d939d8826632f2db64f097a3dfa72d8e00597c733cc6",
+            "tool_versions": {
+              "bwrap": "bubblewrap 0.12.0",
+              "unshare": "unshare from util-linux 2.41.5"
+            }
+          },
+          "started_at": "2026-11-16T16:33:26.374Z",
+          "status": "passed",
+          "timed_out": false,
+          "timeout_ms": 5000
+        },
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.combined import value; assert value() == 3"
+          ],
+          "cancelled": false,
+          "criterion": "The approved function returns its specified value.",
+          "cwd": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree",
+          "ended_at": "2026-11-16T16:33:26.783Z",
+          "executable": {
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          "executed_argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-c",
+            "from src.combined import value; assert value() == 3"
+          ],
+          "exit_code": 0,
+          "id": "check-b0b8b5a0d657c67b362c25288c7ea005",
+          "logs": [
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/ec214c08645e4e6589f9fbde96d3fd97/logs/check-b0b8b5a0d657c67b362c25288c7ea005.stdout.log",
+              "stream": "stdout",
+              "truncated": false
+            },
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/ec214c08645e4e6589f9fbde96d3fd97/logs/check-b0b8b5a0d657c67b362c25288c7ea005.stderr.log",
+              "stream": "stderr",
+              "truncated": false
+            }
+          ],
+          "process_identity": {
+            "attempt_id": "check-20b00bad41544ebb999691a45eb1a96f",
+            "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+            "generation": 1,
+            "nonce": "<redacted>",
+            "pid": 688,
+            "pid_namespace": "pid:[4026532523]",
+            "proc_pid": 688,
+            "profile": "controlled_executor",
+            "sandbox_policy_digest": "sha256:7b61fbbafaa4da170c35d939d8826632f2db64f097a3dfa72d8e00597c733cc6",
+            "session_id": 688,
+            "start_time": "3922606",
+            "tracking": "linux_child_subreaper_v1"
+          },
+          "process_tree_terminated": true,
+          "required": true,
+          "sandbox": {
+            "actual": {
+              "controller_paths_hidden": true,
+              "cwd": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree",
+              "mount_flags": {
+                "/": true,
+                "/dev": false,
+                "/etc/group": true,
+                "/etc/ld.so.cache": true,
+                "/etc/localtime": true,
+                "/etc/passwd": true,
+                "/home/xiaolvji": false,
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/python": true,
+                "/proc": true,
+                "/tmp": false,
+                "/usr/bin": true,
+                "/usr/lib": true,
+                "/usr/lib64": true,
+                "/usr/libexec": true,
+                "/usr/local/bin": true,
+                "/usr/local/lib": true,
+                "/usr/local/libexec": true,
+                "/usr/sbin": true,
+                "/usr/share/git-core": true,
+                "/usr/share/locale": true,
+                "/usr/share/zoneinfo": true,
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree": true,
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree/.git": true
+              },
+              "mountinfo_sha256": "bf672b2648f0e44ddd650259a41fc92cd44c5337614a893ec9b7c2760e08773e",
+              "namespaces": {
+                "ipc": "ipc:[4026532311]",
+                "mnt": "mnt:[4026532309]",
+                "net": "net:[4026532237]",
+                "pid": "pid:[4026532381]",
+                "user": "user:[4026532240]",
+                "uts": "uts:[4026532310]"
+              },
+              "pid": 2,
+              "ppid": 1,
+              "status": {
+                "CapAmb": "0000000000000000",
+                "CapBnd": "0000000000000000",
+                "CapEff": "0000000000000000",
+                "CapInh": "0000000000000000",
+                "CapPrm": "0000000000000000",
+                "NoNewPrivs": "1",
+                "Seccomp": "2"
+              }
+            },
+            "attested": true,
+            "backend": "linux-bubblewrap-offline-v1",
+            "bootstrap_identity": {
+              "pid": 693,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 693,
+              "proc_ppid": 692,
+              "session_id": 692,
+              "start_time": "3922614",
+              "state": "S"
+            },
+            "init_identity": {
+              "pid": 692,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 692,
+              "proc_ppid": 691,
+              "session_id": 692,
+              "start_time": "3922614",
+              "state": "S"
+            },
+            "launcher_identity": {
+              "pid": 691,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 691,
+              "proc_ppid": 688,
+              "session_id": 691,
+              "start_time": "3922613",
+              "state": "R"
+            },
+            "policy": {
+              "architecture": "x86_64",
+              "home": "/home/xiaolvji",
+              "namespaces": [
+                "user",
+                "pid",
+                "mnt",
+                "net",
+                "ipc",
+                "uts"
+              ],
+              "network": "none",
+              "readonly_mounts": [
+                "/usr/bin",
+                "/usr/sbin",
+                "/usr/lib",
+                "/usr/lib64",
+                "/usr/libexec",
+                "/usr/local/bin",
+                "/usr/local/lib",
+                "/usr/local/libexec",
+                "/usr/share/git-core",
+                "/usr/share/locale",
+                "/usr/share/zoneinfo",
+                "/etc/ld.so.cache",
+                "/etc/localtime",
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/python",
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree",
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree/.git",
+                "/",
+                "/proc",
+                "/etc/passwd",
+                "/etc/group"
+              ],
+              "readonly_paths": [],
+              "seccomp": "xlj-offline-v1",
+              "version": 1,
+              "workspace": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/ec214c08645e4e6589f9fbde96d3fd97/worktree",
+              "writable_mounts": [
+                "/home/xiaolvji",
+                "/tmp",
+                "/dev"
+              ],
+              "writable_paths": [],
+              "write_scope": []
+            },
+            "policy_digest": "sha256:7b61fbbafaa4da170c35d939d8826632f2db64f097a3dfa72d8e00597c733cc6",
+            "tool_versions": {
+              "bwrap": "bubblewrap 0.12.0",
+              "unshare": "unshare from util-linux 2.41.5"
+            }
+          },
+          "started_at": "2026-11-16T16:33:26.574Z",
+          "status": "passed",
+          "timed_out": false,
+          "timeout_ms": 5000
+        }
+      ],
+      "ended_at": "2026-11-16T16:33:26.798Z",
+      "environment": {
+        "environment_values_recorded": false,
+        "executables": [
+          {
+            "check_id": "check-8dd7d89da5ee969a13079189141e6e96",
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          {
+            "check_id": "check-9f9348c44a7cec2a55fe357a9d9a48fb",
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          {
+            "check_id": "check-a4db2f8f8d24dbb1389d930a60f13613",
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          {
+            "check_id": "check-b0b8b5a0d657c67b362c25288c7ea005",
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          }
+        ],
+        "execution_profile": "controlled_executor",
+        "hermetic_environment": false,
+        "machine": "x86_64",
+        "platform": "Linux",
+        "python_bytecode_disabled": true,
+        "python_version": "3.12.14",
+        "release": "6.18.57",
+        "runner_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "runner_executable_digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "source_scratch_directory": null,
+        "temp_and_cache": "private_per_check_sandbox"
+      },
+      "environment_digest": "sha256:3187fe9cc6cf588f2ca10bf7e77834de0ddb051280b42d3aa7b43021498ab0cc",
+      "execution_profile": "controlled_executor",
+      "manifest_digest": "sha256:67f45b7564bd7ebfcfb7e74ee894c9ee8e059b3269e069a22f7d388e4b0792d9",
+      "schema_version": 1,
+      "source_after_digest": "sha256:812402ed9653f6071773a4e4cb7ae793db7a2fa262501811b52eac6ec1550e54",
+      "source_before_digest": "sha256:812402ed9653f6071773a4e4cb7ae793db7a2fa262501811b52eac6ec1550e54",
+      "source_unchanged": true,
+      "started_at": "2026-11-16T16:33:25.872Z",
+      "status": "passed"
+    },
+    "report_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/ec214c08645e4e6589f9fbde96d3fd97/report.json"
+  },
+  {
+    "manifest": {
+      "artifact": {
+        "artifact_digest": "sha256:f6f953b9905d77e38854be6ed4d9fe7ff625d1811402c3c85daddea844f7904d",
+        "commit": "5e6556f53e0c1420a3b6cd296e57fe82fa345105",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.combined import value; assert value() == 3"
+          ],
+          "criterion": "The approved function returns its specified value.",
+          "cwd": ".",
+          "id": "combined-value",
+          "required": true,
+          "timeout_ms": 5000
+        }
+      ],
+      "log_dir": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/f8d942622dc546418e2bf26ffcab9f06/logs",
+      "result_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/f8d942622dc546418e2bf26ffcab9f06/report.json",
+      "workspace": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/f8d942622dc546418e2bf26ffcab9f06/worktree"
+    },
+    "manifest_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/f8d942622dc546418e2bf26ffcab9f06/manifest.json",
+    "report": {
+      "artifact": {
+        "artifact_digest": "sha256:f6f953b9905d77e38854be6ed4d9fe7ff625d1811402c3c85daddea844f7904d",
+        "commit": "5e6556f53e0c1420a3b6cd296e57fe82fa345105",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "blockers": [],
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.combined import value; assert value() == 3"
+          ],
+          "cancelled": false,
+          "criterion": "The approved function returns its specified value.",
+          "cwd": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/f8d942622dc546418e2bf26ffcab9f06/worktree",
+          "ended_at": "2026-11-16T16:33:25.353Z",
+          "executable": {
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          "executed_argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-c",
+            "from src.combined import value; assert value() == 3"
+          ],
+          "exit_code": 0,
+          "id": "combined-value",
+          "logs": [
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/f8d942622dc546418e2bf26ffcab9f06/logs/combined-value.stdout.log",
+              "stream": "stdout",
+              "truncated": false
+            },
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/f8d942622dc546418e2bf26ffcab9f06/logs/combined-value.stderr.log",
+              "stream": "stderr",
+              "truncated": false
+            }
+          ],
+          "process_identity": {
+            "attempt_id": "check-d2ea7b90019c453abd671a9efeda1a0e",
+            "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+            "generation": 1,
+            "nonce": "<redacted>",
+            "pid": 510,
+            "pid_namespace": "pid:[4026532523]",
+            "proc_pid": 510,
+            "profile": "controlled_executor",
+            "sandbox_policy_digest": "sha256:a6d882b43da2ca8c3d414c3783a8da672c27d0054cef9acb33ce4a897d59f35e",
+            "session_id": 510,
+            "start_time": "3922462",
+            "tracking": "linux_child_subreaper_v1"
+          },
+          "process_tree_terminated": true,
+          "required": true,
+          "sandbox": {
+            "actual": {
+              "controller_paths_hidden": true,
+              "cwd": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/f8d942622dc546418e2bf26ffcab9f06/worktree",
+              "mount_flags": {
+                "/": true,
+                "/dev": false,
+                "/etc/group": true,
+                "/etc/ld.so.cache": true,
+                "/etc/localtime": true,
+                "/etc/passwd": true,
+                "/home/xiaolvji": false,
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/python": true,
+                "/proc": true,
+                "/tmp": false,
+                "/usr/bin": true,
+                "/usr/lib": true,
+                "/usr/lib64": true,
+                "/usr/libexec": true,
+                "/usr/local/bin": true,
+                "/usr/local/lib": true,
+                "/usr/local/libexec": true,
+                "/usr/sbin": true,
+                "/usr/share/git-core": true,
+                "/usr/share/locale": true,
+                "/usr/share/zoneinfo": true,
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/f8d942622dc546418e2bf26ffcab9f06/worktree": true,
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/f8d942622dc546418e2bf26ffcab9f06/worktree/.git": true
+              },
+              "mountinfo_sha256": "7bfff1ed85c7d96d851520610f1e64b1d5efe6b1b5e44db76168ef1517f15c4c",
+              "namespaces": {
+                "ipc": "ipc:[4026532379]",
+                "mnt": "mnt:[4026532308]",
+                "net": "net:[4026532237]",
+                "pid": "pid:[4026532381]",
+                "user": "user:[4026532382]",
+                "uts": "uts:[4026532309]"
+              },
+              "pid": 2,
+              "ppid": 1,
+              "status": {
+                "CapAmb": "0000000000000000",
+                "CapBnd": "0000000000000000",
+                "CapEff": "0000000000000000",
+                "CapInh": "0000000000000000",
+                "CapPrm": "0000000000000000",
+                "NoNewPrivs": "1",
+                "Seccomp": "2"
+              }
+            },
+            "attested": true,
+            "backend": "linux-bubblewrap-offline-v1",
+            "bootstrap_identity": {
+              "pid": 515,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 515,
+              "proc_ppid": 514,
+              "session_id": 514,
+              "start_time": "3922473",
+              "state": "S"
+            },
+            "init_identity": {
+              "pid": 514,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 514,
+              "proc_ppid": 513,
+              "session_id": 514,
+              "start_time": "3922472",
+              "state": "S"
+            },
+            "launcher_identity": {
+              "pid": 513,
+              "pid_namespace": "pid:[4026532523]",
+              "proc_pid": 513,
+              "proc_ppid": 510,
+              "session_id": 513,
+              "start_time": "3922472",
+              "state": "R"
+            },
+            "policy": {
+              "architecture": "x86_64",
+              "home": "/home/xiaolvji",
+              "namespaces": [
+                "user",
+                "pid",
+                "mnt",
+                "net",
+                "ipc",
+                "uts"
+              ],
+              "network": "none",
+              "readonly_mounts": [
+                "/usr/bin",
+                "/usr/sbin",
+                "/usr/lib",
+                "/usr/lib64",
+                "/usr/libexec",
+                "/usr/local/bin",
+                "/usr/local/lib",
+                "/usr/local/libexec",
+                "/usr/share/git-core",
+                "/usr/share/locale",
+                "/usr/share/zoneinfo",
+                "/etc/ld.so.cache",
+                "/etc/localtime",
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/python",
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/f8d942622dc546418e2bf26ffcab9f06/worktree",
+                "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/f8d942622dc546418e2bf26ffcab9f06/worktree/.git",
+                "/",
+                "/proc",
+                "/etc/passwd",
+                "/etc/group"
+              ],
+              "readonly_paths": [],
+              "seccomp": "xlj-offline-v1",
+              "version": 1,
+              "workspace": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/workspaces/f8d942622dc546418e2bf26ffcab9f06/worktree",
+              "writable_mounts": [
+                "/home/xiaolvji",
+                "/tmp",
+                "/dev"
+              ],
+              "writable_paths": [],
+              "write_scope": []
+            },
+            "policy_digest": "sha256:a6d882b43da2ca8c3d414c3783a8da672c27d0054cef9acb33ce4a897d59f35e",
+            "tool_versions": {
+              "bwrap": "bubblewrap 0.12.0",
+              "unshare": "unshare from util-linux 2.41.5"
+            }
+          },
+          "started_at": "2026-11-16T16:33:25.126Z",
+          "status": "passed",
+          "timed_out": false,
+          "timeout_ms": 5000
+        }
+      ],
+      "ended_at": "2026-11-16T16:33:25.371Z",
+      "environment": {
+        "environment_values_recorded": false,
+        "executables": [
+          {
+            "check_id": "combined-value",
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          }
+        ],
+        "execution_profile": "controlled_executor",
+        "hermetic_environment": false,
+        "machine": "x86_64",
+        "platform": "Linux",
+        "python_bytecode_disabled": true,
+        "python_version": "3.12.14",
+        "release": "6.18.57",
+        "runner_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "runner_executable_digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "source_scratch_directory": null,
+        "temp_and_cache": "private_per_check_sandbox"
+      },
+      "environment_digest": "sha256:1f222bbec5ea340d3807c976c3b28d6887f6fd318abedc4b297b00cff158128a",
+      "execution_profile": "controlled_executor",
+      "manifest_digest": "sha256:83b1bed8ccab86b559eb5b3390b44877cc9d26f6c63bd08a63913cb4094e93bb",
+      "schema_version": 1,
+      "source_after_digest": "sha256:1744d23e3a32bc9d3dc9f69c49ede4220275ddcb741130256015f3dfe79b2cf1",
+      "source_before_digest": "sha256:1744d23e3a32bc9d3dc9f69c49ede4220275ddcb741130256015f3dfe79b2cf1",
+      "source_unchanged": true,
+      "started_at": "2026-11-16T16:33:25.093Z",
+      "status": "passed"
+    },
+    "report_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/state/quality/f8d942622dc546418e2bf26ffcab9f06/report.json"
+  }
+]

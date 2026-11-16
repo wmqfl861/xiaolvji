@@ -1,0 +1,957 @@
+[
+  {
+    "manifest": {
+      "artifact": {
+        "artifact_digest": "sha256:f6f953b9905d77e38854be6ed4d9fe7ff625d1811402c3c85daddea844f7904d",
+        "commit": "91fbae3b78a0dcc0f93af64a95752d365bb50be8",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.combined import value; assert value() == 3"
+          ],
+          "criterion": "The approved function returns its specified value.",
+          "cwd": ".",
+          "id": "combined-value",
+          "required": true,
+          "timeout_ms": 5000
+        }
+      ],
+      "log_dir": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/51af71afefd44321b4e141ff19d2c5a3/logs",
+      "result_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/51af71afefd44321b4e141ff19d2c5a3/report.json",
+      "workspace": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/workspaces/51af71afefd44321b4e141ff19d2c5a3/worktree"
+    },
+    "manifest_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/51af71afefd44321b4e141ff19d2c5a3/manifest.json",
+    "report": {
+      "artifact": {
+        "artifact_digest": "sha256:f6f953b9905d77e38854be6ed4d9fe7ff625d1811402c3c85daddea844f7904d",
+        "commit": "91fbae3b78a0dcc0f93af64a95752d365bb50be8",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "blockers": [],
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.combined import value; assert value() == 3"
+          ],
+          "cancelled": false,
+          "criterion": "The approved function returns its specified value.",
+          "cwd": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/workspaces/51af71afefd44321b4e141ff19d2c5a3/worktree",
+          "ended_at": "2026-11-16T16:33:24.327Z",
+          "executable": {
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          "executed_argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-c",
+            "from src.combined import value; assert value() == 3"
+          ],
+          "exit_code": 0,
+          "id": "combined-value",
+          "logs": [
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/51af71afefd44321b4e141ff19d2c5a3/logs/combined-value.stdout.log",
+              "stream": "stdout",
+              "truncated": false
+            },
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/51af71afefd44321b4e141ff19d2c5a3/logs/combined-value.stderr.log",
+              "stream": "stderr",
+              "truncated": false
+            }
+          ],
+          "process_identity": {
+            "attempt_id": "check-c635551805704df5ac024d5a594274a5",
+            "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+            "generation": 1,
+            "nonce": "<redacted>",
+            "pid": 405,
+            "pid_namespace": "pid:[4026532593]",
+            "proc_pid": 405,
+            "profile": "cooperative_native",
+            "sandbox_policy_digest": null,
+            "session_id": 405,
+            "start_time": "3922369",
+            "tracking": "linux_child_subreaper_v1"
+          },
+          "process_tree_terminated": true,
+          "required": true,
+          "started_at": "2026-11-16T16:33:24.246Z",
+          "status": "passed",
+          "timed_out": false,
+          "timeout_ms": 5000
+        }
+      ],
+      "ended_at": "2026-11-16T16:33:24.343Z",
+      "environment": {
+        "environment_values_recorded": false,
+        "executables": [
+          {
+            "check_id": "combined-value",
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          }
+        ],
+        "execution_profile": "cooperative_native",
+        "hermetic_environment": false,
+        "machine": "x86_64",
+        "platform": "Linux",
+        "python_bytecode_disabled": true,
+        "python_version": "3.12.14",
+        "release": "6.18.57",
+        "runner_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "runner_executable_digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "source_scratch_directory": ".parallel-dev-check-tmp",
+        "temp_and_cache": "external_per_run"
+      },
+      "environment_digest": "sha256:6581107233eabbdc73a4b88e9b49ada2953a79cef4ca9748adf34a34f6f5be35",
+      "execution_profile": "cooperative_native",
+      "manifest_digest": "sha256:f2f5ae41b7088b1c4e92b09662f980821b9b9cbf65fde3e32674c243a16faa3b",
+      "owned_source_scratch_removed": true,
+      "schema_version": 1,
+      "source_after_digest": "sha256:1744d23e3a32bc9d3dc9f69c49ede4220275ddcb741130256015f3dfe79b2cf1",
+      "source_before_digest": "sha256:1744d23e3a32bc9d3dc9f69c49ede4220275ddcb741130256015f3dfe79b2cf1",
+      "source_unchanged": true,
+      "started_at": "2026-11-16T16:33:24.217Z",
+      "status": "passed"
+    },
+    "report_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/51af71afefd44321b4e141ff19d2c5a3/report.json"
+  },
+  {
+    "manifest": {
+      "artifact": {
+        "artifact_digest": "sha256:f74f52271eb34cd41288a83cf2121512ce97f49cd6ee8d3664ffecd7595ad25f",
+        "commit": "2b91348bbe3467cfbb1ecbf928b3cc652d8a6f1e",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.beta import value; assert value() == 2"
+          ],
+          "criterion": "The approved function returns its specified value.",
+          "cwd": ".",
+          "id": "beta-value",
+          "required": true,
+          "timeout_ms": 5000
+        }
+      ],
+      "log_dir": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/9a20c57c28664ebf9518553f8678bf9e/logs",
+      "result_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/9a20c57c28664ebf9518553f8678bf9e/report.json",
+      "workspace": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/workspaces/9a20c57c28664ebf9518553f8678bf9e/worktree"
+    },
+    "manifest_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/9a20c57c28664ebf9518553f8678bf9e/manifest.json",
+    "report": {
+      "artifact": {
+        "artifact_digest": "sha256:f74f52271eb34cd41288a83cf2121512ce97f49cd6ee8d3664ffecd7595ad25f",
+        "commit": "2b91348bbe3467cfbb1ecbf928b3cc652d8a6f1e",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "blockers": [],
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.beta import value; assert value() == 2"
+          ],
+          "cancelled": false,
+          "criterion": "The approved function returns its specified value.",
+          "cwd": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/workspaces/9a20c57c28664ebf9518553f8678bf9e/worktree",
+          "ended_at": "2026-11-16T16:33:22.663Z",
+          "executable": {
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          "executed_argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-c",
+            "from src.beta import value; assert value() == 2"
+          ],
+          "exit_code": 0,
+          "id": "beta-value",
+          "logs": [
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/9a20c57c28664ebf9518553f8678bf9e/logs/beta-value.stdout.log",
+              "stream": "stdout",
+              "truncated": false
+            },
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/9a20c57c28664ebf9518553f8678bf9e/logs/beta-value.stderr.log",
+              "stream": "stderr",
+              "truncated": false
+            }
+          ],
+          "process_identity": {
+            "attempt_id": "check-72b915a68cd4419e878e9ce89681a69e",
+            "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+            "generation": 1,
+            "nonce": "<redacted>",
+            "pid": 151,
+            "pid_namespace": "pid:[4026532593]",
+            "proc_pid": 151,
+            "profile": "cooperative_native",
+            "sandbox_policy_digest": null,
+            "session_id": 151,
+            "start_time": "3922198",
+            "tracking": "linux_child_subreaper_v1"
+          },
+          "process_tree_terminated": true,
+          "required": true,
+          "started_at": "2026-11-16T16:33:22.543Z",
+          "status": "passed",
+          "timed_out": false,
+          "timeout_ms": 5000
+        }
+      ],
+      "ended_at": "2026-11-16T16:33:22.681Z",
+      "environment": {
+        "environment_values_recorded": false,
+        "executables": [
+          {
+            "check_id": "beta-value",
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          }
+        ],
+        "execution_profile": "cooperative_native",
+        "hermetic_environment": false,
+        "machine": "x86_64",
+        "platform": "Linux",
+        "python_bytecode_disabled": true,
+        "python_version": "3.12.14",
+        "release": "6.18.57",
+        "runner_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "runner_executable_digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "source_scratch_directory": ".parallel-dev-check-tmp",
+        "temp_and_cache": "external_per_run"
+      },
+      "environment_digest": "sha256:73a4ae0c2955ae45b3447408f99c53b19bd1c0588679fa9b8fab39721e235679",
+      "execution_profile": "cooperative_native",
+      "manifest_digest": "sha256:f40eeb99b12136d988ff885fadbcb115a6168025b457ab76c14404939a5bca37",
+      "owned_source_scratch_removed": true,
+      "schema_version": 1,
+      "source_after_digest": "sha256:0699d769d964bb016d316ab86816f4ccb1d459e2525aae8f6e8111f78460c0c3",
+      "source_before_digest": "sha256:0699d769d964bb016d316ab86816f4ccb1d459e2525aae8f6e8111f78460c0c3",
+      "source_unchanged": true,
+      "started_at": "2026-11-16T16:33:22.510Z",
+      "status": "passed"
+    },
+    "report_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/9a20c57c28664ebf9518553f8678bf9e/report.json"
+  },
+  {
+    "manifest": {
+      "artifact": {
+        "artifact_digest": "sha256:91a90bb5dc9e4dbc2f3b0cc8e2f637661afba966e699704f42d10f36eaf1125f",
+        "commit": "6062e6cf0f0be6f41199370f961ecf8b949882aa",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.alpha import value; assert value() == 1"
+          ],
+          "criterion": "The approved function returns its specified value.",
+          "cwd": ".",
+          "id": "check-8dd7d89da5ee969a13079189141e6e96",
+          "required": true,
+          "timeout_ms": 5000
+        },
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.beta import value; assert value() == 2"
+          ],
+          "criterion": "The approved function returns its specified value.",
+          "cwd": ".",
+          "id": "check-9f9348c44a7cec2a55fe357a9d9a48fb",
+          "required": true,
+          "timeout_ms": 5000
+        },
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.gamma import value; assert value() == 3"
+          ],
+          "criterion": "The approved function returns its specified value.",
+          "cwd": ".",
+          "id": "check-a4db2f8f8d24dbb1389d930a60f13613",
+          "required": true,
+          "timeout_ms": 5000
+        },
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.combined import value; assert value() == 3"
+          ],
+          "criterion": "The approved function returns its specified value.",
+          "cwd": ".",
+          "id": "check-b0b8b5a0d657c67b362c25288c7ea005",
+          "required": true,
+          "timeout_ms": 5000
+        }
+      ],
+      "log_dir": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/logs",
+      "result_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/report.json",
+      "workspace": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/workspaces/a1cde0c067bf450eae5510b20bca8621/worktree"
+    },
+    "manifest_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/manifest.json",
+    "report": {
+      "artifact": {
+        "artifact_digest": "sha256:91a90bb5dc9e4dbc2f3b0cc8e2f637661afba966e699704f42d10f36eaf1125f",
+        "commit": "6062e6cf0f0be6f41199370f961ecf8b949882aa",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "blockers": [],
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.alpha import value; assert value() == 1"
+          ],
+          "cancelled": false,
+          "criterion": "The approved function returns its specified value.",
+          "cwd": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/workspaces/a1cde0c067bf450eae5510b20bca8621/worktree",
+          "ended_at": "2026-11-16T16:33:24.956Z",
+          "executable": {
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          "executed_argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-c",
+            "from src.alpha import value; assert value() == 1"
+          ],
+          "exit_code": 0,
+          "id": "check-8dd7d89da5ee969a13079189141e6e96",
+          "logs": [
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/logs/check-8dd7d89da5ee969a13079189141e6e96.stdout.log",
+              "stream": "stdout",
+              "truncated": false
+            },
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/logs/check-8dd7d89da5ee969a13079189141e6e96.stderr.log",
+              "stream": "stderr",
+              "truncated": false
+            }
+          ],
+          "process_identity": {
+            "attempt_id": "check-fbe68b9e8584403c81afb60fd87c36ef",
+            "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+            "generation": 1,
+            "nonce": "<redacted>",
+            "pid": 527,
+            "pid_namespace": "pid:[4026532593]",
+            "proc_pid": 527,
+            "profile": "cooperative_native",
+            "sandbox_policy_digest": null,
+            "session_id": 527,
+            "start_time": "3922431",
+            "tracking": "linux_child_subreaper_v1"
+          },
+          "process_tree_terminated": true,
+          "required": true,
+          "started_at": "2026-11-16T16:33:24.865Z",
+          "status": "passed",
+          "timed_out": false,
+          "timeout_ms": 5000
+        },
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.beta import value; assert value() == 2"
+          ],
+          "cancelled": false,
+          "criterion": "The approved function returns its specified value.",
+          "cwd": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/workspaces/a1cde0c067bf450eae5510b20bca8621/worktree",
+          "ended_at": "2026-11-16T16:33:25.069Z",
+          "executable": {
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          "executed_argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-c",
+            "from src.beta import value; assert value() == 2"
+          ],
+          "exit_code": 0,
+          "id": "check-9f9348c44a7cec2a55fe357a9d9a48fb",
+          "logs": [
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/logs/check-9f9348c44a7cec2a55fe357a9d9a48fb.stdout.log",
+              "stream": "stdout",
+              "truncated": false
+            },
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/logs/check-9f9348c44a7cec2a55fe357a9d9a48fb.stderr.log",
+              "stream": "stderr",
+              "truncated": false
+            }
+          ],
+          "process_identity": {
+            "attempt_id": "check-d4a3ba2a538b47738ec5dc2fb0a38f27",
+            "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+            "generation": 1,
+            "nonce": "<redacted>",
+            "pid": 531,
+            "pid_namespace": "pid:[4026532593]",
+            "proc_pid": 531,
+            "profile": "cooperative_native",
+            "sandbox_policy_digest": null,
+            "session_id": 531,
+            "start_time": "3922443",
+            "tracking": "linux_child_subreaper_v1"
+          },
+          "process_tree_terminated": true,
+          "required": true,
+          "started_at": "2026-11-16T16:33:24.989Z",
+          "status": "passed",
+          "timed_out": false,
+          "timeout_ms": 5000
+        },
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.gamma import value; assert value() == 3"
+          ],
+          "cancelled": false,
+          "criterion": "The approved function returns its specified value.",
+          "cwd": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/workspaces/a1cde0c067bf450eae5510b20bca8621/worktree",
+          "ended_at": "2026-11-16T16:33:25.191Z",
+          "executable": {
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          "executed_argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-c",
+            "from src.gamma import value; assert value() == 3"
+          ],
+          "exit_code": 0,
+          "id": "check-a4db2f8f8d24dbb1389d930a60f13613",
+          "logs": [
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/logs/check-a4db2f8f8d24dbb1389d930a60f13613.stdout.log",
+              "stream": "stdout",
+              "truncated": false
+            },
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/logs/check-a4db2f8f8d24dbb1389d930a60f13613.stderr.log",
+              "stream": "stderr",
+              "truncated": false
+            }
+          ],
+          "process_identity": {
+            "attempt_id": "check-57b49b2a2094457fbac8fb82896bde1a",
+            "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+            "generation": 1,
+            "nonce": "<redacted>",
+            "pid": 535,
+            "pid_namespace": "pid:[4026532593]",
+            "proc_pid": 535,
+            "profile": "cooperative_native",
+            "sandbox_policy_digest": null,
+            "session_id": 535,
+            "start_time": "3922455",
+            "tracking": "linux_child_subreaper_v1"
+          },
+          "process_tree_terminated": true,
+          "required": true,
+          "started_at": "2026-11-16T16:33:25.107Z",
+          "status": "passed",
+          "timed_out": false,
+          "timeout_ms": 5000
+        },
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.combined import value; assert value() == 3"
+          ],
+          "cancelled": false,
+          "criterion": "The approved function returns its specified value.",
+          "cwd": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/workspaces/a1cde0c067bf450eae5510b20bca8621/worktree",
+          "ended_at": "2026-11-16T16:33:25.305Z",
+          "executable": {
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          "executed_argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-c",
+            "from src.combined import value; assert value() == 3"
+          ],
+          "exit_code": 0,
+          "id": "check-b0b8b5a0d657c67b362c25288c7ea005",
+          "logs": [
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/logs/check-b0b8b5a0d657c67b362c25288c7ea005.stdout.log",
+              "stream": "stdout",
+              "truncated": false
+            },
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/logs/check-b0b8b5a0d657c67b362c25288c7ea005.stderr.log",
+              "stream": "stderr",
+              "truncated": false
+            }
+          ],
+          "process_identity": {
+            "attempt_id": "check-a9ac2ece1fdf4cc590444dde17fbe2d1",
+            "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+            "generation": 1,
+            "nonce": "<redacted>",
+            "pid": 539,
+            "pid_namespace": "pid:[4026532593]",
+            "proc_pid": 539,
+            "profile": "cooperative_native",
+            "sandbox_policy_digest": null,
+            "session_id": 539,
+            "start_time": "3922466",
+            "tracking": "linux_child_subreaper_v1"
+          },
+          "process_tree_terminated": true,
+          "required": true,
+          "started_at": "2026-11-16T16:33:25.225Z",
+          "status": "passed",
+          "timed_out": false,
+          "timeout_ms": 5000
+        }
+      ],
+      "ended_at": "2026-11-16T16:33:25.324Z",
+      "environment": {
+        "environment_values_recorded": false,
+        "executables": [
+          {
+            "check_id": "check-8dd7d89da5ee969a13079189141e6e96",
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          {
+            "check_id": "check-9f9348c44a7cec2a55fe357a9d9a48fb",
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          {
+            "check_id": "check-a4db2f8f8d24dbb1389d930a60f13613",
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          {
+            "check_id": "check-b0b8b5a0d657c67b362c25288c7ea005",
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          }
+        ],
+        "execution_profile": "cooperative_native",
+        "hermetic_environment": false,
+        "machine": "x86_64",
+        "platform": "Linux",
+        "python_bytecode_disabled": true,
+        "python_version": "3.12.14",
+        "release": "6.18.57",
+        "runner_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "runner_executable_digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "source_scratch_directory": ".parallel-dev-check-tmp",
+        "temp_and_cache": "external_per_run"
+      },
+      "environment_digest": "sha256:f360acb1d62a48ff7f650a07aedd0c87d29c42a4a61a8c615dda87cf1f3385d6",
+      "execution_profile": "cooperative_native",
+      "manifest_digest": "sha256:8708e66608eca8285e890fccb646479dafbaadfeffbce20a22e5c9532dbeb060",
+      "owned_source_scratch_removed": true,
+      "schema_version": 1,
+      "source_after_digest": "sha256:812402ed9653f6071773a4e4cb7ae793db7a2fa262501811b52eac6ec1550e54",
+      "source_before_digest": "sha256:812402ed9653f6071773a4e4cb7ae793db7a2fa262501811b52eac6ec1550e54",
+      "source_unchanged": true,
+      "started_at": "2026-11-16T16:33:24.832Z",
+      "status": "passed"
+    },
+    "report_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/a1cde0c067bf450eae5510b20bca8621/report.json"
+  },
+  {
+    "manifest": {
+      "artifact": {
+        "artifact_digest": "sha256:5b547f4a9a4efa423030eb1e39cd04859f5d6e6786c68117efa373e4f9d4d08a",
+        "commit": "90ec25a11e6303323f079b46ef238b6463f84cf6",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.alpha import value; assert value() == 1"
+          ],
+          "criterion": "The approved function returns its specified value.",
+          "cwd": ".",
+          "id": "alpha-value",
+          "required": true,
+          "timeout_ms": 5000
+        }
+      ],
+      "log_dir": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/bc4c3f3eb8024208b29104e9015cb7d3/logs",
+      "result_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/bc4c3f3eb8024208b29104e9015cb7d3/report.json",
+      "workspace": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/workspaces/bc4c3f3eb8024208b29104e9015cb7d3/worktree"
+    },
+    "manifest_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/bc4c3f3eb8024208b29104e9015cb7d3/manifest.json",
+    "report": {
+      "artifact": {
+        "artifact_digest": "sha256:5b547f4a9a4efa423030eb1e39cd04859f5d6e6786c68117efa373e4f9d4d08a",
+        "commit": "90ec25a11e6303323f079b46ef238b6463f84cf6",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "blockers": [],
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.alpha import value; assert value() == 1"
+          ],
+          "cancelled": false,
+          "criterion": "The approved function returns its specified value.",
+          "cwd": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/workspaces/bc4c3f3eb8024208b29104e9015cb7d3/worktree",
+          "ended_at": "2026-11-16T16:33:23.478Z",
+          "executable": {
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          "executed_argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-c",
+            "from src.alpha import value; assert value() == 1"
+          ],
+          "exit_code": 0,
+          "id": "alpha-value",
+          "logs": [
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/bc4c3f3eb8024208b29104e9015cb7d3/logs/alpha-value.stdout.log",
+              "stream": "stdout",
+              "truncated": false
+            },
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/bc4c3f3eb8024208b29104e9015cb7d3/logs/alpha-value.stderr.log",
+              "stream": "stderr",
+              "truncated": false
+            }
+          ],
+          "process_identity": {
+            "attempt_id": "check-175b90ee6b584558a9958bac65a55c2e",
+            "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+            "generation": 1,
+            "nonce": "<redacted>",
+            "pid": 266,
+            "pid_namespace": "pid:[4026532593]",
+            "proc_pid": 266,
+            "profile": "cooperative_native",
+            "sandbox_policy_digest": null,
+            "session_id": 266,
+            "start_time": "3922284",
+            "tracking": "linux_child_subreaper_v1"
+          },
+          "process_tree_terminated": true,
+          "required": true,
+          "started_at": "2026-11-16T16:33:23.403Z",
+          "status": "passed",
+          "timed_out": false,
+          "timeout_ms": 5000
+        }
+      ],
+      "ended_at": "2026-11-16T16:33:23.496Z",
+      "environment": {
+        "environment_values_recorded": false,
+        "executables": [
+          {
+            "check_id": "alpha-value",
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          }
+        ],
+        "execution_profile": "cooperative_native",
+        "hermetic_environment": false,
+        "machine": "x86_64",
+        "platform": "Linux",
+        "python_bytecode_disabled": true,
+        "python_version": "3.12.14",
+        "release": "6.18.57",
+        "runner_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "runner_executable_digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "source_scratch_directory": ".parallel-dev-check-tmp",
+        "temp_and_cache": "external_per_run"
+      },
+      "environment_digest": "sha256:cf0a28de3259e5d0e88887a1a086f760ae7eb6294273ccbc62c430020729766b",
+      "execution_profile": "cooperative_native",
+      "manifest_digest": "sha256:083e3a4de21d6dcc95b1609beb21c853dee3fcf5b7578476f90dbd5f49f7f27e",
+      "owned_source_scratch_removed": true,
+      "schema_version": 1,
+      "source_after_digest": "sha256:d4f7fb18eadfdc18e616e29b651a2fa3b6ba8a1c6a7c086c3d6771c88a9f3e67",
+      "source_before_digest": "sha256:d4f7fb18eadfdc18e616e29b651a2fa3b6ba8a1c6a7c086c3d6771c88a9f3e67",
+      "source_unchanged": true,
+      "started_at": "2026-11-16T16:33:23.371Z",
+      "status": "passed"
+    },
+    "report_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/bc4c3f3eb8024208b29104e9015cb7d3/report.json"
+  },
+  {
+    "manifest": {
+      "artifact": {
+        "artifact_digest": "sha256:0dc569ff5ca2ae29cf7174047c51f133861c4b71690b9087ca47f2d156e3986f",
+        "commit": "610d75674cc6040ff04cb787997ccfb5111c9ca9",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.gamma import value; assert value() == 3"
+          ],
+          "criterion": "The approved function returns its specified value.",
+          "cwd": ".",
+          "id": "gamma-value",
+          "required": true,
+          "timeout_ms": 5000
+        }
+      ],
+      "log_dir": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/ec6e25d73aa9441599a43f6ac065e6e2/logs",
+      "result_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/ec6e25d73aa9441599a43f6ac065e6e2/report.json",
+      "workspace": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/workspaces/ec6e25d73aa9441599a43f6ac065e6e2/worktree"
+    },
+    "manifest_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/ec6e25d73aa9441599a43f6ac065e6e2/manifest.json",
+    "report": {
+      "artifact": {
+        "artifact_digest": "sha256:0dc569ff5ca2ae29cf7174047c51f133861c4b71690b9087ca47f2d156e3986f",
+        "commit": "610d75674cc6040ff04cb787997ccfb5111c9ca9",
+        "contracts": [],
+        "plan": {
+          "id": "demo-plan",
+          "revision": 1,
+          "scope_digest": "sha256:00947d694a7fb268df5d799170f697a1298f8edc6e85f5a1f33cdb950f502543"
+        }
+      },
+      "blockers": [],
+      "checks": [
+        {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+            "-B",
+            "-c",
+            "from src.gamma import value; assert value() == 3"
+          ],
+          "cancelled": false,
+          "criterion": "The approved function returns its specified value.",
+          "cwd": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/workspaces/ec6e25d73aa9441599a43f6ac065e6e2/worktree",
+          "ended_at": "2026-11-16T16:33:23.082Z",
+          "executable": {
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          },
+          "executed_argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-c",
+            "from src.gamma import value; assert value() == 3"
+          ],
+          "exit_code": 0,
+          "id": "gamma-value",
+          "logs": [
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/ec6e25d73aa9441599a43f6ac065e6e2/logs/gamma-value.stdout.log",
+              "stream": "stdout",
+              "truncated": false
+            },
+            {
+              "bytes": 0,
+              "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/ec6e25d73aa9441599a43f6ac065e6e2/logs/gamma-value.stderr.log",
+              "stream": "stderr",
+              "truncated": false
+            }
+          ],
+          "process_identity": {
+            "attempt_id": "check-9b7d61aa5fd84834941cbb9a238bf10e",
+            "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+            "generation": 1,
+            "nonce": "<redacted>",
+            "pid": 205,
+            "pid_namespace": "pid:[4026532593]",
+            "proc_pid": 205,
+            "profile": "cooperative_native",
+            "sandbox_policy_digest": null,
+            "session_id": 205,
+            "start_time": "3922244",
+            "tracking": "linux_child_subreaper_v1"
+          },
+          "process_tree_terminated": true,
+          "required": true,
+          "started_at": "2026-11-16T16:33:23.001Z",
+          "status": "passed",
+          "timed_out": false,
+          "timeout_ms": 5000
+        }
+      ],
+      "ended_at": "2026-11-16T16:33:23.097Z",
+      "environment": {
+        "environment_values_recorded": false,
+        "executables": [
+          {
+            "check_id": "gamma-value",
+            "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+            "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "size": 30894944
+          }
+        ],
+        "execution_profile": "cooperative_native",
+        "hermetic_environment": false,
+        "machine": "x86_64",
+        "platform": "Linux",
+        "python_bytecode_disabled": true,
+        "python_version": "3.12.14",
+        "release": "6.18.57",
+        "runner_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "runner_executable_digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "source_scratch_directory": ".parallel-dev-check-tmp",
+        "temp_and_cache": "external_per_run"
+      },
+      "environment_digest": "sha256:5cf7f414e984795dd985d25da5a8ae9913f6a826c62206a8daa884832db7530f",
+      "execution_profile": "cooperative_native",
+      "manifest_digest": "sha256:872c5fbb8def2335c56d48cd8803f9a15b1d01862cac71a7b5de49067bc960a8",
+      "owned_source_scratch_removed": true,
+      "schema_version": 1,
+      "source_after_digest": "sha256:1afda78d55efa3e748aad9d64642ab0458c22c0accfaabf88876e16ca91a6c06",
+      "source_before_digest": "sha256:1afda78d55efa3e748aad9d64642ab0458c22c0accfaabf88876e16ca91a6c06",
+      "source_unchanged": true,
+      "started_at": "2026-11-16T16:33:22.970Z",
+      "status": "passed"
+    },
+    "report_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/ec6e25d73aa9441599a43f6ac065e6e2/report.json"
+  }
+]

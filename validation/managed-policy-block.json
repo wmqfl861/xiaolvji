@@ -1,0 +1,38 @@
+{
+  "explanation": "Host verify stopped at the metadata-only system-policy inventory before its native fixture. Explicit provider key path was nonexistent.",
+  "kind": "synthetic_cli_managed_policy_preflight",
+  "native_fixture_output_created": false,
+  "native_host_started": false,
+  "native_registry_created": false,
+  "provider_authentication_attempted": false,
+  "provider_credential_reference_exists": false,
+  "provider_runtime_created": false,
+  "source_version": "0.5.0",
+  "steps": [
+    {
+      "exit_code": 0,
+      "stderr_empty": true,
+      "step": "init",
+      "successful": true
+    },
+    {
+      "exit_code": 0,
+      "stderr_empty": true,
+      "step": "enable",
+      "successful": true
+    },
+    {
+      "exit_code": 2,
+      "result": {
+        "error": {
+          "code": "CAPABILITY_UNSUPPORTED",
+          "message": "An applicable system policy source is present; native policy transfer is not implemented."
+        }
+      },
+      "stderr_empty": true,
+      "step": "verify"
+    }
+  ],
+  "system_policy_metadata_unchanged": true,
+  "system_policy_present": true
+}

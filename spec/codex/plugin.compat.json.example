@@ -1,0 +1,7 @@
+{
+  "name": "parallel-development",
+  "version": "1.0.0-design.1",
+  "description": "Design template for bounded parallel development with explicit task contracts, resource accounting, and quality gates.",
+  "skills": "./skills/",
+  "hooks": "./hooks/codex.json"
+}

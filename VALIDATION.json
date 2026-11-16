@@ -1,0 +1,507 @@
+{
+  "schema_version": 1,
+  "package": "xiaolvji",
+  "runtime_version": "0.5.0",
+  "date": "2026-11-16",
+  "timezone": "Etc/UTC",
+  "status": "development_validation_passed",
+  "implementation_status": "Bounded priority aging, shared admission diagnostics, read-only history metrics, initial-recovery cancellation and Codex/ZCode input fixes implemented and tested. Native Codex synthetic protocol and pinned ZCode source evidence remain distinct from production readiness.",
+  "tests": {
+    "runtime": 556,
+    "injection_reference": 26,
+    "total": 582,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "report": "validation/tests.json",
+    "verbose_output": "validation/test-output.txt",
+    "source_inputs_sha256": "49868bc66f39970a8cdde650c651c3ea1cafaa4e76b401bbc331c0bcaee944c4",
+    "source_input_count": 88,
+    "optional_integration_inputs": {
+      "codex_cli_loading": true,
+      "codex_native_protocol_fixture": true,
+      "zcode_native_source_mapping": true
+    }
+  },
+  "design_static_checks": "passed; static checks are separate from runtime acceptance",
+  "demo": {
+    "assertions": {
+      "all_four_modules_integrated_and_verified": true,
+      "capacity_reclaimed": true,
+      "global_limit_respected": true,
+      "independent_review_not_fabricated": true,
+      "no_controller_errors": true,
+      "rolling_refill_before_slowest_sibling": true,
+      "user_main_ref_unchanged": true,
+      "user_worktree_unchanged": true
+    },
+    "elapsed_seconds": 3.945,
+    "errors": [],
+    "execution_profile": "cooperative_native",
+    "host_or_model_invoked": false,
+    "managed_worker_limit": 2,
+    "maximum_observed_occupancy": 2,
+    "os_write_sandbox": false,
+    "real_processes_and_git": true,
+    "report_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/DEMO-REPORT.json",
+    "rolling_evidence": {
+      "alpha_exit_sequence": 35,
+      "gamma_start_sequence": 19
+    },
+    "schema_version": 1,
+    "status": "passed",
+    "tasks": [
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "alpha",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "beta",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "gamma",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "combined",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "verify-8560805161a8e0d4c6c64ca6b7e0cce8",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "verify-c3e3ea27dba8b16aa96f6d08ac2c8610",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "verify-cdf6a8ab1bafac231449c29a554c54e0",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "verify-db1ec6f1898c5db5b53c3ff46533b155",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "integrate-b2b17e8927813c9cc9bd4af4121053a5",
+        "state": "AWAITING_REVIEW"
+      }
+    ],
+    "report": "validation/demo.json",
+    "event_trace": "validation/demo-events.json",
+    "metrics": "validation/demo-metrics.json",
+    "queue": "validation/demo-queue.json"
+  },
+  "strict_demo": {
+    "assertions": {
+      "all_four_modules_integrated_and_verified": true,
+      "capacity_reclaimed": true,
+      "global_limit_respected": true,
+      "independent_review_not_fabricated": true,
+      "no_controller_errors": true,
+      "rolling_refill_before_slowest_sibling": true,
+      "user_main_ref_unchanged": true,
+      "user_worktree_unchanged": true
+    },
+    "elapsed_seconds": 5.031,
+    "errors": [],
+    "execution_profile": "controlled_executor",
+    "host_or_model_invoked": false,
+    "managed_worker_limit": 2,
+    "maximum_observed_occupancy": 2,
+    "os_write_sandbox": true,
+    "real_processes_and_git": true,
+    "report_path": "/workspace/scratch/356ebfba7105/runtime-strict-demo-0.5.0/DEMO-REPORT.json",
+    "rolling_evidence": {
+      "alpha_exit_sequence": 35,
+      "gamma_start_sequence": 19
+    },
+    "schema_version": 1,
+    "status": "passed",
+    "tasks": [
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "alpha",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "beta",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "gamma",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "combined",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "verify-fbc350c43d647d218e7829387f046261",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "verify-3bbc571595bfddaf83d930e9244ae75f",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "verify-012949b8e544b85e961bb3337f6f3d52",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "verify-ec5d2d23c5b2c72db77ebc8646eefa6a",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "integrate-9691dc22f597a4a9941d4c438c19d731",
+        "state": "AWAITING_REVIEW"
+      }
+    ],
+    "report": "validation/strict-demo.json",
+    "event_trace": "validation/strict-demo-events.json",
+    "metrics": "validation/strict-demo-metrics.json",
+    "queue": "validation/strict-demo-queue.json",
+    "boundary_evidence": "validation/strict-evidence.json"
+  },
+  "provider_demo": {
+    "assertions": {
+      "all_four_modules_integrated_and_verified": true,
+      "capacity_reclaimed": true,
+      "four_scoped_provider_requests": true,
+      "global_limit_respected": true,
+      "independent_review_not_fabricated": true,
+      "no_controller_errors": true,
+      "provider_grants_revoked": true,
+      "provider_limit_respected": true,
+      "provider_requests_accounted": true,
+      "rolling_refill_before_slowest_sibling": true,
+      "user_main_ref_unchanged": true,
+      "user_worktree_unchanged": true
+    },
+    "elapsed_seconds": 5.323,
+    "errors": [],
+    "execution_profile": "controlled_executor",
+    "host_or_model_invoked": false,
+    "managed_worker_limit": 2,
+    "maximum_observed_occupancy": 2,
+    "os_write_sandbox": true,
+    "provider_transport": {
+      "all_grants_revoked": true,
+      "all_requests_accounted": true,
+      "grants": [
+        {
+          "attempt_id": "e19c02ad6ce844d78fd5e18d799ff424",
+          "requests_consumed": 1,
+          "status": "REVOKED"
+        },
+        {
+          "attempt_id": "3432a746b8f14b6cb9adc16e238a5550",
+          "requests_consumed": 1,
+          "status": "REVOKED"
+        },
+        {
+          "attempt_id": "6c700dd7773f4be38878f35ccd6210e9",
+          "requests_consumed": 1,
+          "status": "REVOKED"
+        },
+        {
+          "attempt_id": "d3be5db43902402185eab80928cf0355",
+          "requests_consumed": 1,
+          "status": "REVOKED"
+        }
+      ],
+      "http_requests": 4,
+      "maximum_local_provider_in_flight": 1,
+      "real_host_invocations": 0,
+      "real_provider_requests": 0,
+      "remote_processing_after_disconnect": "unknown_for_real_providers",
+      "requests": [
+        {
+          "outcome": "completed",
+          "state": "COMPLETED"
+        },
+        {
+          "outcome": "completed",
+          "state": "COMPLETED"
+        },
+        {
+          "outcome": "completed",
+          "state": "COMPLETED"
+        },
+        {
+          "outcome": "completed",
+          "state": "COMPLETED"
+        }
+      ],
+      "synthetic_only": true
+    },
+    "real_processes_and_git": true,
+    "report_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/DEMO-REPORT.json",
+    "rolling_evidence": {
+      "alpha_exit_sequence": 34,
+      "gamma_start_sequence": 19
+    },
+    "schema_version": 1,
+    "status": "passed",
+    "tasks": [
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "alpha",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "beta",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "gamma",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "combined",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "verify-d8d82e7d5127d76154fe78c84313bf86",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "verify-b246a24fd90e8467bf1c863ef39acf2a",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "verify-7d96849fe3f60fcff91d34c289468fcf",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "verify-9842fb2065bdc2c7beed22b819c43799",
+        "state": "AWAITING_REVIEW"
+      },
+      {
+        "blocked_reason": "AWAITING_REVIEW",
+        "id": "integrate-8197dfcc16e4d3257a4b41b4b255613c",
+        "state": "AWAITING_REVIEW"
+      }
+    ],
+    "report": "validation/provider-demo.json",
+    "event_trace": "validation/provider-demo-events.json",
+    "metrics": "validation/provider-demo-metrics.json",
+    "queue": "validation/provider-demo-queue.json",
+    "boundary_evidence": "validation/provider-evidence.json"
+  },
+  "native_codex": {
+    "report": "validation/native-codex.json",
+    "actual_binary_version": "codex-cli 0.167.0-alpha.4",
+    "fixed_fixture_assertions": 13,
+    "actual_opt_in_tests": 6,
+    "actual_opt_in_cases": [
+      "production_runner_and_13_boundary_gates",
+      "all_six_supplied_quality_fields",
+      "exec_command_and_write_stdin_three_request_loop",
+      "provider_wait_cancellation_and_tree_teardown",
+      "preserved_real_managed_policy_denied_before_requests",
+      "unknown_model_denied_before_requests"
+    ],
+    "synthetic_provider_requests_in_fixed_fixture": 2,
+    "real_provider_requests": 0,
+    "authentication_attempted": false,
+    "production_current_host": "blocked_managed_policy_cannot_be_fully_preserved",
+    "managed_preflight_observation": "validation/managed-policy-block.json",
+    "note": "The successful fixed fixture uses an isolated synthetic standalone configuration. It is not a readiness record for the actual managed host, a real provider result, or final project acceptance."
+  },
+  "zcode": {
+    "report": "validation/zcode-native-source.json",
+    "source_commit": "a60ba6a7e5a06742270ca605f5d2cc2766afa7e1",
+    "evidence_level": "native_mapping_only",
+    "mapping_cases": 7,
+    "apis": 3,
+    "negative_controls": 3,
+    "alias_controls": 3,
+    "environment_controls": 14,
+    "source_files_bound": 11,
+    "configuration_schema_loaded": false,
+    "cli_launched": false,
+    "real_model_request_tested": false,
+    "native_execution_ready": false,
+    "full_build_blocker": "npm dependency fetch returned EAI_AGAIN; full workspace source is present, not missing public provider/schema packages",
+    "argument_parser_tested": true,
+    "argument_cases": 7,
+    "argument_negative_controls": 3
+  },
+  "capabilities": {
+    "codex_protocol_and_source_package": "implemented_native_fixture_and_package_tested",
+    "zcode_protocol_and_source_package": "implemented_source_mapping_and_package_tested",
+    "linux_cooperative_process_gateway": "linux_integration_tested",
+    "controlled_executor": "linux_offline_integration_tested",
+    "model_transport": "native_codex_protocol_fixture_verified_managed_deployment_blocked",
+    "codex_cli_loading": "configuration_and_native_protocol_fixture_tested",
+    "codex_native_protocol": "actual_binary_synthetic_provider_tested",
+    "zcode_source_mapping": "pinned_native_option_compiler_and_argument_parser_executed",
+    "native_production_current_host": "managed_policy_blocked",
+    "requires_local_host_acceptance": true,
+    "mcp_protocol": "2025-11-25_stdio_6_reader_tools_and_authenticated_registration_tested",
+    "continuous_queue_watch": true,
+    "watch_timeout_preserves_queued_and_completed_work": true,
+    "native_result_and_recovery_validation": true,
+    "host_config_snapshots": true,
+    "provider_journal_recovery": true,
+    "provider_request_limits": true,
+    "remote_processing_after_disconnect": "unknown",
+    "real_host_integration": false,
+    "real_external_provider_acceptance": false,
+    "installed_plugin_hook_mcp_acceptance": false,
+    "windows_execution": false,
+    "macos_execution": false,
+    "aarch64_execution_tested": false,
+    "cgroup_resource_quotas": false,
+    "bounded_priority_aging": true,
+    "shared_atomic_admission_diagnostics": true,
+    "bounded_read_only_history_metrics": true,
+    "initial_recovery_cancellation_covered": true,
+    "zcode_native_argument_parser_verified": true,
+    "zcode_lossless_prompt_argv": true,
+    "strict_native_event_json": true
+  },
+  "host_evidence": {
+    "codex_version": "codex-cli 0.167.0-alpha.4",
+    "doctor_report": "validation/codex-doctor.json",
+    "configuration_loading_smoke": "passed",
+    "actual_native_synthetic_protocol": "passed",
+    "real_provider_requests": 0,
+    "authentication_attempted": false,
+    "production_managed_policy": "blocked_before_native_fixture_and_credential_use",
+    "zcode_full_cli": "not_built_or_launched"
+  },
+  "not_run": [
+    "Authenticated external-model acceptance for Codex",
+    "Complete ZCode CLI/model integration",
+    "Real external provider service acceptance (synthetic IPC/HTTP transport is tested)",
+    "Windows execution",
+    "macOS execution",
+    "Production load and long-duration recovery",
+    "Independent formal release review",
+    "Complete installed-plugin Hook/MCP model-facing path",
+    "aarch64 execution",
+    "Matched serial/parallel real-model quality and efficiency benchmark"
+  ],
+  "formal_release_review": "pending_configured_independent_authority",
+  "remote_push": "not_performed_at_validation_snapshot_authenticated_connector_available",
+  "current_evidence_scope": "The recorded frozen source-input digest passed 582 tests on this Linux x86_64 host. Actual Codex synthetic tool turns, namespaces, IPC/HTTP, Git, pinned ZCode option and argument parsers, and three real-process pipeline demos were exercised. Queue previews grant no reservation; historical metrics grant no quality proof. Real external-model quality, managed-policy equivalence, complete ZCode execution, zero-defect guarantees and serial/parallel speedup remain unverified.",
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "git": "git version 2.52.0",
+    "sandbox_tools": {
+      "bwrap": "bubblewrap 0.12.0",
+      "unshare": "unshare from util-linux 2.41.5"
+    },
+    "codex": "codex-cli 0.167.0-alpha.4",
+    "zcode_mapping_node": "v24.22.1",
+    "zcode_documented_build_node": "v24.14.0"
+  },
+  "independent_code_review": {
+    "performed": true,
+    "formal_release_approval": false,
+    "scope": [
+      "aging and shared atomic admission",
+      "queue bounds and coherent snapshots",
+      "metrics populations and structural history integrity",
+      "Codex runner inputs",
+      "initial recovery cancellation",
+      "ZCode native argument boundary and strict event JSON",
+      "CLI/MCP/hook authorization",
+      "English instructions and capability documentation"
+    ],
+    "fixed_findings": [
+      "verifier-first fixed priority starvation",
+      "missing admission blocker diagnostics",
+      "unbounded diagnostic population materialization",
+      "silently missing registration history",
+      "misleading retry and timing labels",
+      "missing metric event-history checks",
+      "initial recovery cancellation outside cleanup coverage",
+      "huge timeout integer overflow",
+      "leading-option prompt native parser rejection",
+      "deep JSON exponent overflow",
+      "eligible terminology mismatch",
+      "idle polling latency overstatement"
+    ],
+    "unresolved_concrete_implementation_findings": [],
+    "remaining_deployment_limits": [
+      "managed Codex policy preservation",
+      "ZCode complete dependency/runtime closure",
+      "real external provider and installed-plugin acceptance"
+    ]
+  },
+  "scheduling": {
+    "contract": "docs/SCHEDULING-CONTRACT.en.md",
+    "guide": "docs/SCHEDULING.zh-CN.md",
+    "aging_policy": {
+      "rank_ceiling": 120,
+      "step_seconds": 30,
+      "verifier_bonus": 20,
+      "integrator_bonus": 10,
+      "age_source": "durable_registration",
+      "start_deadline_guaranteed": false
+    },
+    "queue": "advisory_individual_snapshot_shared_admission_checks_no_reservation",
+    "queue_limits": {
+      "tasks": 10000,
+      "projects": 10000,
+      "active_attempts": 20000,
+      "leases": 20000,
+      "entries": 200,
+      "blockers_per_entry": 16
+    },
+    "metrics_limits": {
+      "events": 100000,
+      "tasks": 10000,
+      "attempts": 20000,
+      "event_detail_bytes": 16777216
+    },
+    "metrics_scope": "complete_retained_selected_history_with_structural_checks_not_tamper_proof_or_delivery_acceptance",
+    "unavailable_metrics": [
+      "cpu_memory_and_model_usage",
+      "delivery_wall_time",
+      "eligible_queue_wait",
+      "integration_conflict_rate",
+      "pure_dispatch_latency",
+      "technical_first_pass_rate"
+    ],
+    "demo_exports": "validation/demo-exports.json"
+  },
+  "repository_delivery": {
+    "repository": "https://github.com/wmqfl861/xiaolvji",
+    "target_branch": "feat/parallel-development-v0.5.0",
+    "connection": "existing_authenticated_GitHub_connector",
+    "write_access_observed": true,
+    "status": "pending_after_validation_snapshot",
+    "default_branch_preserved": true,
+    "note": "Remote publication is a separate subsequent action. No broad credential or device login was acquired."
+  }
+}

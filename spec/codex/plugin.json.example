@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "parallel-development",
+  "version": "1.0.0-design.1",
+  "description": "Design template for bounded parallel development with explicit task contracts, resource accounting, and quality gates.",
+  "extensions": {
+    "com.openai": {
+      "hooks": "./hooks/codex.json"
+    }
+  }
+}

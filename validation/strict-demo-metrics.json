@@ -1,0 +1,128 @@
+{
+  "capacity": {
+    "global": {
+      "available": 2,
+      "limit": 2,
+      "uncertain": 0,
+      "used": 0
+    },
+    "selected_active": 0,
+    "selected_peak_reserved": 2,
+    "selected_uncertain": 0
+  },
+  "diagnostic_only": true,
+  "event_cursor": 85,
+  "historical_quality_records": {
+    "gate_records": {
+      "contract_ready": 0,
+      "final_accepted": 0,
+      "implementation_verified": 9,
+      "integrated_verified": 9
+    },
+    "records_may_have_been_revoked": true,
+    "review_decisions": {
+      "approve": 0,
+      "reject": 0,
+      "rework": 0
+    }
+  },
+  "history": {
+    "complete": true,
+    "detail_bytes": 20489,
+    "events": 85,
+    "first_event_at_epoch": 1794846801.53,
+    "last_event_at_epoch": 1794846806.628,
+    "limits": {
+      "attempts": 20000,
+      "event_detail_bytes": 16777216,
+      "events": 100000,
+      "tasks": 10000
+    },
+    "timestamp_basis": "controller_wall_clock",
+    "timestamp_order_reversals": 0
+  },
+  "observed_at": "2026-11-16T16:35:21.488Z",
+  "population": {
+    "attempt_states": {
+      "RELEASED": 9
+    },
+    "attempts": 9,
+    "retried_tasks": 0,
+    "retry_attempts": 0,
+    "stored_task_states": {
+      "AWAITING_REVIEW": 9
+    },
+    "tasks": 9,
+    "tasks_ever_reserved": 9
+  },
+  "process_outcomes": {
+    "cancelled": 0,
+    "failed": 0,
+    "start_failed": 0,
+    "succeeded": 9,
+    "timed_out": 0
+  },
+  "project_id": "demo",
+  "schema_version": 1,
+  "seconds": {
+    "active_reservation_age": {
+      "excluded_clock_reversals": 0,
+      "max": null,
+      "mean": null,
+      "min": null,
+      "p50": null,
+      "p95": null,
+      "samples": 0
+    },
+    "first_start_ack_to_terminal_observation": {
+      "excluded_clock_reversals": 0,
+      "max": 1.46,
+      "mean": 0.529667,
+      "min": 0.182,
+      "p50": 0.391,
+      "p95": 1.46,
+      "samples": 9
+    },
+    "registration_to_first_reservation": {
+      "excluded_clock_reversals": 0,
+      "max": 2.396,
+      "mean": 0.456889,
+      "min": 0.006,
+      "p50": 0.08,
+      "p95": 2.396,
+      "samples": 9
+    },
+    "release_to_next_reservation_in_scope": {
+      "excluded_clock_reversals": 0,
+      "max": 0.261,
+      "mean": 0.0835,
+      "min": 0.008,
+      "p50": 0.04,
+      "p95": 0.261,
+      "samples": 8
+    },
+    "reservation_to_release": {
+      "excluded_clock_reversals": 0,
+      "max": 1.717,
+      "mean": 0.726889,
+      "min": 0.4,
+      "p50": 0.543,
+      "p95": 1.717,
+      "samples": 9
+    }
+  },
+  "slot_usage": {
+    "active_intervals_are_incomplete": false,
+    "active_reservation_seconds": 0.0,
+    "closed_reservation_seconds": 6.542,
+    "releases_without_later_reservation": 1
+  },
+  "unavailable": {
+    "cpu_memory_and_model_usage": "The ledger does not record complete process-tree CPU, memory, or provider usage.",
+    "delivery_wall_time": "Tasks may arrive continuously; there is no immutable delivery cohort or final delivery checkpoint.",
+    "eligible_queue_wait": "Eligibility transitions are not durably timestamped; registration wait includes dependencies and backoff.",
+    "integration_conflict_rate": "Historical task blockers do not carry a stable conflict classification.",
+    "pure_dispatch_latency": "A release-to-reservation gap can include idle time and does not associate a particular physical slot.",
+    "technical_first_pass_rate": "Process success and recorded gates do not enumerate every required check attempt."
+  }
+}

@@ -1,0 +1,716 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:parallel-development:event:1",
+  "title": "Parallel Development Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "event_id",
+    "idempotency_key",
+    "type",
+    "project_id",
+    "producer",
+    "occurred_at",
+    "payload"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "event_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"
+    },
+    "idempotency_key": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "type": {
+      "enum": [
+        "plan_registered",
+        "task_registered",
+        "contract_ready",
+        "dispatch_requested",
+        "run_reserved",
+        "run_start_ack",
+        "run_start_failed",
+        "run_reported",
+        "run_exit_confirmed",
+        "run_cancel_requested",
+        "run_cancel_confirmed",
+        "run_lost",
+        "evidence_submitted",
+        "technical_verification_passed",
+        "integration_verified",
+        "review_recorded",
+        "resource_released",
+        "capacity_changed"
+      ]
+    },
+    "project_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"
+    },
+    "task_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"
+    },
+    "attempt_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"
+    },
+    "generation": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "producer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "id"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "planner",
+            "controller",
+            "host_adapter",
+            "executor",
+            "verifier",
+            "integrator",
+            "review_authority"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"
+        }
+      }
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "observed_host": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "engine": {
+          "enum": [
+            "codex",
+            "zcode"
+          ]
+        },
+        "session_id": {
+          "type": "string"
+        },
+        "tool_use_id": {
+          "type": "string"
+        },
+        "native_agent_id": {
+          "type": "string"
+        },
+        "process_identity": {
+          "type": "string"
+        }
+      }
+    },
+    "payload": {
+      "type": "object",
+      "description": "Versioned event-specific data. Critical event payloads are closed and constrained below. Other handlers still require separate contracts. Never include secrets or a full transcript by default."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "run_reserved",
+              "run_start_ack",
+              "run_start_failed",
+              "run_reported",
+              "run_exit_confirmed",
+              "run_cancel_requested",
+              "run_cancel_confirmed",
+              "run_lost"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "task_id",
+          "attempt_id",
+          "generation"
+        ]
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "run_exit_confirmed"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/exitPayload"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "resource_released"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "task_id",
+          "attempt_id",
+          "generation"
+        ],
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/releasePayload"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "evidence_submitted",
+              "technical_verification_passed"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "task_id",
+          "attempt_id",
+          "generation"
+        ],
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/artifactEvidencePayload"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "integration_verified"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/integrationPayload"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "review_recorded"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/reviewPayload"
+          }
+        }
+      }
+    }
+  ],
+  "description": "Producer and review-authority names are not authentication. The runtime must verify caller authority, immutable evidence, current plan and attempt generation, legal transitions, and idempotent lease ownership. JSON Schema cannot establish these facts.",
+  "dependentRequired": {
+    "attempt_id": [
+      "task_id",
+      "generation"
+    ],
+    "generation": [
+      "task_id",
+      "attempt_id"
+    ]
+  },
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"
+    },
+    "digest": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "revision",
+        "scope_digest"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "scope_digest": {
+          "$ref": "#/$defs/digest"
+        }
+      }
+    },
+    "evidenceReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "digest"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "digest": {
+          "$ref": "#/$defs/digest"
+        }
+      },
+      "description": "An immutable evidence-store record and its canonical digest. The runtime must resolve, authenticate, and verify its applicability; a self-reported reference is not proof."
+    },
+    "evidenceReferences": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1024,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/evidenceReference"
+      }
+    },
+    "artifactEvidencePayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "plan",
+        "artifact_digest",
+        "evidence_refs"
+      ],
+      "properties": {
+        "plan": {
+          "$ref": "#/$defs/plan"
+        },
+        "artifact_digest": {
+          "$ref": "#/$defs/digest"
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/evidenceReferences"
+        }
+      },
+      "description": "The enclosing task, attempt, and generation identify the candidate owner. Technical-pass evidence must contain the required checks, contract bindings, environment, and outcomes; submission alone grants no pass or acceptance."
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "task_id",
+        "attempt_id",
+        "generation",
+        "artifact_digest"
+      ],
+      "properties": {
+        "task_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "attempt_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "generation": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "artifact_digest": {
+          "$ref": "#/$defs/digest"
+        }
+      }
+    },
+    "integrationRevision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "commit",
+        "artifact_digest"
+      ],
+      "properties": {
+        "commit": {
+          "type": "string",
+          "pattern": "^([a-f0-9]{40}|[a-f0-9]{64})$"
+        },
+        "artifact_digest": {
+          "$ref": "#/$defs/digest"
+        }
+      },
+      "description": "An exact immutable Git commit and the digest of its delivered tree or canonical artifact manifest. Resolve both and prove they describe the same revision."
+    },
+    "integrationPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "plan",
+        "integration_ref",
+        "integration_baseline",
+        "integration_result",
+        "candidates",
+        "evidence_refs"
+      ],
+      "properties": {
+        "plan": {
+          "$ref": "#/$defs/plan"
+        },
+        "integration_ref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1024
+        },
+        "integration_baseline": {
+          "$ref": "#/$defs/integrationRevision"
+        },
+        "integration_result": {
+          "$ref": "#/$defs/integrationRevision"
+        },
+        "candidates": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1024,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/candidate"
+          }
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/evidenceReferences"
+        }
+      },
+      "description": "May be project-level or task-level without an enclosing attempt. Evidence must cover this exact baseline, candidate set, and result. Ref updates require an authorized compare-and-swap; schema validity does not perform one."
+    },
+    "reviewAuthorityIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "id"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 96
+        },
+        "id": {
+          "$ref": "#/$defs/identifier"
+        }
+      },
+      "description": "Claimed identity for correlation only. Authenticate the actual caller and resolve the designated independent review authority through trusted configuration; these fields never grant review permission."
+    },
+    "reviewPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "plan",
+        "delivery_digest",
+        "decision",
+        "review_record_id",
+        "review_authority"
+      ],
+      "properties": {
+        "plan": {
+          "$ref": "#/$defs/plan"
+        },
+        "delivery_digest": {
+          "$ref": "#/$defs/digest"
+        },
+        "decision": {
+          "enum": [
+            "approve",
+            "reject",
+            "rework"
+          ]
+        },
+        "review_record_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "review_authority": {
+          "$ref": "#/$defs/reviewAuthorityIdentity"
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/evidenceReferences"
+        }
+      },
+      "description": "May be project-level without a task or attempt. Only an authenticated, authorized record for the current plan and exact delivery can affect formal review. A syntactically valid approve value is not approval evidence."
+    },
+    "processExitStatus": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "code"
+          ],
+          "properties": {
+            "kind": {
+              "const": "exit_code"
+            },
+            "code": {
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "signal"
+          ],
+          "properties": {
+            "kind": {
+              "const": "signal"
+            },
+            "signal": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 96
+            }
+          }
+        }
+      ]
+    },
+    "exitFact": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "identity",
+            "observed_at",
+            "status"
+          ],
+          "properties": {
+            "kind": {
+              "const": "process_tree_exit"
+            },
+            "identity": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024,
+              "description": "Executor-bound process instance identity, including a start-time or nonce binding; a bare reusable PID is insufficient."
+            },
+            "observed_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "status": {
+              "$ref": "#/$defs/processExitStatus"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "identity",
+            "observed_at"
+          ],
+          "properties": {
+            "kind": {
+              "const": "native_thread_closed"
+            },
+            "identity": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024,
+              "description": "Adapter-bound native thread/agent handle with verified closure semantics; a model turn stopping is insufficient."
+            },
+            "observed_at": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      ]
+    },
+    "exitPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "process_tree_terminated",
+        "exit_fact",
+        "evidence_refs"
+      ],
+      "properties": {
+        "process_tree_terminated": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "True only for confirmed termination of the owned process tree. Null for a native closure that establishes no process-tree termination fact."
+        },
+        "exit_fact": {
+          "$ref": "#/$defs/exitFact"
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/evidenceReferences"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "exit_fact": {
+                "properties": {
+                  "kind": {
+                    "const": "process_tree_exit"
+                  }
+                },
+                "required": [
+                  "kind"
+                ]
+              }
+            },
+            "required": [
+              "exit_fact"
+            ]
+          },
+          "then": {
+            "properties": {
+              "process_tree_terminated": {
+                "const": true
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "process_tree_terminated": {
+                "const": null
+              }
+            }
+          }
+        }
+      ],
+      "description": "Observation of a real terminal resource fact, not a worker completion message. Native closure may release a verified host-thread reservation, but does not establish that descendant processes or writers stopped."
+    },
+    "releasePayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lease_id",
+        "resource_id",
+        "resource_kind",
+        "release_basis",
+        "evidence_refs"
+      ],
+      "properties": {
+        "lease_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "resource_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "resource_kind": {
+          "enum": [
+            "managed_worker_slot",
+            "host_thread_slot",
+            "exclusive_write_scope",
+            "exclusive_resource"
+          ]
+        },
+        "release_basis": {
+          "enum": [
+            "process_tree_exit_confirmed",
+            "native_thread_closure_confirmed",
+            "effective_write_revocation",
+            "confirmed_never_started"
+          ]
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/evidenceReferences"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "release_basis": {
+                "const": "effective_write_revocation"
+              }
+            },
+            "required": [
+              "release_basis"
+            ]
+          },
+          "then": {
+            "properties": {
+              "resource_kind": {
+                "const": "exclusive_write_scope"
+              }
+            }
+          }
+        }
+      ],
+      "description": "Release one identified reservation belonging to the enclosing attempt and generation. Verify lease ownership, authoritative evidence, and that the basis releases this resource kind atomically. Expiry, worker prose, or a repeated event cannot release capacity; write revocation alone cannot release a process or thread slot."
+    }
+  }
+}

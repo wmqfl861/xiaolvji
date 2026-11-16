@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "task_id": "parser-implementation",
+  "plan": {
+    "id": "approved-plan-001",
+    "revision": 1,
+    "scope_digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "role": "worker",
+  "engine": "zcode",
+  "objective": "Implement the parser module using the approved parser contract. Preserve existing public behavior.",
+  "base_commit": "2222222222222222222222222222222222222222",
+  "contract_versions": [
+    {
+      "id": "parser-contract",
+      "version": "1.0.0",
+      "digest": "sha256:3333333333333333333333333333333333333333333333333333333333333333"
+    }
+  ],
+  "depends_on": [
+    {
+      "task_id": "parser-contract-definition",
+      "gate": "contract_ready",
+      "artifact_digest": "sha256:3333333333333333333333333333333333333333333333333333333333333333"
+    }
+  ],
+  "write_scope": [
+    {
+      "path": "src/parser",
+      "kind": "directory"
+    },
+    {
+      "path": "tests/parser",
+      "kind": "directory"
+    }
+  ],
+  "exclusive_resources": [
+    "module:parser"
+  ],
+  "acceptance": [
+    {
+      "id": "parser-regression",
+      "criterion": "All agreed parser behavior and regression checks pass on the exact submitted commit.",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/parser"
+      ],
+      "cwd": ".",
+      "timeout_ms": 120000,
+      "required": true
+    }
+  ],
+  "expected_artifacts": [
+    "candidate_commit",
+    "changed_paths",
+    "validation_report",
+    "handover"
+  ],
+  "priority": 60,
+  "estimated_seconds": 1200,
+  "retry": {
+    "max_retries": 2,
+    "backoff_ms": 2000
+  },
+  "final_review_required": true,
+  "notes": "Synthetic example: the plan ID, hashes, paths, and test command are illustrative and are not evidence of a real approved task."
+}

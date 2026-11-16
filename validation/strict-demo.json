@@ -1,0 +1,74 @@
+{
+  "assertions": {
+    "all_four_modules_integrated_and_verified": true,
+    "capacity_reclaimed": true,
+    "global_limit_respected": true,
+    "independent_review_not_fabricated": true,
+    "no_controller_errors": true,
+    "rolling_refill_before_slowest_sibling": true,
+    "user_main_ref_unchanged": true,
+    "user_worktree_unchanged": true
+  },
+  "elapsed_seconds": 5.031,
+  "errors": [],
+  "execution_profile": "controlled_executor",
+  "host_or_model_invoked": false,
+  "managed_worker_limit": 2,
+  "maximum_observed_occupancy": 2,
+  "os_write_sandbox": true,
+  "real_processes_and_git": true,
+  "report_path": "/workspace/scratch/356ebfba7105/runtime-strict-demo-0.5.0/DEMO-REPORT.json",
+  "rolling_evidence": {
+    "alpha_exit_sequence": 35,
+    "gamma_start_sequence": 19
+  },
+  "schema_version": 1,
+  "status": "passed",
+  "tasks": [
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "alpha",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "beta",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "gamma",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "combined",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "verify-fbc350c43d647d218e7829387f046261",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "verify-3bbc571595bfddaf83d930e9244ae75f",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "verify-012949b8e544b85e961bb3337f6f3d52",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "verify-ec5d2d23c5b2c72db77ebc8646eefa6a",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "integrate-9691dc22f597a4a9941d4c438c19d731",
+      "state": "AWAITING_REVIEW"
+    }
+  ]
+}

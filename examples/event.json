@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "event_id": "evt-example-001",
+  "idempotency_key": "attempt-001:exit:1",
+  "type": "run_exit_confirmed",
+  "project_id": "example-project",
+  "task_id": "parser-implementation",
+  "attempt_id": "attempt-001",
+  "generation": 1,
+  "producer": {
+    "kind": "executor",
+    "id": "local-supervisor"
+  },
+  "occurred_at": "2026-11-03T10:00:00Z",
+  "observed_host": {
+    "engine": "zcode",
+    "process_identity": "synthetic-process-instance-with-start-nonce"
+  },
+  "payload": {
+    "process_tree_terminated": true,
+    "exit_fact": {
+      "kind": "process_tree_exit",
+      "identity": "synthetic-process-instance-with-start-nonce",
+      "observed_at": "2026-11-03T10:00:00Z",
+      "status": {
+        "kind": "exit_code",
+        "code": 0
+      }
+    },
+    "evidence_refs": [
+      {
+        "id": "synthetic-exit-observation",
+        "digest": "sha256:4444444444444444444444444444444444444444444444444444444444444444"
+      }
+    ]
+  }
+}

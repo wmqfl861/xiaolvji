@@ -1,0 +1,290 @@
+{
+  "advisory": true,
+  "capacity": {
+    "available": 2,
+    "limit": 2,
+    "uncertain": 0,
+    "used": 0
+  },
+  "entries": [
+    {
+      "aging_credit": 0,
+      "base_rank": 120,
+      "blocker_count": 1,
+      "blockers": [
+        {
+          "code": "AWAITING_REVIEW",
+          "kind": "eligibility"
+        }
+      ],
+      "blockers_truncated": false,
+      "created_seq": 18,
+      "dispatchable": false,
+      "effective_rank": 120,
+      "eligible": false,
+      "priority": 100,
+      "project_capacity": {
+        "available": 2,
+        "limit": 2,
+        "used": 0
+      },
+      "project_id": "demo",
+      "role": "verifier",
+      "role_bonus": 20,
+      "state": "AWAITING_REVIEW",
+      "task_id": "verify-8560805161a8e0d4c6c64ca6b7e0cce8",
+      "waiting_age_seconds": 119
+    },
+    {
+      "aging_credit": 0,
+      "base_rank": 120,
+      "blocker_count": 1,
+      "blockers": [
+        {
+          "code": "AWAITING_REVIEW",
+          "kind": "eligibility"
+        }
+      ],
+      "blockers_truncated": false,
+      "created_seq": 25,
+      "dispatchable": false,
+      "effective_rank": 120,
+      "eligible": false,
+      "priority": 100,
+      "project_capacity": {
+        "available": 2,
+        "limit": 2,
+        "used": 0
+      },
+      "project_id": "demo",
+      "role": "verifier",
+      "role_bonus": 20,
+      "state": "AWAITING_REVIEW",
+      "task_id": "verify-c3e3ea27dba8b16aa96f6d08ac2c8610",
+      "waiting_age_seconds": 119
+    },
+    {
+      "aging_credit": 0,
+      "base_rank": 120,
+      "blocker_count": 1,
+      "blockers": [
+        {
+          "code": "AWAITING_REVIEW",
+          "kind": "eligibility"
+        }
+      ],
+      "blockers_truncated": false,
+      "created_seq": 38,
+      "dispatchable": false,
+      "effective_rank": 120,
+      "eligible": false,
+      "priority": 100,
+      "project_capacity": {
+        "available": 2,
+        "limit": 2,
+        "used": 0
+      },
+      "project_id": "demo",
+      "role": "verifier",
+      "role_bonus": 20,
+      "state": "AWAITING_REVIEW",
+      "task_id": "verify-cdf6a8ab1bafac231449c29a554c54e0",
+      "waiting_age_seconds": 118
+    },
+    {
+      "aging_credit": 0,
+      "base_rank": 120,
+      "blocker_count": 1,
+      "blockers": [
+        {
+          "code": "AWAITING_REVIEW",
+          "kind": "eligibility"
+        }
+      ],
+      "blockers_truncated": false,
+      "created_seq": 58,
+      "dispatchable": false,
+      "effective_rank": 120,
+      "eligible": false,
+      "priority": 100,
+      "project_capacity": {
+        "available": 2,
+        "limit": 2,
+        "used": 0
+      },
+      "project_id": "demo",
+      "role": "verifier",
+      "role_bonus": 20,
+      "state": "AWAITING_REVIEW",
+      "task_id": "verify-db1ec6f1898c5db5b53c3ff46533b155",
+      "waiting_age_seconds": 117
+    },
+    {
+      "aging_credit": 3,
+      "base_rank": 110,
+      "blocker_count": 1,
+      "blockers": [
+        {
+          "code": "AWAITING_REVIEW",
+          "kind": "eligibility"
+        }
+      ],
+      "blockers_truncated": false,
+      "created_seq": 67,
+      "dispatchable": false,
+      "effective_rank": 113,
+      "eligible": false,
+      "priority": 100,
+      "project_capacity": {
+        "available": 2,
+        "limit": 2,
+        "used": 0
+      },
+      "project_id": "demo",
+      "role": "integrator",
+      "role_bonus": 10,
+      "state": "AWAITING_REVIEW",
+      "task_id": "integrate-b2b17e8927813c9cc9bd4af4121053a5",
+      "waiting_age_seconds": 116
+    },
+    {
+      "aging_credit": 3,
+      "base_rank": 50,
+      "blocker_count": 1,
+      "blockers": [
+        {
+          "code": "AWAITING_REVIEW",
+          "kind": "eligibility"
+        }
+      ],
+      "blockers_truncated": false,
+      "created_seq": 3,
+      "dispatchable": false,
+      "effective_rank": 53,
+      "eligible": false,
+      "priority": 50,
+      "project_capacity": {
+        "available": 2,
+        "limit": 2,
+        "used": 0
+      },
+      "project_id": "demo",
+      "role": "worker",
+      "role_bonus": 0,
+      "state": "AWAITING_REVIEW",
+      "task_id": "alpha",
+      "waiting_age_seconds": 119
+    },
+    {
+      "aging_credit": 3,
+      "base_rank": 50,
+      "blocker_count": 1,
+      "blockers": [
+        {
+          "code": "AWAITING_REVIEW",
+          "kind": "eligibility"
+        }
+      ],
+      "blockers_truncated": false,
+      "created_seq": 4,
+      "dispatchable": false,
+      "effective_rank": 53,
+      "eligible": false,
+      "priority": 50,
+      "project_capacity": {
+        "available": 2,
+        "limit": 2,
+        "used": 0
+      },
+      "project_id": "demo",
+      "role": "worker",
+      "role_bonus": 0,
+      "state": "AWAITING_REVIEW",
+      "task_id": "beta",
+      "waiting_age_seconds": 119
+    },
+    {
+      "aging_credit": 3,
+      "base_rank": 50,
+      "blocker_count": 1,
+      "blockers": [
+        {
+          "code": "AWAITING_REVIEW",
+          "kind": "eligibility"
+        }
+      ],
+      "blockers_truncated": false,
+      "created_seq": 5,
+      "dispatchable": false,
+      "effective_rank": 53,
+      "eligible": false,
+      "priority": 50,
+      "project_capacity": {
+        "available": 2,
+        "limit": 2,
+        "used": 0
+      },
+      "project_id": "demo",
+      "role": "worker",
+      "role_bonus": 0,
+      "state": "AWAITING_REVIEW",
+      "task_id": "gamma",
+      "waiting_age_seconds": 119
+    },
+    {
+      "aging_credit": 3,
+      "base_rank": 50,
+      "blocker_count": 1,
+      "blockers": [
+        {
+          "code": "AWAITING_REVIEW",
+          "kind": "eligibility"
+        }
+      ],
+      "blockers_truncated": false,
+      "created_seq": 6,
+      "dispatchable": false,
+      "effective_rank": 53,
+      "eligible": false,
+      "priority": 50,
+      "project_capacity": {
+        "available": 2,
+        "limit": 2,
+        "used": 0
+      },
+      "project_id": "demo",
+      "role": "worker",
+      "role_bonus": 0,
+      "state": "AWAITING_REVIEW",
+      "task_id": "combined",
+      "waiting_age_seconds": 119
+    }
+  ],
+  "event_cursor": 85,
+  "observed_at": 1794846921.4763348,
+  "policy": {
+    "age_includes_dependency_and_backoff_wait": true,
+    "age_source": "task_registration",
+    "aging_step_seconds": 30,
+    "default_priority": 50,
+    "maximum_seconds_to_ceiling": 3600,
+    "name": "bounded_priority_aging",
+    "order": [
+      "eligible_desc",
+      "effective_rank_desc",
+      "created_seq_asc",
+      "project_id_asc",
+      "task_id_asc"
+    ],
+    "rank_ceiling": 120,
+    "role_bonus": {
+      "integrator": 10,
+      "verifier": 20
+    },
+    "start_deadline_guaranteed": false,
+    "version": 1
+  },
+  "schema_version": 1,
+  "total": 9,
+  "truncated": false
+}

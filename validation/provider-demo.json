@@ -1,0 +1,128 @@
+{
+  "assertions": {
+    "all_four_modules_integrated_and_verified": true,
+    "capacity_reclaimed": true,
+    "four_scoped_provider_requests": true,
+    "global_limit_respected": true,
+    "independent_review_not_fabricated": true,
+    "no_controller_errors": true,
+    "provider_grants_revoked": true,
+    "provider_limit_respected": true,
+    "provider_requests_accounted": true,
+    "rolling_refill_before_slowest_sibling": true,
+    "user_main_ref_unchanged": true,
+    "user_worktree_unchanged": true
+  },
+  "elapsed_seconds": 5.323,
+  "errors": [],
+  "execution_profile": "controlled_executor",
+  "host_or_model_invoked": false,
+  "managed_worker_limit": 2,
+  "maximum_observed_occupancy": 2,
+  "os_write_sandbox": true,
+  "provider_transport": {
+    "all_grants_revoked": true,
+    "all_requests_accounted": true,
+    "grants": [
+      {
+        "attempt_id": "e19c02ad6ce844d78fd5e18d799ff424",
+        "requests_consumed": 1,
+        "status": "REVOKED"
+      },
+      {
+        "attempt_id": "3432a746b8f14b6cb9adc16e238a5550",
+        "requests_consumed": 1,
+        "status": "REVOKED"
+      },
+      {
+        "attempt_id": "6c700dd7773f4be38878f35ccd6210e9",
+        "requests_consumed": 1,
+        "status": "REVOKED"
+      },
+      {
+        "attempt_id": "d3be5db43902402185eab80928cf0355",
+        "requests_consumed": 1,
+        "status": "REVOKED"
+      }
+    ],
+    "http_requests": 4,
+    "maximum_local_provider_in_flight": 1,
+    "real_host_invocations": 0,
+    "real_provider_requests": 0,
+    "remote_processing_after_disconnect": "unknown_for_real_providers",
+    "requests": [
+      {
+        "outcome": "completed",
+        "state": "COMPLETED"
+      },
+      {
+        "outcome": "completed",
+        "state": "COMPLETED"
+      },
+      {
+        "outcome": "completed",
+        "state": "COMPLETED"
+      },
+      {
+        "outcome": "completed",
+        "state": "COMPLETED"
+      }
+    ],
+    "synthetic_only": true
+  },
+  "real_processes_and_git": true,
+  "report_path": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0/DEMO-REPORT.json",
+  "rolling_evidence": {
+    "alpha_exit_sequence": 34,
+    "gamma_start_sequence": 19
+  },
+  "schema_version": 1,
+  "status": "passed",
+  "tasks": [
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "alpha",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "beta",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "gamma",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "combined",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "verify-d8d82e7d5127d76154fe78c84313bf86",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "verify-b246a24fd90e8467bf1c863ef39acf2a",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "verify-7d96849fe3f60fcff91d34c289468fcf",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "verify-9842fb2065bdc2c7beed22b819c43799",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "integrate-8197dfcc16e4d3257a4b41b4b255613c",
+      "state": "AWAITING_REVIEW"
+    }
+  ]
+}

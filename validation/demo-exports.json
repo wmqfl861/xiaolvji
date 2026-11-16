@@ -1,0 +1,329 @@
+{
+  "demos": {
+    "cooperative": {
+      "attempted_runs": 1,
+      "capacity_peak": 2,
+      "capacity_used_at_end": 0,
+      "check_commands": 8,
+      "demo_status": "passed",
+      "elapsed_seconds_observed": 3.945,
+      "event_count": 85,
+      "event_cursor": 85,
+      "event_page_size": 25,
+      "event_pages": [
+        {
+          "after": 0,
+          "count": 25,
+          "last_sequence": 25
+        },
+        {
+          "after": 25,
+          "count": 25,
+          "last_sequence": 50
+        },
+        {
+          "after": 50,
+          "count": 25,
+          "last_sequence": 75
+        },
+        {
+          "after": 75,
+          "count": 10,
+          "last_sequence": 85
+        },
+        {
+          "after": 85,
+          "count": 0,
+          "last_sequence": null
+        }
+      ],
+      "evidence_status": "passed",
+      "implementation_attestations": 0,
+      "reports": {
+        "demo_report": "/workspace/scratch/356ebfba7105/review-v5/demos/cooperative-DEMO-REPORT.json",
+        "evidence_summary": "/workspace/scratch/356ebfba7105/review-v5/demos/cooperative-evidence.json",
+        "implementation_evidence": "/workspace/scratch/356ebfba7105/review-v5/demos/cooperative-implementation-evidence.json",
+        "ledger_events": "/workspace/scratch/356ebfba7105/review-v5/demos/cooperative-ledger-events.json",
+        "metrics": "/workspace/scratch/356ebfba7105/review-v5/demos/cooperative-metrics.json",
+        "quality_reports": "/workspace/scratch/356ebfba7105/review-v5/demos/cooperative-quality-reports.json",
+        "quality_services": "/workspace/scratch/356ebfba7105/review-v5/demos/cooperative-quality-services.json",
+        "queue": "/workspace/scratch/356ebfba7105/review-v5/demos/cooperative-queue.json"
+      },
+      "runtime_root": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0",
+      "source_cli_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "xiaolvji",
+        "demo",
+        "--output",
+        "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0",
+        "--profile",
+        "cooperative_native"
+      ],
+      "source_cli_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/workspace/scratch/356ebfba7105/xiaolvji/src"
+      },
+      "source_cli_exit_code": 0,
+      "source_cli_stderr_bytes": 0,
+      "task_count": 9,
+      "trusted_quality_services": 0,
+      "packaged_reports": {
+        "DEMO-REPORT.json": "validation/demo.json",
+        "ledger-events.json": "validation/demo-events.json",
+        "metrics.json": "validation/demo-metrics.json",
+        "queue.json": "validation/demo-queue.json",
+        "evidence.json": "validation/cooperative-evidence.json",
+        "implementation-evidence.json": "validation/cooperative-implementation-evidence.json",
+        "quality-services.json": "validation/cooperative-quality-services.json",
+        "quality-reports.json": "validation/cooperative-quality-reports.json"
+      }
+    },
+    "provider": {
+      "attempted_runs": 1,
+      "capacity_peak": 2,
+      "capacity_used_at_end": 0,
+      "check_commands": 8,
+      "demo_status": "passed",
+      "elapsed_seconds_observed": 5.323,
+      "event_count": 85,
+      "event_cursor": 85,
+      "event_page_size": 25,
+      "event_pages": [
+        {
+          "after": 0,
+          "count": 25,
+          "last_sequence": 25
+        },
+        {
+          "after": 25,
+          "count": 25,
+          "last_sequence": 50
+        },
+        {
+          "after": 50,
+          "count": 25,
+          "last_sequence": 75
+        },
+        {
+          "after": 75,
+          "count": 10,
+          "last_sequence": 85
+        },
+        {
+          "after": 85,
+          "count": 0,
+          "last_sequence": null
+        }
+      ],
+      "evidence_status": "passed",
+      "implementation_attestations": 4,
+      "reports": {
+        "demo_report": "/workspace/scratch/356ebfba7105/review-v5/demos/provider-DEMO-REPORT.json",
+        "evidence_summary": "/workspace/scratch/356ebfba7105/review-v5/demos/provider-evidence.json",
+        "implementation_evidence": "/workspace/scratch/356ebfba7105/review-v5/demos/provider-implementation-evidence.json",
+        "ledger_events": "/workspace/scratch/356ebfba7105/review-v5/demos/provider-ledger-events.json",
+        "metrics": "/workspace/scratch/356ebfba7105/review-v5/demos/provider-metrics.json",
+        "quality_reports": "/workspace/scratch/356ebfba7105/review-v5/demos/provider-quality-reports.json",
+        "quality_services": "/workspace/scratch/356ebfba7105/review-v5/demos/provider-quality-services.json",
+        "queue": "/workspace/scratch/356ebfba7105/review-v5/demos/provider-queue.json"
+      },
+      "runtime_root": "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0",
+      "source_cli_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "xiaolvji",
+        "demo",
+        "--output",
+        "/workspace/scratch/356ebfba7105/runtime-provider-demo-0.5.0",
+        "--profile",
+        "controlled_executor",
+        "--provider-transport"
+      ],
+      "source_cli_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/workspace/scratch/356ebfba7105/xiaolvji/src"
+      },
+      "source_cli_exit_code": 0,
+      "source_cli_stderr_bytes": 0,
+      "task_count": 9,
+      "trusted_quality_services": 5,
+      "packaged_reports": {
+        "DEMO-REPORT.json": "validation/provider-demo.json",
+        "ledger-events.json": "validation/provider-demo-events.json",
+        "metrics.json": "validation/provider-demo-metrics.json",
+        "queue.json": "validation/provider-demo-queue.json",
+        "evidence.json": "validation/provider-evidence.json",
+        "implementation-evidence.json": "validation/provider-implementation-evidence.json",
+        "quality-services.json": "validation/provider-quality-services.json",
+        "quality-reports.json": "validation/provider-quality-reports.json"
+      }
+    },
+    "strict": {
+      "attempted_runs": 1,
+      "capacity_peak": 2,
+      "capacity_used_at_end": 0,
+      "check_commands": 8,
+      "demo_status": "passed",
+      "elapsed_seconds_observed": 5.031,
+      "event_count": 85,
+      "event_cursor": 85,
+      "event_page_size": 25,
+      "event_pages": [
+        {
+          "after": 0,
+          "count": 25,
+          "last_sequence": 25
+        },
+        {
+          "after": 25,
+          "count": 25,
+          "last_sequence": 50
+        },
+        {
+          "after": 50,
+          "count": 25,
+          "last_sequence": 75
+        },
+        {
+          "after": 75,
+          "count": 10,
+          "last_sequence": 85
+        },
+        {
+          "after": 85,
+          "count": 0,
+          "last_sequence": null
+        }
+      ],
+      "evidence_status": "passed",
+      "implementation_attestations": 4,
+      "reports": {
+        "demo_report": "/workspace/scratch/356ebfba7105/review-v5/demos/strict-DEMO-REPORT.json",
+        "evidence_summary": "/workspace/scratch/356ebfba7105/review-v5/demos/strict-evidence.json",
+        "implementation_evidence": "/workspace/scratch/356ebfba7105/review-v5/demos/strict-implementation-evidence.json",
+        "ledger_events": "/workspace/scratch/356ebfba7105/review-v5/demos/strict-ledger-events.json",
+        "metrics": "/workspace/scratch/356ebfba7105/review-v5/demos/strict-metrics.json",
+        "quality_reports": "/workspace/scratch/356ebfba7105/review-v5/demos/strict-quality-reports.json",
+        "quality_services": "/workspace/scratch/356ebfba7105/review-v5/demos/strict-quality-services.json",
+        "queue": "/workspace/scratch/356ebfba7105/review-v5/demos/strict-queue.json"
+      },
+      "runtime_root": "/workspace/scratch/356ebfba7105/runtime-strict-demo-0.5.0",
+      "source_cli_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "xiaolvji",
+        "demo",
+        "--output",
+        "/workspace/scratch/356ebfba7105/runtime-strict-demo-0.5.0",
+        "--profile",
+        "controlled_executor"
+      ],
+      "source_cli_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/workspace/scratch/356ebfba7105/xiaolvji/src"
+      },
+      "source_cli_exit_code": 0,
+      "source_cli_stderr_bytes": 0,
+      "task_count": 9,
+      "trusted_quality_services": 5,
+      "packaged_reports": {
+        "DEMO-REPORT.json": "validation/strict-demo.json",
+        "ledger-events.json": "validation/strict-demo-events.json",
+        "metrics.json": "validation/strict-demo-metrics.json",
+        "queue.json": "validation/strict-demo-queue.json",
+        "evidence.json": "validation/strict-evidence.json",
+        "implementation-evidence.json": "validation/strict-implementation-evidence.json",
+        "quality-services.json": "validation/strict-quality-services.json",
+        "quality-reports.json": "validation/strict-quality-reports.json"
+      }
+    }
+  },
+  "export_sha256": {
+    "cooperative-DEMO-REPORT.json": "d14429fdcbf0897f64818a82e1e4401e0c4901abe6708e40efd6a1e460f6b433",
+    "cooperative-evidence.json": "f62ee0386b235e40faaeb5c15d7d1d1c996b67bdfcb8230b6a32c9928c55de16",
+    "cooperative-implementation-evidence.json": "297db0de9e0b195ead20dc90ed2a9c3a7b24ebef8cd62abf64e83d604c2d3633",
+    "cooperative-ledger-events.json": "f4dfa1b0ade7ac54809da09b4bbfd057fcf74a724985835d502ed78aecc89192",
+    "cooperative-metrics.json": "d38ab94fd1b6d01d2abccf6c623f18fa9d81763eccc5ae8e004e22076437a27c",
+    "cooperative-quality-reports.json": "6c74544e92a259ad93eac4832f18f7111ce6632d4fc6320d599fe1c8b9b6cfa4",
+    "cooperative-quality-services.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "cooperative-queue.json": "1ad571978095b1e2f0b0e35ba785a1585875d348a658d5fe9edcd0c05da9a13c",
+    "cooperative-source-cli.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cooperative-source-cli.stdout.json": "932a815a0931c782b6708e5fb3b8f84513bf704cebf1e5f81adc2720e6f1a8ad",
+    "export_runtime_evidence.py": "01897d87218a2bb170fd06e0a0ed40defda46e325febb1cf867c19e372c11a52",
+    "provider-DEMO-REPORT.json": "d928fa51dd1d45801488f6377203d3e5131501865ae517e07d9106969106d9f6",
+    "provider-evidence.json": "10d70dfcdf7ce0da278eff6014414a49bc8c0298fd92a106a0349c4ed5433e1e",
+    "provider-implementation-evidence.json": "a6c8bb65df715ffebff6c98936d29dc430cc4cc002f0a88167537b2199f06c47",
+    "provider-ledger-events.json": "64776eeacce77d5f488f389da7facda2de31d681aea2c0e7a32edbdb63cdd4a1",
+    "provider-metrics.json": "e658bcf23e13392fc2051756b7c10811401cab4f0cc94dfc91f3f4c2826a4efe",
+    "provider-quality-reports.json": "1b04fe54d7c516ee34f07d0b6a1d305ad211507ba7e2e361ad4f5164313fd921",
+    "provider-quality-services.json": "f43bb41a5cbf8e2c0851cb494b69c3e350ab0630fbbc299a0483537e9a8065c6",
+    "provider-queue.json": "1fc367313c31187a663a9652842d2fabb075a2d317bb245fbd5a57ea572c56b5",
+    "provider-source-cli.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "provider-source-cli.stdout.json": "9e330d5623bd89ec0985c49c34fb783dca8955e07af1dd017a83648dd48d5855",
+    "source-cli-version.txt": "a0ad50640139a524f86591157145bf1d4674ea9c065bfea21558f0f7b04430c8",
+    "strict-DEMO-REPORT.json": "60cf11f54f4ab7b3699e2cb08a929f45c6485e309b75a4a7829d974b94bfe137",
+    "strict-evidence.json": "7ebcfa9019551ddd329e61711346243683209fe461ac2c8d315302b3cff7e7a7",
+    "strict-implementation-evidence.json": "421e6e1f129994cd0351767f7626e70fd3060671b3185c3d7abff7b4bd1fb97e",
+    "strict-ledger-events.json": "267c9a7f4fd0e67a2029d09c90f17aae6eb79dc6d103886e50eb74a80423a180",
+    "strict-metrics.json": "5431a668ca8d9012e0adbb66761c7615253261bef9526a11bb496954809b36a9",
+    "strict-quality-reports.json": "fd6929c04b5e6e5ebb6173ef76bb9d61b660bdee25bc90b634cd04b5a9b91b2a",
+    "strict-quality-services.json": "e1f53612b6a101aca76d891152627efce630fb777b43d6221f73f361aa209590",
+    "strict-queue.json": "75fa4e33a024236642f16b99387329ad98b9b81b742673114c6988fcd13081ae",
+    "strict-source-cli.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "strict-source-cli.stdout.json": "bd6cfbd68b3e7d8803e13c4fa8c8f0368fb32b54707e52a4c301a86db17e53f9"
+  },
+  "external_provider_requests": 0,
+  "generated_at": "2026-11-16T16:35:21.466536Z",
+  "real_host_or_model_invoked": false,
+  "runtime_version": "0.5.0",
+  "sanitization": {
+    "paths_preserved_for_evidence_traceability": true,
+    "record_elision": false,
+    "redacted_key_names": [
+      "access_token",
+      "api_key",
+      "authorization",
+      "capability",
+      "credential",
+      "nonce",
+      "refresh_token",
+      "secret",
+      "token",
+      "xiaolvji_provider_capability"
+    ],
+    "redacted_value": "<redacted>"
+  },
+  "schema_version": 1,
+  "source_root": "/workspace/scratch/356ebfba7105/xiaolvji",
+  "speedup_benchmark": false,
+  "status": "passed",
+  "validation_kind": "release_pipeline_and_gate_regression",
+  "packaged_exports_sha256": {
+    "demo.json": "d14429fdcbf0897f64818a82e1e4401e0c4901abe6708e40efd6a1e460f6b433",
+    "demo-events.json": "f4dfa1b0ade7ac54809da09b4bbfd057fcf74a724985835d502ed78aecc89192",
+    "demo-metrics.json": "d38ab94fd1b6d01d2abccf6c623f18fa9d81763eccc5ae8e004e22076437a27c",
+    "demo-queue.json": "1ad571978095b1e2f0b0e35ba785a1585875d348a658d5fe9edcd0c05da9a13c",
+    "cooperative-evidence.json": "f62ee0386b235e40faaeb5c15d7d1d1c996b67bdfcb8230b6a32c9928c55de16",
+    "cooperative-implementation-evidence.json": "297db0de9e0b195ead20dc90ed2a9c3a7b24ebef8cd62abf64e83d604c2d3633",
+    "cooperative-quality-services.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "cooperative-quality-reports.json": "6c74544e92a259ad93eac4832f18f7111ce6632d4fc6320d599fe1c8b9b6cfa4",
+    "strict-demo.json": "60cf11f54f4ab7b3699e2cb08a929f45c6485e309b75a4a7829d974b94bfe137",
+    "strict-demo-events.json": "267c9a7f4fd0e67a2029d09c90f17aae6eb79dc6d103886e50eb74a80423a180",
+    "strict-demo-metrics.json": "5431a668ca8d9012e0adbb66761c7615253261bef9526a11bb496954809b36a9",
+    "strict-demo-queue.json": "75fa4e33a024236642f16b99387329ad98b9b81b742673114c6988fcd13081ae",
+    "strict-evidence.json": "7ebcfa9019551ddd329e61711346243683209fe461ac2c8d315302b3cff7e7a7",
+    "strict-implementation-evidence.json": "421e6e1f129994cd0351767f7626e70fd3060671b3185c3d7abff7b4bd1fb97e",
+    "strict-quality-services.json": "e1f53612b6a101aca76d891152627efce630fb777b43d6221f73f361aa209590",
+    "strict-quality-reports.json": "fd6929c04b5e6e5ebb6173ef76bb9d61b660bdee25bc90b634cd04b5a9b91b2a",
+    "provider-demo.json": "d928fa51dd1d45801488f6377203d3e5131501865ae517e07d9106969106d9f6",
+    "provider-demo-events.json": "64776eeacce77d5f488f389da7facda2de31d681aea2c0e7a32edbdb63cdd4a1",
+    "provider-demo-metrics.json": "e658bcf23e13392fc2051756b7c10811401cab4f0cc94dfc91f3f4c2826a4efe",
+    "provider-demo-queue.json": "1fc367313c31187a663a9652842d2fabb075a2d317bb245fbd5a57ea572c56b5",
+    "provider-evidence.json": "10d70dfcdf7ce0da278eff6014414a49bc8c0298fd92a106a0349c4ed5433e1e",
+    "provider-implementation-evidence.json": "a6c8bb65df715ffebff6c98936d29dc430cc4cc002f0a88167537b2199f06c47",
+    "provider-quality-services.json": "f43bb41a5cbf8e2c0851cb494b69c3e350ab0630fbbc299a0483537e9a8065c6",
+    "provider-quality-reports.json": "1b04fe54d7c516ee34f07d0b6a1d305ad211507ba7e2e361ad4f5164313fd921"
+  },
+  "source_export_manifest": "Original paths identify the actual test run; packaged_reports locates the delivered sanitized copies. No records were removed. Nonce and credential fields are redacted as described in the original export."
+}

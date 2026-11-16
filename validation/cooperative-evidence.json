@@ -1,0 +1,105 @@
+{
+  "assertions": {
+    "all_capacity_reclaimed": true,
+    "all_check_outcomes_successful": true,
+    "all_checked_sources_unchanged": true,
+    "all_checks_pin_recorded_executable": true,
+    "all_demo_assertions_pass": true,
+    "all_implementation_process_trees_terminated": true,
+    "complete_history_exported": true,
+    "independent_review_not_fabricated": true,
+    "metrics_queue_agree_at_terminal_cursor": true
+  },
+  "attested_check_commands": 0,
+  "check_commands": 8,
+  "date": "2026-11-16",
+  "evidence_files": {
+    "demo_report": "/workspace/scratch/356ebfba7105/review-v5/demos/cooperative-DEMO-REPORT.json",
+    "implementation_evidence": "/workspace/scratch/356ebfba7105/review-v5/demos/cooperative-implementation-evidence.json",
+    "ledger_events": "/workspace/scratch/356ebfba7105/review-v5/demos/cooperative-ledger-events.json",
+    "metrics": "/workspace/scratch/356ebfba7105/review-v5/demos/cooperative-metrics.json",
+    "quality_reports": "/workspace/scratch/356ebfba7105/review-v5/demos/cooperative-quality-reports.json",
+    "quality_services": "/workspace/scratch/356ebfba7105/review-v5/demos/cooperative-quality-services.json",
+    "queue": "/workspace/scratch/356ebfba7105/review-v5/demos/cooperative-queue.json"
+  },
+  "execution_profile": "cooperative_native",
+  "fixture_only": true,
+  "host_or_model_invoked": false,
+  "implementation_attempts": 4,
+  "implementation_attestations": 0,
+  "network_evidence": {
+    "check_policy_modes": [],
+    "cooperative_network_isolation_attested": false,
+    "implementation_policy_modes": [],
+    "local_synthetic_provider_only": false,
+    "synthetic_transport_does_not_prove_native_host_readiness": false
+  },
+  "quality_reports": 5,
+  "runtime_version": "0.5.0",
+  "sample_check_evidence": {
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "-c",
+      "from src.combined import value; assert value() == 3"
+    ],
+    "cancelled": false,
+    "criterion": "The approved function returns its specified value.",
+    "cwd": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/workspaces/51af71afefd44321b4e141ff19d2c5a3/worktree",
+    "ended_at": "2026-11-16T16:33:24.327Z",
+    "executable": {
+      "digest": "sha256:fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+      "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "size": 30894944
+    },
+    "executed_argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "-B",
+      "-c",
+      "from src.combined import value; assert value() == 3"
+    ],
+    "exit_code": 0,
+    "id": "combined-value",
+    "logs": [
+      {
+        "bytes": 0,
+        "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/51af71afefd44321b4e141ff19d2c5a3/logs/combined-value.stdout.log",
+        "stream": "stdout",
+        "truncated": false
+      },
+      {
+        "bytes": 0,
+        "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/quality/51af71afefd44321b4e141ff19d2c5a3/logs/combined-value.stderr.log",
+        "stream": "stderr",
+        "truncated": false
+      }
+    ],
+    "process_identity": {
+      "attempt_id": "check-c635551805704df5ac024d5a594274a5",
+      "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+      "generation": 1,
+      "nonce": "<redacted>",
+      "pid": 405,
+      "pid_namespace": "pid:[4026532593]",
+      "proc_pid": 405,
+      "profile": "cooperative_native",
+      "sandbox_policy_digest": null,
+      "session_id": 405,
+      "start_time": "3922369",
+      "tracking": "linux_child_subreaper_v1"
+    },
+    "process_tree_terminated": true,
+    "required": true,
+    "started_at": "2026-11-16T16:33:24.246Z",
+    "status": "passed",
+    "timed_out": false,
+    "timeout_ms": 5000
+  },
+  "sample_implementation_attestation": null,
+  "schema_version": 1,
+  "status": "passed",
+  "timezone": "Etc/UTC",
+  "trusted_quality_services": 0
+}

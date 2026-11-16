@@ -1,0 +1,123 @@
+{
+  "authentication_attempted": false,
+  "blocking_reasons": [
+    "Strict model jobs require explicit provider profiles and isolated host snapshots; no ambient credentials or model settings are imported",
+    "codex: no verified native deployment matches an explicit provider binding"
+  ],
+  "checks": [
+    {
+      "detail": "A registered Codex native fixture checks the actual tool manifest; unverified deployments remain blocked.",
+      "name": "codex_agents_disabled",
+      "source": "https://learn.chatgpt.com/docs/config-file/config-reference",
+      "status": "documented"
+    },
+    {
+      "detail": "Pinned CLI supports the explicit disallowlist and guarded mode; arbitrary shell launching remains outside native-tool denial.",
+      "name": "zcode_agent_disallowlist",
+      "source_commit": "a60ba6a7e5a06742270ca605f5d2cc2766afa7e1",
+      "status": "source_verified"
+    },
+    {
+      "detail": "Codex parent session IDs do not prove a child's identity; ordinary ZCode Agent children do not inherit parent hooks.",
+      "name": "native_hook_identity",
+      "status": "unsupported"
+    },
+    {
+      "detail": "Native Stop/result hooks cannot attest process-tree termination or reclaim a managed reservation.",
+      "name": "native_hook_slot_release",
+      "status": "unsupported"
+    },
+    {
+      "detail": "Source packages can generate py -3 hooks; Windows host and process-boundary integration tests are pending.",
+      "name": "native_windows_hooks",
+      "status": "unknown"
+    }
+  ],
+  "effective_mode": "blocked",
+  "execution_location": "local",
+  "executor": {
+    "blocking_reasons": [],
+    "effective_mode": "controlled_executor",
+    "isolation": {
+      "backend": "linux-bubblewrap-offline-v1",
+      "blocking_reasons": [],
+      "limitations": [
+        "This probe establishes the default offline boundary; explicit provider channels require their own attested launch",
+        "Native host/model acceptance is not established by this OS capability probe",
+        "CPU, memory and process-count resource quotas are not enforced",
+        "A missing supervisor result remains uncertain even if a namespace disappears"
+      ],
+      "model_network_supported": false,
+      "network": "none",
+      "observed": {
+        "caps": [
+          "0000000000000000",
+          "0000000000000000",
+          "0000000000000000"
+        ],
+        "hidden": false,
+        "home": "/home/xiaolvji",
+        "namespaces": {
+          "ipc": "ipc:[4026532380]",
+          "mnt": "mnt:[4026532308]",
+          "net": "net:[4026532237]",
+          "pid": "pid:[4026532381]",
+          "user": "user:[4026532382]",
+          "uts": "uts:[4026532309]"
+        },
+        "no_new_privs": "1",
+        "ptrace_denied": true,
+        "root_readonly": true,
+        "seccomp": "2"
+      },
+      "os_boundary": true,
+      "resource_limits_enforced": false,
+      "status": "runtime_probed",
+      "strict_supported": true,
+      "supported": true,
+      "tool_versions": {
+        "bwrap": "bubblewrap 0.12.0",
+        "unshare": "unshare from util-linux 2.41.5"
+      }
+    },
+    "model_network_supported": false,
+    "process_tracking": {
+      "backend": "linux_child_subreaper_v1",
+      "status": "detected"
+    },
+    "profile": "controlled_executor",
+    "strict_supported": true,
+    "supported": true
+  },
+  "host_capabilities": [
+    {
+      "engine": "codex",
+      "executable": "/opt/codex/bin/codex",
+      "integration_tested": false,
+      "missing_help_flags": [],
+      "reason": "Version/help detected; native hooks, configuration enforcement, authentication, and worker execution still require host integration testing.",
+      "required_flags_detected": true,
+      "source_commit": null,
+      "status": "detected",
+      "version": "codex-cli 0.167.0-alpha.4"
+    }
+  ],
+  "model_transport": {
+    "configuration": null,
+    "configuration_supplied": false,
+    "host_credentials_provisioned": false,
+    "kind": "inherited_socketpair_v1",
+    "network_policy": "none",
+    "private_loopback": true,
+    "remote_processing_after_disconnect": "unknown",
+    "status": "native_acceptance_required",
+    "strict_supported": false
+  },
+  "native_deployments": [],
+  "offline_executor_supported": true,
+  "permissions_changed": false,
+  "platform": "Linux",
+  "python_version": "3.12.14",
+  "requested_mode": "controlled_executor",
+  "schema_version": 1
+}

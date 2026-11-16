@@ -1,0 +1,84 @@
+{
+  "description": "DESIGN TEMPLATE: POSIX process hooks for the unimplemented parallel-dev runtime. Package as hooks/hooks.json only after implementation and host validation.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "${ZCODE_PLUGIN_ROOT}/bin/parallel-dev",
+            "args": ["hook", "--adapter", "zcode"],
+            "timeoutMs": 10000,
+            "statusMessage": "Loading parallel development policy"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "${ZCODE_PLUGIN_ROOT}/bin/parallel-dev",
+            "args": ["hook", "--adapter", "zcode"],
+            "timeoutMs": 10000,
+            "statusMessage": "Reconciling the authorized task scope"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "${ZCODE_PLUGIN_ROOT}/bin/parallel-dev",
+            "args": ["hook", "--adapter", "zcode"],
+            "timeoutMs": 10000,
+            "onError": "deny",
+            "statusMessage": "Checking task admission and resource ownership"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "${ZCODE_PLUGIN_ROOT}/bin/parallel-dev",
+            "args": ["hook", "--adapter", "zcode"],
+            "timeoutMs": 10000,
+            "statusMessage": "Recording tool results and scheduling events"
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "${ZCODE_PLUGIN_ROOT}/bin/parallel-dev",
+            "args": ["hook", "--adapter", "zcode"],
+            "timeoutMs": 10000,
+            "statusMessage": "Recording failed operations for reconciliation"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "${ZCODE_PLUGIN_ROOT}/bin/parallel-dev",
+            "args": ["hook", "--adapter", "zcode"],
+            "timeoutMs": 10000,
+            "statusMessage": "Checking remaining executable work"
+          }
+        ]
+      }
+    ]
+  }
+}

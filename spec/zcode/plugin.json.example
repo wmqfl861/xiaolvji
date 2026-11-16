@@ -1,0 +1,5 @@
+{
+  "name": "parallel-development",
+  "version": "1.0.0-design.1",
+  "description": "DESIGN TEMPLATE: bounded parallel development with explicit task contracts, resource accounting, and quality gates; requires the future parallel-dev runtime."
+}

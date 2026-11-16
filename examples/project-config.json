@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "project_id": "example-project",
+  "enabled": false,
+  "mode": "controlled_executor",
+  "policy": {
+    "language": "en",
+    "user_response_language": "inherit",
+    "approved_plan_required": true,
+    "allow_scope_expansion": false
+  },
+  "concurrency": {
+    "managed_workers_global": 4,
+    "managed_workers_per_project": 4,
+    "respect_host_limit": true,
+    "verification_capacity": 1,
+    "verification_capacity_borrowable": true
+  },
+  "isolation": {
+    "require_os_boundary": true,
+    "one_worktree_per_attempt": true,
+    "shared_main_worktree_writes": false,
+    "unknown_identity": "deny"
+  },
+  "lifecycle": {
+    "max_retries": 2,
+    "stop_continuation_limit": 2,
+    "unknown_exit": "reconcile",
+    "lease_timeout_releases_capacity": false
+  },
+  "quality": {
+    "final_review_required": true,
+    "final_review_authority": "configured_independent_reviewer",
+    "worker_may_record_final_acceptance": false,
+    "evidence_bound_to_commit": true
+  },
+  "adapters": {
+    "codex": {
+      "scope": "local",
+      "capability_probe_required": true
+    },
+    "zcode": {
+      "pinned_source": "a60ba6a7e5a06742270ca605f5d2cc2766afa7e1",
+      "capability_probe_required": true,
+      "prefer_create_workflow_in_native_mode": true
+    }
+  },
+  "telemetry": {
+    "store_full_prompts": false,
+    "store_secrets": false
+  }
+}

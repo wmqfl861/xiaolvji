@@ -1,0 +1,106 @@
+{
+  "description": "DESIGN TEMPLATE: synchronous Codex lifecycle adapters for the unimplemented parallel-dev shared runtime.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "^(startup|resume|clear|compact|fork)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${PLUGIN_ROOT}/bin/parallel-dev\" hook --adapter codex",
+            "commandWindows": "\"${PLUGIN_ROOT}/bin/parallel-dev.exe\" hook --adapter codex",
+            "timeout": 10,
+            "async": false,
+            "additionalContextLimit": 1500,
+            "statusMessage": "Loading parallel development policy"
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${PLUGIN_ROOT}/bin/parallel-dev\" hook --adapter codex",
+            "commandWindows": "\"${PLUGIN_ROOT}/bin/parallel-dev.exe\" hook --adapter codex",
+            "timeout": 10,
+            "async": false,
+            "additionalContextLimit": 1500,
+            "statusMessage": "Loading the assigned task policy"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${PLUGIN_ROOT}/bin/parallel-dev\" hook --adapter codex",
+            "commandWindows": "\"${PLUGIN_ROOT}/bin/parallel-dev.exe\" hook --adapter codex",
+            "timeout": 10,
+            "async": false,
+            "statusMessage": "Checking task admission and resource ownership"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${PLUGIN_ROOT}/bin/parallel-dev\" hook --adapter codex",
+            "commandWindows": "\"${PLUGIN_ROOT}/bin/parallel-dev.exe\" hook --adapter codex",
+            "timeout": 10,
+            "async": false,
+            "statusMessage": "Recording tool results and scheduling events"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${PLUGIN_ROOT}/bin/parallel-dev\" hook --adapter codex",
+            "commandWindows": "\"${PLUGIN_ROOT}/bin/parallel-dev.exe\" hook --adapter codex",
+            "timeout": 10,
+            "async": false,
+            "statusMessage": "Checking remaining executable work"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${PLUGIN_ROOT}/bin/parallel-dev\" hook --adapter codex",
+            "commandWindows": "\"${PLUGIN_ROOT}/bin/parallel-dev.exe\" hook --adapter codex",
+            "timeout": 10,
+            "async": false,
+            "statusMessage": "Recording the subagent handover"
+          }
+        ]
+      }
+    ],
+    "Interrupt": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${PLUGIN_ROOT}/bin/parallel-dev\" hook --adapter codex",
+            "commandWindows": "\"${PLUGIN_ROOT}/bin/parallel-dev.exe\" hook --adapter codex",
+            "timeout": 3,
+            "async": false,
+            "statusMessage": "Recording cancellation without restarting work"
+          }
+        ]
+      }
+    ]
+  }
+}

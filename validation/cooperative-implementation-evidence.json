@@ -1,0 +1,230 @@
+[
+  {
+    "attempt_id": "16652ca7d3bd474bb04b3829da97ff4c",
+    "evidence_directory": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/executor/launches/16652ca7d3bd474bb04b3829da97ff4c",
+    "identity": {
+      "attempt_id": "16652ca7d3bd474bb04b3829da97ff4c",
+      "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+      "generation": 1,
+      "nonce": "<redacted>",
+      "pid": 67,
+      "pid_namespace": "pid:[4026532593]",
+      "proc_pid": 67,
+      "profile": "cooperative_native",
+      "sandbox_policy_digest": null,
+      "session_id": 67,
+      "start_time": "3922110",
+      "tracking": "linux_child_subreaper_v1"
+    },
+    "launch": {
+      "attempt_id": "16652ca7d3bd474bb04b3829da97ff4c",
+      "generation": 1,
+      "launch_key": "launch:16652ca7d3bd474bb04b3829da97ff4c:1",
+      "nonce": "<redacted>",
+      "profile": "cooperative_native",
+      "sandbox_policy_digest": null
+    },
+    "provider_binding": null,
+    "result": {
+      "cancelled": false,
+      "duration_seconds": 1.344468372000847,
+      "exit_code": 0,
+      "identity": {
+        "attempt_id": "16652ca7d3bd474bb04b3829da97ff4c",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 67,
+        "pid_namespace": "pid:[4026532593]",
+        "proc_pid": 67,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 67,
+        "start_time": "3922110",
+        "tracking": "linux_child_subreaper_v1"
+      },
+      "log_truncated": {
+        "stderr": false,
+        "stdout": false
+      },
+      "process_tree_terminated": true,
+      "stderr_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/executor/launches/16652ca7d3bd474bb04b3829da97ff4c/stderr.log",
+      "stdout_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/executor/launches/16652ca7d3bd474bb04b3829da97ff4c/stdout.log",
+      "timed_out": false,
+      "worker_started": true
+    },
+    "sandbox": null,
+    "task_id": "alpha"
+  },
+  {
+    "attempt_id": "719f4b499234443aa54d4cf5c0bc2a17",
+    "evidence_directory": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/executor/launches/719f4b499234443aa54d4cf5c0bc2a17",
+    "identity": {
+      "attempt_id": "719f4b499234443aa54d4cf5c0bc2a17",
+      "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+      "generation": 1,
+      "nonce": "<redacted>",
+      "pid": 66,
+      "pid_namespace": "pid:[4026532593]",
+      "proc_pid": 66,
+      "profile": "cooperative_native",
+      "sandbox_policy_digest": null,
+      "session_id": 66,
+      "start_time": "3922110",
+      "tracking": "linux_child_subreaper_v1"
+    },
+    "launch": {
+      "attempt_id": "719f4b499234443aa54d4cf5c0bc2a17",
+      "generation": 1,
+      "launch_key": "launch:719f4b499234443aa54d4cf5c0bc2a17:1",
+      "nonce": "<redacted>",
+      "profile": "cooperative_native",
+      "sandbox_policy_digest": null
+    },
+    "provider_binding": null,
+    "result": {
+      "cancelled": false,
+      "duration_seconds": 0.09184534199448535,
+      "exit_code": 0,
+      "identity": {
+        "attempt_id": "719f4b499234443aa54d4cf5c0bc2a17",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 66,
+        "pid_namespace": "pid:[4026532593]",
+        "proc_pid": 66,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 66,
+        "start_time": "3922110",
+        "tracking": "linux_child_subreaper_v1"
+      },
+      "log_truncated": {
+        "stderr": false,
+        "stdout": false
+      },
+      "process_tree_terminated": true,
+      "stderr_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/executor/launches/719f4b499234443aa54d4cf5c0bc2a17/stderr.log",
+      "stdout_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/executor/launches/719f4b499234443aa54d4cf5c0bc2a17/stdout.log",
+      "timed_out": false,
+      "worker_started": true
+    },
+    "sandbox": null,
+    "task_id": "beta"
+  },
+  {
+    "attempt_id": "6d277f33b89d4a318930ad9fd3749c94",
+    "evidence_directory": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/executor/launches/6d277f33b89d4a318930ad9fd3749c94",
+    "identity": {
+      "attempt_id": "6d277f33b89d4a318930ad9fd3749c94",
+      "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+      "generation": 1,
+      "nonce": "<redacted>",
+      "pid": 102,
+      "pid_namespace": "pid:[4026532593]",
+      "proc_pid": 102,
+      "profile": "cooperative_native",
+      "sandbox_policy_digest": null,
+      "session_id": 102,
+      "start_time": "3922142",
+      "tracking": "linux_child_subreaper_v1"
+    },
+    "launch": {
+      "attempt_id": "6d277f33b89d4a318930ad9fd3749c94",
+      "generation": 1,
+      "launch_key": "launch:6d277f33b89d4a318930ad9fd3749c94:1",
+      "nonce": "<redacted>",
+      "profile": "cooperative_native",
+      "sandbox_policy_digest": null
+    },
+    "provider_binding": null,
+    "result": {
+      "cancelled": false,
+      "duration_seconds": 0.09795071000553435,
+      "exit_code": 0,
+      "identity": {
+        "attempt_id": "6d277f33b89d4a318930ad9fd3749c94",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 102,
+        "pid_namespace": "pid:[4026532593]",
+        "proc_pid": 102,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 102,
+        "start_time": "3922142",
+        "tracking": "linux_child_subreaper_v1"
+      },
+      "log_truncated": {
+        "stderr": false,
+        "stdout": false
+      },
+      "process_tree_terminated": true,
+      "stderr_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/executor/launches/6d277f33b89d4a318930ad9fd3749c94/stderr.log",
+      "stdout_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/executor/launches/6d277f33b89d4a318930ad9fd3749c94/stdout.log",
+      "timed_out": false,
+      "worker_started": true
+    },
+    "sandbox": null,
+    "task_id": "gamma"
+  },
+  {
+    "attempt_id": "78154ab11cb947b0a4de43566c1b45e8",
+    "evidence_directory": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/executor/launches/78154ab11cb947b0a4de43566c1b45e8",
+    "identity": {
+      "attempt_id": "78154ab11cb947b0a4de43566c1b45e8",
+      "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+      "generation": 1,
+      "nonce": "<redacted>",
+      "pid": 352,
+      "pid_namespace": "pid:[4026532593]",
+      "proc_pid": 352,
+      "profile": "cooperative_native",
+      "sandbox_policy_digest": null,
+      "session_id": 352,
+      "start_time": "3922319",
+      "tracking": "linux_child_subreaper_v1"
+    },
+    "launch": {
+      "attempt_id": "78154ab11cb947b0a4de43566c1b45e8",
+      "generation": 1,
+      "launch_key": "launch:78154ab11cb947b0a4de43566c1b45e8:1",
+      "nonce": "<redacted>",
+      "profile": "cooperative_native",
+      "sandbox_policy_digest": null
+    },
+    "provider_binding": null,
+    "result": {
+      "cancelled": false,
+      "duration_seconds": 0.0980859990013414,
+      "exit_code": 0,
+      "identity": {
+        "attempt_id": "78154ab11cb947b0a4de43566c1b45e8",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 352,
+        "pid_namespace": "pid:[4026532593]",
+        "proc_pid": 352,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 352,
+        "start_time": "3922319",
+        "tracking": "linux_child_subreaper_v1"
+      },
+      "log_truncated": {
+        "stderr": false,
+        "stdout": false
+      },
+      "process_tree_terminated": true,
+      "stderr_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/executor/launches/78154ab11cb947b0a4de43566c1b45e8/stderr.log",
+      "stdout_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/state/executor/launches/78154ab11cb947b0a4de43566c1b45e8/stdout.log",
+      "timed_out": false,
+      "worker_started": true
+    },
+    "sandbox": null,
+    "task_id": "combined"
+  }
+]

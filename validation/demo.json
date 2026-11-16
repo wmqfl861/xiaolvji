@@ -1,0 +1,74 @@
+{
+  "assertions": {
+    "all_four_modules_integrated_and_verified": true,
+    "capacity_reclaimed": true,
+    "global_limit_respected": true,
+    "independent_review_not_fabricated": true,
+    "no_controller_errors": true,
+    "rolling_refill_before_slowest_sibling": true,
+    "user_main_ref_unchanged": true,
+    "user_worktree_unchanged": true
+  },
+  "elapsed_seconds": 3.945,
+  "errors": [],
+  "execution_profile": "cooperative_native",
+  "host_or_model_invoked": false,
+  "managed_worker_limit": 2,
+  "maximum_observed_occupancy": 2,
+  "os_write_sandbox": false,
+  "real_processes_and_git": true,
+  "report_path": "/workspace/scratch/356ebfba7105/runtime-cooperative-demo-0.5.0/DEMO-REPORT.json",
+  "rolling_evidence": {
+    "alpha_exit_sequence": 35,
+    "gamma_start_sequence": 19
+  },
+  "schema_version": 1,
+  "status": "passed",
+  "tasks": [
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "alpha",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "beta",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "gamma",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "combined",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "verify-8560805161a8e0d4c6c64ca6b7e0cce8",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "verify-c3e3ea27dba8b16aa96f6d08ac2c8610",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "verify-cdf6a8ab1bafac231449c29a554c54e0",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "verify-db1ec6f1898c5db5b53c3ff46533b155",
+      "state": "AWAITING_REVIEW"
+    },
+    {
+      "blocked_reason": "AWAITING_REVIEW",
+      "id": "integrate-b2b17e8927813c9cc9bd4af4121053a5",
+      "state": "AWAITING_REVIEW"
+    }
+  ]
+}

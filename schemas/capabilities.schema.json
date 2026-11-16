@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:parallel-development:capabilities:1",
+  "title": "Host Capability Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "engine",
+    "version",
+    "execution_location",
+    "requested_mode",
+    "effective_mode",
+    "checks",
+    "blocking_reasons"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "engine": {
+      "enum": [
+        "codex",
+        "zcode"
+      ]
+    },
+    "version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_commit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "execution_location": {
+      "enum": [
+        "local",
+        "cloud",
+        "remote_local_runtime",
+        "unknown"
+      ]
+    },
+    "requested_mode": {
+      "enum": [
+        "cooperative_native",
+        "controlled_executor"
+      ]
+    },
+    "effective_mode": {
+      "enum": [
+        "cooperative_native",
+        "controlled_executor",
+        "blocked"
+      ]
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "capability",
+          "status",
+          "evidence"
+        ],
+        "properties": {
+          "capability": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "documented",
+              "source_verified",
+              "detected",
+              "integration_tested",
+              "unsupported",
+              "unknown"
+            ]
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "tested_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "blocking_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "counters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "host_unit": {
+          "enum": [
+            "open_subagent_thread",
+            "active_ask",
+            "model_request",
+            "worker_process",
+            "unknown"
+          ]
+        },
+        "host_limit": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "managed_worker_limit": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    }
+  }
+}

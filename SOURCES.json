@@ -1,0 +1,245 @@
+{
+  "research_date": "2026-11-03",
+  "zcode": {
+    "repository": "https://github.com/zai-org/ZCode",
+    "commit": "a60ba6a7e5a06742270ca605f5d2cc2766afa7e1",
+    "method": "Pinned public source inspection; full tree reconstructed after identifying sparse checkout; native pure TypeScript option mapping executed with Node v24.22.1. Full CLI and configuration schema not loaded; npm dependency fetch blocked by EAI_AGAIN.",
+    "files": [
+      {
+        "path": "README.md",
+        "sha256": "9e86fe49c70c669ad127e19075757d160fdf8095cdd00010a7514d12c6463874",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/README.md"
+      },
+      {
+        "path": "apps/zcode-cli/docs/usage/09-hooks.md",
+        "sha256": "04482fe4eb6ff0bc3eed3e3a491c3b171289b5ff000f98d24482e10d1bfe822f",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/apps/zcode-cli/docs/usage/09-hooks.md"
+      },
+      {
+        "path": "apps/zcode-cli/docs/usage/10-plugins.md",
+        "sha256": "55e1f10c58c5a612b4bbc70b4780dcf591f0e449b3f36c0b04b9eac13082fcb9",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/apps/zcode-cli/docs/usage/10-plugins.md"
+      },
+      {
+        "path": "apps/zcode-cli/packages/contracts/src/hooks/index.ts",
+        "sha256": "6d1ee171642ec2e33c66cba99d2365d0d1620e5022ab4a427cd4af9c8b3f0b28",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/apps/zcode-cli/packages/contracts/src/hooks/index.ts"
+      },
+      {
+        "path": "apps/zcode-cli/packages/contracts/src/tools/agent.ts",
+        "sha256": "11f570e70ad5413af90e7582f68a441ce06a1f4e838123e20c7c163752d80046",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/apps/zcode-cli/packages/contracts/src/tools/agent.ts"
+      },
+      {
+        "path": "apps/zcode-cli/packages/contracts/src/tools/create-workflow.ts",
+        "sha256": "d45c3e09828334651d4a2dbf94a311d1ee147c0199056539b5195ae4918b7c61",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/apps/zcode-cli/packages/contracts/src/tools/create-workflow.ts"
+      },
+      {
+        "path": "apps/zcode-cli/packages/core/src/runtime/methods/subagent.ts",
+        "sha256": "a3af92d29c791cc90ec330d5be513e06206d84c0f92e933b30939c852ad93022",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/apps/zcode-cli/packages/core/src/runtime/methods/subagent.ts"
+      },
+      {
+        "path": "apps/zcode-cli/packages/core/src/runtime/helpers/runtime-tools.ts",
+        "sha256": "0f8f1ca2568e576e756fc58a23beae0fbce723c942d2580f6c9f061ff77b73ff",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/apps/zcode-cli/packages/core/src/runtime/helpers/runtime-tools.ts"
+      },
+      {
+        "path": "apps/zcode-cli/packages/core/src/hooks/configured-runner-input.ts",
+        "sha256": "9004e5c185a0e38e4b42d0fa73769e251a08785859a29aa78bfa181912927432",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/apps/zcode-cli/packages/core/src/hooks/configured-runner-input.ts"
+      },
+      {
+        "path": "apps/zcode-cli/packages/core/src/hooks/configured-runner-callback.ts",
+        "sha256": "8c16399932d4a894f4d3ffec34e0cf97d8666800a74793fea0929dabb41fe5e3",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/apps/zcode-cli/packages/core/src/hooks/configured-runner-callback.ts"
+      },
+      {
+        "path": "apps/zcode-cli/packages/adapters/src/context/index.ts",
+        "sha256": "14e7fd3686ed947e52f982510cd7d48accbd5c07874ede5fa88c26cedb7f1e3c",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/apps/zcode-cli/packages/adapters/src/context/index.ts"
+      },
+      {
+        "path": "apps/zcode-cli/packages/adapters/src/plugins/hook-sources.ts",
+        "sha256": "abef83f4a396eea78039db0248769201973a4bca4399be432ccd8347e4cafa49",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/apps/zcode-cli/packages/adapters/src/plugins/hook-sources.ts"
+      },
+      {
+        "path": "apps/zcode-cli/packages/bootstrap/src/app/script-workflow-runtime.ts",
+        "sha256": "4d381f3fef708ff93a9e5ef280b1ad034dcab9104e114c10f3ffc5eb18aa8a68",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/apps/zcode-cli/packages/bootstrap/src/app/script-workflow-runtime.ts"
+      },
+      {
+        "path": "apps/zcode-cli/packages/dynamic-workflow/src/engine/scheduler.ts",
+        "sha256": "f1f8e1c2829cd90914fb04cf1ced25136597ec8fccdea88343a4affc8a15fd30",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/apps/zcode-cli/packages/dynamic-workflow/src/engine/scheduler.ts"
+      },
+      {
+        "path": "apps/zcode-cli/packages/cli/src/arguments.ts",
+        "sha256": "28fd9de33f8fd8e36360b2da0c4c6b84729aa14e110271f84859e8bd5651a8ce",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/apps/zcode-cli/packages/cli/src/arguments.ts"
+      },
+      {
+        "path": "apps/zcode-cli/packages/cli/src/run.ts",
+        "sha256": "999a7b4e9f3101cb3f050541253010e40cc8d16dae8207c827f3f1657c3e7faa",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/apps/zcode-cli/packages/cli/src/run.ts"
+      },
+      {
+        "path": "apps/zcode-cli/packages/cli/src/prompt-command.ts",
+        "sha256": "b72a4c0a854b710df7abe256f06384c17c4a2a9512e4e56205b9240fdd0311bd",
+        "url": "https://github.com/zai-org/ZCode/blob/a60ba6a7e5a06742270ca605f5d2cc2766afa7e1/apps/zcode-cli/packages/cli/src/prompt-command.ts"
+      }
+    ],
+    "native_source_mapping_report": "validation/zcode-native-source.json"
+  },
+  "codex": {
+    "method": "Official documentation plus local installed binary version/help, strict configuration loading, and actual native tool turns through the App Server runner using a fixed local synthetic provider. Managed production deployment, real external provider and installed-plugin Hook acceptance remain unverified.",
+    "urls": [
+      "https://developers.openai.com/plugins/build/plugins",
+      "https://learn.chatgpt.com/docs/hooks",
+      "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+      "https://learn.chatgpt.com/docs/build-skills",
+      "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+      "https://learn.chatgpt.com/docs/config-file/config-reference"
+    ],
+    "local_cli_observations": [
+      {
+        "reviewed": "2026-11-05",
+        "executable": "/opt/codex/bin/codex",
+        "reported_version": "codex-cli 0.167.0-alpha.4",
+        "scope": "Local installed binary; temporary HOME/CODEX_HOME and a fresh allowlisted environment. No existing authentication credentials or trust bypass flags were used.",
+        "checks": {
+          "version_and_exec_help": "passed",
+          "agents_enabled_boolean_strict_config_load": "passed",
+          "agents_enabled_string_negative_control": "rejected_as_expected",
+          "stdin_and_jsonl_interface": "documented_and_detected_in_help",
+          "live_delegation_tool_manifest": "not_established",
+          "real_model_turn": "not_attempted",
+          "installed_hook_execution": "not_tested"
+        },
+        "offline_mock_protocol": {
+          "status": "blocked_before_provider_request",
+          "exit_code": 1,
+          "provider_requests": 0,
+          "isolation": "Fresh user/network namespace with loopback only, separate filesystem sandbox, temporary home and deterministic local HTTP/SSE fixture.",
+          "reason": "Native Codex instruction-loading filesystem helper failed: bwrap: loopback: Failed to create NETLINK_ROUTE socket: Operation not permitted",
+          "real_api_credentials_used": false,
+          "external_network_available": false,
+          "sandbox_or_hook_trust_bypassed": false
+        },
+        "evidence_document": "docs/CODEX-COMPATIBILITY.en.md",
+        "local_loading_test": "tests/test_adapters.py::InstalledCodexLoadingTests",
+        "official_references": [
+          "https://learn.chatgpt.com/docs/config-file/config-reference",
+          "https://learn.chatgpt.com/docs/non-interactive-mode",
+          "https://learn.chatgpt.com/docs/hooks"
+        ]
+      },
+      {
+        "reviewed": "2026-11-09",
+        "reported_version": "codex-cli 0.167.0-alpha.4",
+        "native_protocol": "codex-app-server-v2",
+        "evidence_scope": "Actual binary inside attested controlled_executor; synthetic provider fixture, no external model authentication.",
+        "evidence_document": "docs/CODEX-COMPATIBILITY.en.md",
+        "native_fixture_report": "validation/native-codex.json",
+        "managed_deployment_observation": "validation/managed-policy-block.json",
+        "ordinary_workspace_write_nested_sandbox": "native_tool_namespace_creation_blocked",
+        "production_current_host": "managed_policy_blocked_before_provider_or_credential_use",
+        "real_provider_verified": false,
+        "installed_plugin_hooks_verified": false
+      }
+    ]
+  },
+  "limitations": [
+    "Documentation/source inspection does not establish complete installed-version compatibility.",
+    "Actual Codex native protocol tests use a synthetic local provider; real external model quality and service acceptance are not established.",
+    "Current managed Codex policy cannot be fully preserved by the initial standalone profile and is rejected before fixture/provider launch.",
+    "ZCode native pure mapping was executed against the pinned source; complete CLI/schema and installed plugin behavior remain unverified.",
+    "Portable plugin packaging and Linux tests do not establish Windows/macOS execution or formal release approval."
+  ],
+  "runtime_additional_sources": [
+    {
+      "url": "https://learn.chatgpt.com/docs/non-interactive-mode",
+      "reviewed": "2026-11-03",
+      "purpose": "Codex noninteractive execution, JSONL and stdin prompt"
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/cli/reference",
+      "reviewed": "2026-11-03",
+      "purpose": "Supported Codex exec argv; no bypass flags used"
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/config-file/config-reference",
+      "reviewed": "2026-11-03",
+      "purpose": "agents.enabled=false configuration; real host enforcement not tested"
+    },
+    {
+      "url": "https://developers.openai.com/plugins/deploy/desktop-only",
+      "reviewed": "2026-11-03",
+      "purpose": "Portable plugin MCP and local executor packaging"
+    },
+    {
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/lifecycle",
+      "reviewed": "2026-11-03",
+      "purpose": "Implemented legacy stdio MCP initialize negotiation"
+    },
+    {
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/transports",
+      "reviewed": "2026-11-03",
+      "purpose": "Newline-delimited stdio messages"
+    },
+    {
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/server/tools",
+      "reviewed": "2026-11-03",
+      "purpose": "Tool schemas and error semantics"
+    },
+    {
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/versioning",
+      "reviewed": "2026-11-03",
+      "purpose": "New stateless era explicitly not claimed by 0.1"
+    },
+    {
+      "url": "https://github.com/containers/bubblewrap/security/advisories/GHSA-pxhw-h44j-8pfx",
+      "reviewed": "2026-11-05",
+      "purpose": "Upstream CVE-2026-87766 advisory: sandbox-setup symlink traversal affects versions below 0.12.0 and is patched in 0.12.0; basis for the backend minimum version."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/containers/bubblewrap/v0.12.0/README.md",
+      "reviewed": "2026-11-05",
+      "purpose": "Pinned upstream sandbox construction model, no-new-privileges behavior, and the caller responsibility for choosing an effective policy."
+    },
+    {
+      "url": "https://github.com/containers/bubblewrap/blob/main/bwrap.xml",
+      "reviewed": "2026-11-05",
+      "revision_scope": "Upstream main as reviewed; this reference does not substitute for installed-binary capability checks.",
+      "purpose": "Namespace, read-only mount, disable-userns, seccomp file-descriptor, and lifecycle command-line contracts."
+    },
+    {
+      "url": "https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html",
+      "reviewed": "2026-11-05",
+      "purpose": "Kernel filter inheritance, no-new-privileges requirements, syscall ABI filtering, and the limitation that seccomp alone is not a complete sandbox."
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man7/pid_namespaces.7.html",
+      "reviewed": "2026-11-05",
+      "purpose": "Linux man-pages primary interface documentation: PID-namespace visibility, namespace-init termination, and orphan/subreaper behavior relevant to process-tree accounting."
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/app-server",
+      "reviewed": "2026-11-09",
+      "purpose": "App Server externalSandbox, bounded JSON-RPC, configRequirements/read and native turn lifecycle; external policy is not asserted equivalent to all native approvals."
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/permissions",
+      "reviewed": "2026-11-09",
+      "purpose": "Native permission policy and sandbox semantics; unsupported inherited policies must not be omitted."
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "reviewed": "2026-11-09",
+      "purpose": "Native .agents skill discovery is a policy source; initial standalone deployment rejects unpreserved skill/plugin trees."
+    }
+  ],
+  "supplemental_research_date": "2026-11-09"
+}

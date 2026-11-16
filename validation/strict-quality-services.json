@@ -1,0 +1,117 @@
+[
+  {
+    "evidence": {
+      "check_profile": "controlled_executor",
+      "identity": {
+        "attempt_id": "574207812e2f4cff9211d933b7897434",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 301,
+        "pid_namespace": "pid:[4026532312]",
+        "proc_pid": 301,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 301,
+        "start_time": "3922290",
+        "tracking": "linux_child_subreaper_v1"
+      },
+      "manifest_digest": "sha256:2f94ffd32605649aab96674ec995b926ab7f33e2cfd6a71986069622e711556e",
+      "manifest_path": "/workspace/scratch/356ebfba7105/runtime-strict-demo-0.5.0/state/quality/574207812e2f4cff9211d933b7897434/manifest.json",
+      "role": "trusted_check_service"
+    },
+    "path": "/workspace/scratch/356ebfba7105/runtime-strict-demo-0.5.0/state/executor/launches/574207812e2f4cff9211d933b7897434/service.json"
+  },
+  {
+    "evidence": {
+      "check_profile": "controlled_executor",
+      "identity": {
+        "attempt_id": "583df47d816842daae944b304244e348",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 615,
+        "pid_namespace": "pid:[4026532312]",
+        "proc_pid": 615,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 615,
+        "start_time": "3922481",
+        "tracking": "linux_child_subreaper_v1"
+      },
+      "manifest_digest": "sha256:18bc2a458960b1cb402fdd866132ed49c53ef917bc1784c520a635f7da7d7ed5",
+      "manifest_path": "/workspace/scratch/356ebfba7105/runtime-strict-demo-0.5.0/state/quality/583df47d816842daae944b304244e348/manifest.json",
+      "role": "trusted_check_service"
+    },
+    "path": "/workspace/scratch/356ebfba7105/runtime-strict-demo-0.5.0/state/executor/launches/583df47d816842daae944b304244e348/service.json"
+  },
+  {
+    "evidence": {
+      "check_profile": "controlled_executor",
+      "identity": {
+        "attempt_id": "62e37f48ea464c6eb7729b3746e03531",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 249,
+        "pid_namespace": "pid:[4026532312]",
+        "proc_pid": 249,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 249,
+        "start_time": "3922268",
+        "tracking": "linux_child_subreaper_v1"
+      },
+      "manifest_digest": "sha256:39d9b1a3c530b7c0410c9342904ce39139106294a17b4f42a85b5067979e4988",
+      "manifest_path": "/workspace/scratch/356ebfba7105/runtime-strict-demo-0.5.0/state/quality/62e37f48ea464c6eb7729b3746e03531/manifest.json",
+      "role": "trusted_check_service"
+    },
+    "path": "/workspace/scratch/356ebfba7105/runtime-strict-demo-0.5.0/state/executor/launches/62e37f48ea464c6eb7729b3746e03531/service.json"
+  },
+  {
+    "evidence": {
+      "check_profile": "controlled_executor",
+      "identity": {
+        "attempt_id": "a525ca5e8385463da51074b15302db87",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 482,
+        "pid_namespace": "pid:[4026532312]",
+        "proc_pid": 482,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 482,
+        "start_time": "3922400",
+        "tracking": "linux_child_subreaper_v1"
+      },
+      "manifest_digest": "sha256:3ade81056c32afe63779c3b91be0711fb1817431642a6bea1953be32be25ec91",
+      "manifest_path": "/workspace/scratch/356ebfba7105/runtime-strict-demo-0.5.0/state/quality/a525ca5e8385463da51074b15302db87/manifest.json",
+      "role": "trusted_check_service"
+    },
+    "path": "/workspace/scratch/356ebfba7105/runtime-strict-demo-0.5.0/state/executor/launches/a525ca5e8385463da51074b15302db87/service.json"
+  },
+  {
+    "evidence": {
+      "check_profile": "controlled_executor",
+      "identity": {
+        "attempt_id": "d9e96c6612e94d738c1ceb045bf97d29",
+        "boot_id": "3e93297c-52ca-421d-a8fe-bbf60f15fc1f",
+        "generation": 1,
+        "nonce": "<redacted>",
+        "pid": 184,
+        "pid_namespace": "pid:[4026532312]",
+        "proc_pid": 184,
+        "profile": "cooperative_native",
+        "sandbox_policy_digest": null,
+        "session_id": 184,
+        "start_time": "3922205",
+        "tracking": "linux_child_subreaper_v1"
+      },
+      "manifest_digest": "sha256:8768480a3a780d99c9f686167a6cb9ab164e1bfb26178ca5b3532ceb2b2b43f8",
+      "manifest_path": "/workspace/scratch/356ebfba7105/runtime-strict-demo-0.5.0/state/quality/d9e96c6612e94d738c1ceb045bf97d29/manifest.json",
+      "role": "trusted_check_service"
+    },
+    "path": "/workspace/scratch/356ebfba7105/runtime-strict-demo-0.5.0/state/executor/launches/d9e96c6612e94d738c1ceb045bf97d29/service.json"
+  }
+]
