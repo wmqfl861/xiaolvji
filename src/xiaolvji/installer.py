@@ -200,10 +200,12 @@ def _package_documentation(source: Path, stage: Path, version: str) -> None:
 
 
 def build_plugin(adapter: str, destination: str | Path, source_root: str | Path,
-                 target_platform: str | None = None) -> dict:
+                 target_platform: str | None = None, *, codex_marketplace: bool = False) -> dict:
     """Build a fresh Python 3.11+ package, not an installed or trusted host plugin."""
     if adapter not in EVENTS:
         raise Fault("CAPABILITY_UNSUPPORTED", "Unknown plugin adapter.")
+    if codex_marketplace and adapter != "codex":
+        raise Fault("INVALID_INPUT", "A Codex marketplace requires the Codex adapter.")
     target_platform = target_platform or ("windows" if os.name == "nt" else "posix")
     if target_platform not in ("posix", "windows"):
         raise Fault("INVALID_INPUT", "Target platform must be posix or windows.")
@@ -247,15 +249,32 @@ def build_plugin(adapter: str, destination: str | Path, source_root: str | Path,
         manifest = {"name": "parallel-development", "version": version,
                     "description": "Bounded parallel development with explicit contracts, admission accounting, and independent quality gates."}
         plugin_root = "${PLUGIN_ROOT}" if adapter == "codex" else "${ZCODE_PLUGIN_ROOT}"
+        interpreter_args = ["-3"] if target_platform == "windows" else []
         mcp_server = {"type": "stdio", "command": "py" if target_platform == "windows" else "python3",
-                      "args": (["-3"] if target_platform == "windows" else []) + [plugin_root + "/bin/parallel-dev", "mcp"],
+                      "args": [*interpreter_args, plugin_root + "/bin/parallel-dev", "mcp"],
                       "cwd": plugin_root}
         if adapter == "codex":
-            _json_file(stage / "mcp.json", {"$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
-                                          "mcpServers": {"parallel-development": mcp_server}})
-            _json_file(stage / "plugin.json", {"$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json", **manifest,
-                                              "extensions": {"com.openai": {"hooks": "./hooks/codex.json", "requires_local_executor": True}}})
-            _json_file(stage / ".codex-plugin" / "plugin.json", {**manifest, "skills": "./skills/", "hooks": "./hooks/codex.json", "mcpServers": "./mcp.json", "requires_local_executor": True})
+            # Native stdio resolves cwd relative to the installed package. The
+            # portable loader expands PLUGIN_ROOT and consumes the native
+            # overlay for explicitly forwarded environment variables.
+            native_server = {"command": mcp_server["command"], "cwd": ".",
+                             "args": [*interpreter_args, "bin/parallel-dev", "mcp"],
+                             "env_vars": ["PARALLEL_DEV_STATE_DIR"]}
+            _json_file(stage / ".mcp.json", {"mcpServers": {"parallel-development": native_server}})
+            _json_file(stage / ".codex-plugin" / "plugin.json", {**manifest, "skills": "./skills/",
+                        "hooks": "./hooks/codex.json", "mcpServers": "./.mcp.json", "requires_local_executor": True})
+            if codex_marketplace:
+                _json_file(stage / ".agents/plugins/marketplace.json", {
+                    "name": "xiaolvji-local",
+                    "plugins": [{"name": manifest["name"], "source": {"source": "local", "path": "./"},
+                                 "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
+                                 "category": "Productivity"}],
+                })
+            else:
+                _json_file(stage / "mcp.json", {"$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+                                               "mcpServers": {"parallel-development": mcp_server}})
+                _json_file(stage / "plugin.json", {"$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json", **manifest,
+                                                  "extensions": {"com.openai": {"hooks": "./hooks/codex.json", "requires_local_executor": True}}})
             _json_file(stage / "hooks" / "codex.json", _hooks(adapter, target_platform))
         else:
             # ZCode automatically discovers hooks/hooks.json; do not also add an
@@ -265,6 +284,7 @@ def build_plugin(adapter: str, destination: str | Path, source_root: str | Path,
             _json_file(stage / "hooks" / "hooks.json", _hooks(adapter, target_platform))
         _json_file(stage / "PACKAGE.json", {
             "name": "xiaolvji-parallel-development", "version": version, "adapter": adapter,
+            "local_codex_marketplace": codex_marketplace,
             "target_platform": target_platform, "python_requires": ">=3.11",
             "distribution": "python-source", "host_integration_tested": False,
             "strict_execution_available": False,

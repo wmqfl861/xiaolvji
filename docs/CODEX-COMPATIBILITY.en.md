@@ -1,11 +1,8 @@
 # Local Codex compatibility evidence
 
-Updated for the 0.5 development work on 2026-11-16 (UTC). The inspected executable,
-`/opt/codex/bin/codex`, reports `codex-cli 0.167.0-alpha.4`. Its App Server now
-completes a deterministic native tool turn inside Xiaolvji's actual strict
-executor. The provider is a local HTTP/SSE fixture with synthetic credentials;
-this is native protocol and boundary evidence, not an authenticated external
-model run or a model-quality benchmark.
+The 0.6.0 development run on 2026-11-23 used Codex CLI 0.172.0-alpha.2 on Linux. Its native App Server passed the synthetic-provider tests inside the strict executor. The native installation fixture added a separate local marketplace in a disposable account view, with the system policy mounted read-only and an isolated network namespace. [Installation evidence](../validation/codex-installed-plugin.json)
+
+The original 0.5 investigation used 0.167.0-alpha.4. The 0.6 run repeated the native fixture and added the installed-coordinator checks described below.
 
 **This machine remains ineligible for production standalone native admission.**
 Its real `/etc/codex` policy root exists. The initial deployment profile requires
@@ -30,7 +27,7 @@ own acceptance record. See [NATIVE-HOST-CONTRACT.en.md](NATIVE-HOST-CONTRACT.en.
 | Installed-Codex opt-in suite | Six actual native cases passed | Tool loops, exact supplied quality settings, cancellation, managed-policy rejection, and unknown-model rejection. |
 | Production standalone admission on this machine | Blocked by the real system policy root | Synthetic isolation cannot erase production policy obligations. |
 | Authenticated external provider and model-quality acceptance | Not attempted | Separate deployment and task-quality evidence is required. |
-| Installed plugin and native Hook trust/event coverage | Not established | The fixture does not install or approve a plugin or Hook. |
+| Installed coordinator package | Local install, seven Hook declarations and six reader tools verified on Linux | Trust and runtime firing are reported separately. |
 
 Executable cases are in `tests/test_codex_app_server.py` (full source delivery).
 The fixed checks are in [native_acceptance.py](../src/xiaolvji/native_acceptance.py).
@@ -244,17 +241,11 @@ replace quality checks and review.
 
 ## Hook and MCP boundary
 
-The official [Hooks documentation](https://learn.chatgpt.com/docs/hooks)
-requires review and trust for applicable non-managed hooks. This integration
-does not change trust state. Installed-plugin Hook registration, native event
-coverage, worker identity, and denial behavior remain separate acceptance gates.
+On the tested CLI, a root portable manifest exposed the skill and stdio service. The CLI selected the native manifest in the local marketplace distribution and registered each of its seven lifecycle hooks once. The fresh installation reported all seven as untrusted. Review the commands through the host's trust interface before enabling them for a real project. [Hook documentation](https://learn.chatgpt.com/docs/hooks)
 
-A zero-provider-request diagnostic connected an isolated stdio MCP server.
-App Server reported server `parallel-development`, raw tool
-`parallel_dev_status`, and no plugin identity. This proves direct inventory
-loading only. A model turn with that server declared deferred client
-`tool_search`; the broker rejected this unsupported declaration. Its allowlist
-was not broadened to make the diagnostic pass.
+Both distributions explicitly forward the controller directory through the native stdio overlay. A native stdio working directory of `.` is resolved against the installed plugin. The native launcher takes the relative argument `bin/parallel-dev`. The portable parser expands its own `PLUGIN_ROOT` reference. Keeping these inputs distinct fixed MCP startup for a controller outside the default home location.
+
+The host attributed all six reader tools to the installed plugin. The installed stdio server returned the fixture ledger's limit of seven. The optional thread-owned status call stopped at thread creation when the native filesystem sandbox could not create its loopback socket. A live external provider and trusted Hook execution remain deployment checks. The earlier 0.5 fixture established a synthetic shell-tool turn independently of the installed coordinator path.
 
 Current public Codex source sanitizes the MCP namespace prefix to ASCII letters,
 digits, and underscores; its MCP Hook handler joins the canonical namespace and

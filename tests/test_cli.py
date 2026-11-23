@@ -84,6 +84,17 @@ class RealCliPackageTests(unittest.TestCase):
                 self.assertFalse(report["authentication_attempted"])
                 self.assertFalse(report["permissions_changed"])
 
+    def test_demo_accepts_parent_relative_destination_and_rejects_alias_before_setup(self):
+        alias = self.test_root / 'alias'
+        alias.symlink_to(self.test_root, target_is_directory=True)
+        refused = self.run_cli('demo', '--output', str(alias / 'unused'))
+        self.assertEqual(2, refused.returncode)
+        self.assertFalse((self.test_root / 'unused').exists())
+        result = self.run_cli('demo', '--output', f'../{self.test_root.name}/demo')
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        report = json.loads((self.test_root / 'demo' / 'DEMO-REPORT.json').read_text())
+        self.assertEqual('passed', report['status'])
+
     def test_run_watch_waits_for_work_until_explicit_timeout(self):
         self.initialize_project()
         result = self.run_cli("run", "project-1", "--watch", "--timeout", "0.05")

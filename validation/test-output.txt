@@ -28,6 +28,7 @@ test_source_mutation_rejects_pass_and_stops_following_check (tests.test_check_ru
 test_timeout_stops_remaining_checks (tests.test_check_runner.CheckRunnerTests.test_timeout_stops_remaining_checks) ... ok
 test_untracked_files_prevent_testing_different_artifact (tests.test_check_runner.CheckRunnerTests.test_untracked_files_prevent_testing_different_artifact) ... ok
 test_actual_packaged_mcp_defaults_to_read_only (tests.test_cli.RealCliPackageTests.test_actual_packaged_mcp_defaults_to_read_only) ... ok
+test_demo_accepts_parent_relative_destination_and_rejects_alias_before_setup (tests.test_cli.RealCliPackageTests.test_demo_accepts_parent_relative_destination_and_rejects_alias_before_setup) ... ok
 test_enrolled_session_injects_and_pretool_spawn_denies (tests.test_cli.RealCliPackageTests.test_enrolled_session_injects_and_pretool_spawn_denies) ... ok
 test_malformed_hook_is_nonzero_and_structured_denial (tests.test_cli.RealCliPackageTests.test_malformed_hook_is_nonzero_and_structured_denial) ... ok
 test_mcp_layout_and_no_credentials_in_each_distribution (tests.test_cli.RealCliPackageTests.test_mcp_layout_and_no_credentials_in_each_distribution) ... ok
@@ -69,6 +70,14 @@ test_exit_zero_without_native_terminal_is_failure (tests.test_codex_app_server.R
 test_native_completed_turn_and_service_exit_emit_one_normalized_terminal (tests.test_codex_app_server.RealProcessProtocolTests.test_native_completed_turn_and_service_exit_emit_one_normalized_terminal) ... ok
 test_resident_service_is_stopped_without_faking_process_tree_authority (tests.test_codex_app_server.RealProcessProtocolTests.test_resident_service_is_stopped_without_faking_process_tree_authority) ... ok
 test_unexpected_service_crash_after_turn_is_failure (tests.test_codex_app_server.RealProcessProtocolTests.test_unexpected_service_crash_after_turn_is_failure) ... ok
+test_installed_coordinator_inventory_and_reader_status (tests.test_codex_plugin_install.InstalledMarketplaceTests.test_installed_coordinator_inventory_and_reader_status) ... ok
+test_portable_overlay_forwards_only_the_controller_directory (tests.test_codex_plugin_install.InstalledMarketplaceTests.test_portable_overlay_forwards_only_the_controller_directory) ... ok
+test_native_and_portable_layouts_have_separate_loader_inputs (tests.test_codex_plugin_install.MarketplaceLayoutTests.test_native_and_portable_layouts_have_separate_loader_inputs) ... ok
+test_zcode_rejects_the_codex_marketplace_option_before_writing (tests.test_codex_plugin_install.MarketplaceLayoutTests.test_zcode_rejects_the_codex_marketplace_option_before_writing) ... ok
+test_duplicate_hooks_stop_before_starting_a_thread (tests.test_codex_plugin_install.ThreadProbeTests.test_duplicate_hooks_stop_before_starting_a_thread) ... ok
+test_exact_thread_and_server_ownership_required_before_call (tests.test_codex_plugin_install.ThreadProbeTests.test_exact_thread_and_server_ownership_required_before_call) ... ok
+test_only_a_successful_status_payload_verifies_the_thread (tests.test_codex_plugin_install.ThreadProbeTests.test_only_a_successful_status_payload_verifies_the_thread) ... ok
+test_same_named_server_on_a_later_page_makes_the_target_ambiguous (tests.test_codex_plugin_install.ThreadProbeTests.test_same_named_server_on_a_later_page_makes_the_target_ambiguous) ... ok
 test_authorities_distinct_and_key_authentication (tests.test_contracts.ContractTests.test_authorities_distinct_and_key_authentication) ... ok
 test_closed_schema_and_false_integer (tests.test_contracts.ContractTests.test_closed_schema_and_false_integer) ... ok
 test_duplicate_json_and_nonfinite (tests.test_contracts.ContractTests.test_duplicate_json_and_nonfinite) ... ok
@@ -556,7 +565,7 @@ test_other_commit_is_rejected (tests.test_zcode_source.PinnedZCodeSourceTests.te
 test_symlink_to_identical_source_is_rejected (tests.test_zcode_source.PinnedZCodeSourceTests.test_symlink_to_identical_source_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 556 tests in 75.752s
+Ran 565 tests in 64.012s
 
 OK
 test_bom_crlf_and_existing_bytes_round_trip (test_inject_agents.InjectorTests.test_bom_crlf_and_existing_bytes_round_trip) ... ok
@@ -587,54 +596,6 @@ test_uninstall_preserves_user_edits_outside_block (test_inject_agents.InjectorTe
 test_unowned_block_cannot_be_adopted_or_removed (test_inject_agents.InjectorTests.test_unowned_block_cannot_be_adopted_or_removed) ... ok
 
 ----------------------------------------------------------------------
-Ran 26 tests in 0.094s
+Ran 26 tests in 0.095s
 
 OK
-{
-  "status": "passed_with_declared_scope",
-  "checks": [
-    {
-      "check": "strict_json_parse",
-      "files": 47,
-      "status": "passed"
-    },
-    {
-      "check": "instruction_source_cjk_scan",
-      "files": 14,
-      "status": "passed",
-      "note": "Language was also reviewed; this scan alone cannot prove English semantics."
-    },
-    {
-      "check": "policy_markers_and_skill_metadata",
-      "status": "passed"
-    },
-    {
-      "check": "codex_template_consistency",
-      "status": "passed"
-    },
-    {
-      "check": "zcode_template_consistency",
-      "status": "passed"
-    },
-    {
-      "check": "schema_local_references_and_selected_invariants",
-      "references": 33,
-      "patterns": 17,
-      "status": "passed"
-    },
-    {
-      "check": "hook_response_example_json",
-      "examples": 3,
-      "status": "passed"
-    }
-  ],
-  "not_performed": [
-    "Complete Draft 2020-12 schema validation",
-    "Host plugin loading",
-    "Hook execution or enforcement",
-    "Scheduler concurrency tests",
-    "OS sandbox or cross-platform acceptance"
-  ]
-}
-
-{"status": "passed", "tests": 582, "report": "validation/tests.json"}

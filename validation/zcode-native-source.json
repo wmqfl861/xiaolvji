@@ -3,7 +3,7 @@
   "status": "passed",
   "evidence_level": "native_mapping_only",
   "source_commit": "a60ba6a7e5a06742270ca605f5d2cc2766afa7e1",
-  "node_version": "v24.22.1",
+  "node_version": "v24.22.3",
   "documented_build_node_version": "v24.14.0",
   "source_files": [
     {

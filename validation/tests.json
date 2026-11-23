@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
-  "runtime_version": "0.5.0",
+  "runtime_version": "0.6.0",
   "status": "passed",
   "environment": {
     "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
     "python": "3.12.14",
-    "git": "git version 2.52.0"
+    "git": "git version 2.56.1"
   },
   "groups": [
     {
       "group": "runtime",
-      "tests": 556,
+      "tests": 565,
       "failures": 0,
       "errors": 0,
       "skipped": 0,
       "passed": true,
-      "seconds": 75.752,
+      "seconds": 64.012,
       "failed_tests": []
     },
     {
@@ -25,20 +25,21 @@
       "errors": 0,
       "skipped": 0,
       "passed": true,
-      "seconds": 0.094,
+      "seconds": 0.095,
       "failed_tests": []
     }
   ],
-  "total_unit_tests": 582,
+  "total_unit_tests": 591,
   "design_static_check": {
     "passed": true,
-    "output": "{\n  \"status\": \"passed_with_declared_scope\",\n  \"checks\": [\n    {\n      \"check\": \"strict_json_parse\",\n      \"files\": 47,\n      \"status\": \"passed\"\n    },\n    {\n      \"check\": \"instruction_source_cjk_scan\",\n      \"files\": 14,\n      \"status\": \"passed\",\n      \"note\": \"Language was also reviewed; this scan alone cannot prove English semantics.\"\n    },\n    {\n      \"check\": \"policy_markers_and_skill_metadata\",\n      \"status\": \"passed\"\n    },\n    {\n      \"check\": \"codex_template_consistency\",\n      \"status\": \"passed\"\n    },\n    {\n      \"check\": \"zcode_template_consistency\",\n      \"status\": \"passed\"\n    },\n    {\n      \"check\": \"schema_local_references_and_selected_invariants\",\n      \"references\": 33,\n      \"patterns\": 17,\n      \"status\": \"passed\"\n    },\n    {\n      \"check\": \"hook_response_example_json\",\n      \"examples\": 3,\n      \"status\": \"passed\"\n    }\n  ],\n  \"not_performed\": [\n    \"Complete Draft 2020-12 schema validation\",\n    \"Host plugin loading\",\n    \"Hook execution or enforcement\",\n    \"Scheduler concurrency tests\",\n    \"OS sandbox or cross-platform acceptance\"\n  ]\n}"
+    "output": "{\n  \"status\": \"passed_with_declared_scope\",\n  \"checks\": [\n    {\n      \"check\": \"strict_json_parse\",\n      \"files\": 48,\n      \"status\": \"passed\"\n    },\n    {\n      \"check\": \"instruction_source_cjk_scan\",\n      \"files\": 14,\n      \"status\": \"passed\",\n      \"note\": \"Language was also reviewed; this scan alone cannot prove English semantics.\"\n    },\n    {\n      \"check\": \"policy_markers_and_skill_metadata\",\n      \"status\": \"passed\"\n    },\n    {\n      \"check\": \"codex_template_consistency\",\n      \"status\": \"passed\"\n    },\n    {\n      \"check\": \"zcode_template_consistency\",\n      \"status\": \"passed\"\n    },\n    {\n      \"check\": \"schema_local_references_and_selected_invariants\",\n      \"references\": 33,\n      \"patterns\": 17,\n      \"status\": \"passed\"\n    },\n    {\n      \"check\": \"hook_response_example_json\",\n      \"examples\": 3,\n      \"status\": \"passed\"\n    }\n  ],\n  \"not_performed\": [\n    \"Complete Draft 2020-12 schema validation\",\n    \"Host plugin loading\",\n    \"Hook execution or enforcement\",\n    \"Scheduler concurrency tests\",\n    \"OS sandbox or cross-platform acceptance\"\n  ]\n}"
   },
-  "source_inputs_sha256": "49868bc66f39970a8cdde650c651c3ea1cafaa4e76b401bbc331c0bcaee944c4",
-  "source_input_count": 88,
-  "elapsed_seconds": 76.064,
+  "source_inputs_sha256": "c8aaa9895040195d3666615805a3e3e6c0a0fa4573cb35ac19f9f0f3a081d19d",
+  "source_input_count": 90,
+  "elapsed_seconds": 64.315,
   "optional_integration_inputs": {
     "codex_cli_loading": true,
+    "codex_installed_marketplace": true,
     "codex_native_protocol_fixture": true,
     "zcode_native_source_mapping": true
   },

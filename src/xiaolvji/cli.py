@@ -27,12 +27,17 @@ def parser():
     provider = sub.add_parser("provider").add_subparsers(dest="action", required=True)
     validate_provider = provider.add_parser("validate", help="Validate provider/host bindings without authenticating")
     validate_provider.add_argument("--file", type=Path, required=True)
-    host = sub.add_parser("host", help="Verify an explicit standalone native deployment").add_subparsers(dest="action", required=True)
+    host = sub.add_parser("host", help="Inspect the installed coordinator or verify a native worker deployment").add_subparsers(dest="action", required=True)
     verify_host = host.add_parser("verify", help="Run local native protocol/boundary acceptance without reading provider credentials")
     verify_host.add_argument("--project", required=True)
     verify_host.add_argument("--deployment", type=Path, required=True)
     verify_host.add_argument("--provider-config", type=Path, required=True)
     verify_host.add_argument("--output", type=Path, required=True)
+    inspect_plugin = host.add_parser("inspect-plugin", help="Check installed Codex skill, hooks, and reader MCP inventory")
+    inspect_plugin.add_argument("--marketplace", type=Path, required=True, help="Registered local marketplace root or marketplace.json")
+    inspect_plugin.add_argument("--cwd", type=Path, default=Path.cwd(), help="Coordinator working directory")
+    inspect_plugin.add_argument("--codex", default="codex", help="Codex CLI executable")
+    inspect_plugin.add_argument("--thread-call", action="store_true", help="Also start an ephemeral thread and call parallel_status")
     project = sub.add_parser("project").add_subparsers(dest="action", required=True)
     enable = project.add_parser("enable")
     enable.add_argument("project_id")
@@ -101,6 +106,8 @@ def parser():
     package.add_argument("--output", type=Path, required=True)
     package.add_argument("--source", type=Path, default=Path(__file__).resolve().parents[2])
     package.add_argument("--platform", choices=["posix", "windows"])
+    package.add_argument("--codex-marketplace", action="store_true",
+                         help="Build a local marketplace that can be installed with codex plugin")
     hook = sub.add_parser("hook")
     hook.add_argument("--adapter", choices=["codex", "zcode"], required=True)
     sub.add_parser("mcp", help="Legacy MCP 2025 stdio: read tools and authenticated task registration")
@@ -153,6 +160,11 @@ def _hook(args):
 def main(argv=None):
     args = parser().parse_args(argv)
     try:
+        if args.command == "host" and args.action == "inspect-plugin":
+            from .codex_plugin_probe import inspect_install
+            report = asyncio.run(inspect_install(args.codex, args.marketplace, args.cwd, thread_call=args.thread_call))
+            print(canonical_json(report))
+            return 0 if report["status"] == "passed" else 2
         if args.command == "hook":
             return _hook(args)
         if args.command == "check-runner":
@@ -174,7 +186,8 @@ def main(argv=None):
             result = install_policy(args.project, args.action, args.target)
         elif args.command == "package":
             from .installer import build_plugin
-            result = build_plugin(args.adapter, args.output, args.source, target_platform=args.platform)
+            result = build_plugin(args.adapter, args.output, args.source, target_platform=args.platform,
+                                  codex_marketplace=args.codex_marketplace)
         elif args.command == "demo":
             from .demo import run_demo
             result = asyncio.run(run_demo(args.output, profile=args.profile, provider_transport=args.provider_transport))

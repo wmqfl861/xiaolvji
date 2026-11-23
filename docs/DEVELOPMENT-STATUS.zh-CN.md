@@ -1,4 +1,20 @@
-# 开发状态：0.5.0
+# 开发状态 0.6.0
+
+2026-11-23 的交付补齐了 Codex 本地协调器的安装和诊断。`package --codex-marketplace` 生成一个可以直接交给 `codex plugin marketplace add` 的目录。`host inspect-plugin` 从已安装的宿主读取插件身份、版本、Skill、Hook 和 MCP 工具。
+
+| 实际检查 | Linux Codex CLI 0.172.0-alpha.2 的结果 |
+| --- | --- |
+| 注册市场、安装插件、加载英文 Skill | 通过 |
+| 七个 Hook 的注册及信任状态 | 每个事件登记一次，初次安装均等待信任 |
+| 自定义状态目录下的 MCP | 宿主发现六个 reader 工具，已安装服务通过 stdio 返回设置的并发上限 7 |
+| 临时会话内调用 `parallel_status` | 创建会话时宿主文件系统沙箱无法建立网络命名空间，未进入工具调用 |
+| 外部真实模型、完整 ZCode CLI、Windows/macOS 执行 | 待目标环境验收 |
+
+本轮 565 项运行时测试与 26 项策略测试全部通过，跳过数为零。三种 Linux 演示均验证了两个并发名额下的四模块交付。演示命令支持含 `..` 的普通相对输出路径，并在创建项目之前检查符号链接。
+
+下一项是在保留目标机器管理策略的环境中运行 `host inspect-plugin --thread-call`，核对会话内返回的控制器容量，再进行模型任务和受信任 Hook 联调。[安装指南](HOST-INSTALL.zh-CN.md) · [验证明细](../validation/codex-installed-plugin.json)
+
+## 0.5.0 开发记录
 
 日期：2026-11-16（UTC）。本版完成**有界优先级老化、共享准入诊断、只读运行指标、初始恢复取消修复，以及 Codex/ZCode 的输入边界修复**。英文 Skill 与 AGENTS 注入同步更新，CLI/MCP/Hook 和四种源码插件布局一起交付。
 

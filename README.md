@@ -1,8 +1,16 @@
 # xiaolvji · 并行开发控制器
 
-**当前版本：0.5.0，公平调度与可观测性开发版。** 本版实现有界优先级老化、真实准入阻塞诊断和只读运行指标，并修复初始恢复取消、Codex 超大整数输入、ZCode 提示词参数与事件解析缺陷。原有原子并发上限、严格 Linux 执行、原生协议和独立质量门槛继续保留。英文 Skill、AGENTS 注入、Hook、控制器和四种源码插件布局一并交付。
+**0.6.0 增加了可直接安装的本地 Codex 插件市场。** 小绿鸡让主 Agent 按任务依赖和写入范围调度多个开发任务。真实 Codex CLI 已能从已安装的包读取协作 Skill、七个 Hook 和六个只读 MCP 工具。配置自定义控制器目录时，本地包及兼容覆盖层都会将目录传给 MCP。
 
-**真实 Codex 二进制已在受控 Linux 沙箱内完成合成提供商的多轮工具协议；真实提供商与完整 ZCode CLI 尚未验收。** 首条正式路径支持明确选择的独立 API 部署，并要求 `host verify` 在目标机器通过。当前开发机器存在不能完整迁移的 Codex 管理策略，因此真实模型任务继续阻断；ZCode 源码映射已验证，但完整构建受到 npm 访问限制。详见[原生接入指南](docs/NATIVE-HOST.zh-CN.md)。所有质量检查保持离线，模型密钥只留在控制器。
+下载完整交付后，从 `plugins/` 选择与系统对应的 `parallel-development-codex-marketplace-*`，将内层 ZIP 解压到一个单独目录。在已初始化控制器的终端中运行以下命令。使用自定义目录时，先设置 `PARALLEL_DEV_STATE_DIR`。[安装与诊断指南](docs/HOST-INSTALL.zh-CN.md)
+
+```bash
+codex plugin marketplace add /absolute/path/to/unpacked-marketplace
+codex plugin add parallel-development@xiaolvji-local
+python3 /absolute/path/to/unpacked-marketplace/bin/parallel-dev host inspect-plugin --marketplace /absolute/path/to/unpacked-marketplace
+```
+
+Linux 上用真实进程验证了安装与服务发现。七个 Hook 在新安装中均等待宿主信任。当前测试环境在创建 Codex 会话时受到系统沙箱限制，真实提供商开发任务和完整 ZCode CLI 仍待现场验收。[本版验证记录](validation/codex-installed-plugin.json)
 
 ## 先运行完整演示
 
@@ -52,7 +60,7 @@ python3 bin/parallel-dev demo --profile controlled_executor --provider-transport
 | --- | --- |
 | [调度与指标](docs/SCHEDULING.zh-CN.md) / [英文契约](docs/SCHEDULING-CONTRACT.en.md) | 防饥饿规则、准入诊断、统计口径、查询预算与权限 |
 | [运行指南](docs/RUNTIME.zh-CN.md) | 从初始化、项目启用、计划和任务登记到运行、取消、审核的完整操作 |
-| [宿主安装](docs/HOST-INSTALL.zh-CN.md) | Codex / ZCode 发现路径、四种源码包布局、Hook 信任与 MCP 配置 |
+| [宿主安装](docs/HOST-INSTALL.zh-CN.md) | Codex / ZCode 发现路径、本地市场与通用源码包、Hook 信任与 MCP 配置 |
 | [能力与限制](docs/LIMITATIONS.zh-CN.md) | 执行边界、未验收能力、暂停与恢复行为 |
 | [开发状态](docs/DEVELOPMENT-STATUS.zh-CN.md) | 蓝图 P0–P9 与本次实现、剩余工作对应关系 |
 | [验证记录](VALIDATION.json) | 实际运行的测试、演示、环境和未运行项目 |
@@ -99,9 +107,9 @@ python3 scripts/validate_runtime.py --report /tmp/xiaolvji-validation.json
 ```bash
 python3 bin/parallel-dev package --adapter codex --platform posix --output /tmp/xiaolvji-codex
 python3 bin/parallel-dev package --adapter zcode --platform posix --output /tmp/xiaolvji-zcode
-python3 scripts/build_release.py --output /tmp/xiaolvji-runtime-0.5.0.zip
+python3 scripts/build_release.py --output /tmp/xiaolvji-runtime-0.6.0.zip
 ```
 
-插件是 Python 源码包，不是虚构的原生二进制。Windows 包提供配置与源码，当前不能作为已验收的 Windows 执行器使用。完整交付脚本只从指定的已提交版本构建，包含源码、文档、测试、四种插件布局和可还原历史的 Git bundle。
+完整交付包含运行时源码、测试、Git bundle 和六个插件 ZIP。Codex 本地市场包、Codex 通用包和 ZCode 包均提供 POSIX 与 Windows 布局。Windows 执行仍待实机验收。
 
-本版源码与全部文档已同步到 [GitHub 开发分支](https://github.com/wmqfl861/xiaolvji/tree/feat/parallel-development-v0.5.0)。发布时核对了完整 Git 树与本地验证快照一致；记录见 `VALIDATION.json`。源码同步不替代目标宿主验收或指定 reviewer 的正式发布批准。
+本轮在 0.5.0 开发分支的源码基础上进行。[0.6.0 开发分支](https://github.com/wmqfl861/xiaolvji/tree/feat/codex-install-v0.6.0)

@@ -51,6 +51,7 @@ def main():
               'elapsed_seconds': round(time.monotonic()-started, 3),
               'optional_integration_inputs': {
                   'codex_cli_loading': bool(os.environ.get('XIAOLVJI_CODEX_CLI_SMOKE')),
+                  'codex_installed_marketplace': bool(os.environ.get('XIAOLVJI_CODEX_INSTALL_SMOKE')),
                   'codex_native_protocol_fixture': bool(os.environ.get('XIAOLVJI_CODEX_NATIVE_SMOKE')),
                   'zcode_native_source_mapping': bool(os.environ.get('XIAOLVJI_ZCODE_SOURCE'))},
               'not_run': ['Authenticated external-model acceptance for Codex', 'Complete ZCode CLI/model integration',

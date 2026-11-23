@@ -1,6 +1,7 @@
 """Reproducible real process/Git demonstration; no model or host is invoked."""
 from __future__ import annotations
 
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -24,10 +25,14 @@ async def run_demo(output: str | Path, *, profile: str = "cooperative_native", p
         raise Fault("INVALID_ARGUMENT", "Unknown demo execution profile.")
     if type(provider_transport) is not bool or provider_transport and profile != "controlled_executor":
         raise Fault("INVALID_ARGUMENT", "The provider demonstration requires controlled execution.")
-    root = Path(output).absolute()
-    if root.exists():
-        raise Fault("DESTINATION_EXISTS", "Use a new directory for the isolated demonstration.")
-    root.mkdir(parents=True, mode=0o700)
+    requested = Path(output).absolute()
+    root = Path(os.path.normpath(requested))
+    if any(part.is_symlink() for part in (requested, *requested.parents)) or root.resolve() != root:
+        raise Fault("INVALID_ARGUMENT", "The demo directory cannot pass through symbolic links.")
+    try:
+        root.mkdir(parents=True, mode=0o700)
+    except FileExistsError as exc:
+        raise Fault("DESTINATION_EXISTS", "Use a new directory for the isolated demonstration.") from exc
     repository = root / "project"
     repository.mkdir()
     _git(repository, "init", "-q", "-b", "main")

@@ -1,0 +1,132 @@
+{
+  "codex_version": "codex-cli 0.172.0-alpha.2",
+  "environment": "Linux, disposable account view with host system policy mounted read-only, private network namespace",
+  "inventory": {
+    "all_hooks_trusted": false,
+    "hook_execution_verified": false,
+    "hooks": [
+      {
+        "enabled": true,
+        "event": "interrupt",
+        "trust": "untrusted"
+      },
+      {
+        "enabled": true,
+        "event": "postToolUse",
+        "trust": "untrusted"
+      },
+      {
+        "enabled": true,
+        "event": "preToolUse",
+        "trust": "untrusted"
+      },
+      {
+        "enabled": true,
+        "event": "sessionStart",
+        "trust": "untrusted"
+      },
+      {
+        "enabled": true,
+        "event": "stop",
+        "trust": "untrusted"
+      },
+      {
+        "enabled": true,
+        "event": "subagentStart",
+        "trust": "untrusted"
+      },
+      {
+        "enabled": true,
+        "event": "subagentStop",
+        "trust": "untrusted"
+      }
+    ],
+    "installed_version": "0.6.0",
+    "model_turn_started": false,
+    "plugin_id": "parallel-development@xiaolvji-local",
+    "reader_tools": [
+      "parallel_events",
+      "parallel_metrics",
+      "parallel_project_tree",
+      "parallel_queue",
+      "parallel_read_file",
+      "parallel_status"
+    ],
+    "runtime_version": "0.6.0",
+    "schema_version": 1,
+    "skill_enabled": true,
+    "stage": "complete",
+    "status": "passed",
+    "thread_call_requested": false,
+    "thread_status_call_verified": false
+  },
+  "installed_stdio_status": {
+    "is_error": false,
+    "capacity": {
+      "available": 7,
+      "limit": 7,
+      "uncertain": 0,
+      "used": 0
+    }
+  },
+  "optional_thread_call": {
+    "all_hooks_trusted": false,
+    "hook_execution_verified": false,
+    "hooks": [
+      {
+        "enabled": true,
+        "event": "interrupt",
+        "trust": "untrusted"
+      },
+      {
+        "enabled": true,
+        "event": "postToolUse",
+        "trust": "untrusted"
+      },
+      {
+        "enabled": true,
+        "event": "preToolUse",
+        "trust": "untrusted"
+      },
+      {
+        "enabled": true,
+        "event": "sessionStart",
+        "trust": "untrusted"
+      },
+      {
+        "enabled": true,
+        "event": "stop",
+        "trust": "untrusted"
+      },
+      {
+        "enabled": true,
+        "event": "subagentStart",
+        "trust": "untrusted"
+      },
+      {
+        "enabled": true,
+        "event": "subagentStop",
+        "trust": "untrusted"
+      }
+    ],
+    "installed_version": "0.6.0",
+    "model_turn_started": false,
+    "plugin_id": "parallel-development@xiaolvji-local",
+    "reader_tools": [
+      "parallel_events",
+      "parallel_metrics",
+      "parallel_project_tree",
+      "parallel_queue",
+      "parallel_read_file",
+      "parallel_status"
+    ],
+    "reason": "thread/start: native filesystem sandbox could not initialize its network namespace.",
+    "runtime_version": "0.6.0",
+    "schema_version": 1,
+    "skill_enabled": true,
+    "stage": "thread_start",
+    "status": "blocked",
+    "thread_call_requested": true,
+    "thread_status_call_verified": false
+  }
+}

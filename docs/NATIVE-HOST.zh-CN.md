@@ -1,6 +1,8 @@
-# 0.5.0 原生宿主接入与持续运行
+# 原生宿主接入与持续运行
 
-本版把原生宿主接入做成了可运行、可失效的验收流程。`host verify` 使用真实 Codex 二进制和固定本地 HTTP/SSE 夹具，检查工具执行、写入范围、网络隔离和完整终态；它不读取真实 API 密钥，也不声称真实提供商已经通过。
+0.6.0 提供两个独立入口。`host inspect-plugin` 核对已安装的 Codex 协调器，`host verify` 验收严格 Worker 的目标部署。协调器的检查结果不授予 Worker 执行权限。
+
+`host verify` 使用真实 Codex 二进制和固定本地 HTTP/SSE 夹具，检查工具执行、写入范围、网络隔离和完整终态；它不读取真实 API 密钥，也不声称真实提供商已经通过。
 
 当前开发环境的结果必须分开理解：独立合成配置下的 Codex 原生工具轮次通过；保留本机 `/etc/codex` 管理要求后，支持范围检查正确阻断，提供商请求为零。完整 ZCode CLI 尚不能构建，原因是公开 npm 域名不可达；其固定源码中的模型选项编译器已实际执行验证。完整记录见 [Codex](CODEX-COMPATIBILITY.en.md)、[ZCode](ZCODE-COMPATIBILITY.en.md) 和 [VALIDATION.json](../VALIDATION.json)。
 

@@ -98,6 +98,7 @@ def recorded_execution_status(source: Path, version: str) -> tuple[dict, dict]:
         "model_transport": status("model_transport"),
         "codex_cli_loading": status("codex_cli_loading"),
         "codex_native_protocol": status("codex_native_protocol"),
+        "codex_coordinator_install": status("codex_coordinator_install"),
         "zcode_source_mapping": status("zcode_source_mapping"),
         "native_production_current_host": status("native_production_current_host"),
         "real_codex_zcode_host_tests": reported("real_host_integration"),
@@ -143,6 +144,7 @@ def execution_summary_zh(execution: dict, evidence: dict) -> str:
         ("受限模型通道", "model_transport"),
         ("Codex CLI 局部检查", "codex_cli_loading"),
         ("Codex 原生合成协议", "codex_native_protocol"),
+        ("Codex 协调器安装与工具发现", "codex_coordinator_install"),
         ("ZCode 原生源码映射", "zcode_source_mapping"),
         ("当前机器正式原生部署", "native_production_current_host"),
         ("真实 Codex/ZCode 宿主联调", "real_codex_zcode_host_tests"),
@@ -350,23 +352,22 @@ def zip_tree(root: Path, destination: Path, epoch: int) -> dict:
 def build_plugins(source: Path, work: Path, output: Path, version: str, epoch: int) -> list[dict]:
     output.mkdir()
     results = []
-    script = (
-        "import json,sys; from pathlib import Path; "
-        "sys.path.insert(0,str(Path(sys.argv[1])/'src')); "
-        "from xiaolvji.installer import build_plugin; "
-        "print(json.dumps(build_plugin(sys.argv[2],sys.argv[3],sys.argv[1],target_platform=sys.argv[4])))"
-    )
-    for adapter in ("codex", "zcode"):
+    command = [sys.executable, "-I", "-B", str(source / "bin/parallel-dev"), "package"]
+    layouts = [("codex", "codex", []), ("zcode", "zcode", [])]
+    if b"--codex-marketplace" in run([*command, "--help"]):
+        layouts.append(("codex", "codex-marketplace", ["--codex-marketplace"]))
+    for adapter, layout, options in layouts:
         for target in ("posix", "windows"):
-            directory = work / (adapter + "-" + target)
-            raw = run([sys.executable, "-I", "-B", "-c", script, str(source), adapter, str(directory), target])
+            directory = work / (layout + "-" + target)
+            raw = run([*command, "--adapter", adapter, "--source", str(source), "--output",
+                       str(directory), "--platform", target, *options])
             result = json.loads(raw)
             if result.get("status") != "built" or result.get("installed") is not False:
                 raise BuildError("Committed installer did not return a source-package build result.")
             count = verify_checksums(directory)
-            name = f"parallel-development-{adapter}-{target}-{version}.zip"
+            name = f"parallel-development-{layout}-{target}-{version}.zip"
             packed = zip_tree(directory, output / name, epoch)
-            results.append({"adapter": adapter, "platform": target, "path": "plugins/" + name,
+            results.append({"adapter": adapter, "layout": layout, "platform": target, "path": "plugins/" + name,
                             **packed, "checksum_entries": count, "native_host_tested": False})
     return results
 
@@ -464,7 +465,7 @@ def build(repository: Path, revision: str, destination: Path) -> dict:
 - `source/docs/LIMITATIONS.zh-CN.md`：当前能力与限制。
 - `source/docs/HOST-INSTALL.zh-CN.md`：Codex / ZCode 本地加载方法。
 - `source/`：该提交的全部受支持跟踪文件，包括源代码、测试和文档。
-- `plugins/`：Codex / ZCode × POSIX / Windows 的四个独立 Python 源码插件 ZIP。
+- `plugins/`：Codex / ZCode × POSIX / Windows 的{len(plugins)} 个 Python 源码插件 ZIP。
 - `{bundle['path']}`：所选提交和命名分支的完整 Git 历史。
 - `DELIVERY.json`：精确提交、数量、组件摘要及构建验证信息。
 - `SHA256SUMS`：除清单自身外的全部交付文件摘要。
@@ -500,10 +501,10 @@ git clone --branch {shlex.quote(branch)} {shlex.quote(bundle['path'])} xiaolvji-
 sha256sum -c SHA256SUMS
 ```
 
-四个插件 ZIP 内也各有摘要清单。安装前选择一个宿主/平台包，按宿主自己的本地插件加载和信任流程处理；不要将四个插件目录混合或把审核凭据放进插件目录。
+每个插件 ZIP 都带有摘要清单。根据宿主、平台和安装方式选择一个包，按宿主流程加载并审查 Hook。
 '''
         (payload / "START-HERE.zh-CN.md").write_text(start, encoding="utf-8")
-        # source + 4 plugin ZIPs + bundle + START-HERE + DELIVERY + SHA256SUMS.
+        # Source files, plugin ZIPs, Git bundle, and three delivery metadata files.
         file_count = len(entries) + len(plugins) + 4
         delivery = {
             "schema_version": 1, "name": "xiaolvji", "version": version,
